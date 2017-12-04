@@ -1,17 +1,20 @@
 import path from 'path'
+import webpack from 'webpack'
 
 import { WDS_PORT } from './src/shared/config'
 import { isProd } from './src/shared/util'
 
 export default {
-  entry: [
-    'react-hot-loader/patch',
-    './src/client',
-  ],
+  entry: {
+    hot: 'react-hot-loader/patch',
+    client: './src/client',
+    crowdFunding: './src/crowdFunding',
+  },
   output: {
-    filename: 'js/bundle.js',
+    filename: 'js/bundle_[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: isProd ? '/static/' : `http://localhost:${WDS_PORT}/dist/`,
+    chunkFilename: '[name].[chunkhash].bundle.js',
+    publicPath: isProd ? STATIC_PATH : `http://localhost:${WDS_PORT}/dist/`,
   },
   module: {
     rules: [
