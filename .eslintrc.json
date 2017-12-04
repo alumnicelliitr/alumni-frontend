@@ -1,6 +1,6 @@
 {
   "extends": [
-    "airbnb",
+    "airbnb"
   ],
   "plugins": [
     "compat"
@@ -8,12 +8,12 @@
   "rules": {
     "semi": [2, "never"],
     "no-unexpected-multiline": 2,
-    "compat/compat": 2,
+    "compat/compat": 2
   },
   "settings": {
     "polyfills": ["fetch"]
   },
   "env": {
-    "browser": true,
+    "browser": true
   }
 }
