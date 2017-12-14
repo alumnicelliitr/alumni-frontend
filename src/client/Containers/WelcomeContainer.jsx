@@ -4,18 +4,24 @@ import { Link } from 'react-router'
 class WelcomeContainer extends React.Component {
   render() {
     return (
-      <div>
+      <div className="homepage">
         <div className="navbar">
-        	<button className="loginbutton">Login/Sign up</button>
-  			<a href="#contact">Contact</a>
-  			<a href="#donate">Donate</a>
-  			<a href="#awards">Awards</a>
-  			<a href="#initiatives">Initiatives</a>
-  			<a href="#mou">MOUs</a>
-  			<a href="#events">Events</a>
-  			<a href="#about">About</a>
+        	 <button className="loginbutton">Login</button>
+  			   <a href="#contact">Contact</a>
+  			   <a href="#donate">Donate</a>
+  			   <a href="#awards">Awards</a>
+  			   <a href="#initiatives">Initiatives</a>
+  			   <a href="#mou">MOUs</a>
+  			   <a href="#events">Events</a>
+  			   <a href="#about">About</a>
 	  	</div>
-      </div>
+      
+        <div className="trendingNews">
+          <div className="newsHead">Trending News Will Come Here</div>
+          <div className="newsTag">Trending News Tagline(if any)</div>
+        </div>
+     
+    </div>
     )
   }
 }

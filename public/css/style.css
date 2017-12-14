@@ -29,9 +29,9 @@ body{
 }
 
 button {
-   border: 1px solid #0f7cbf;
+   border: 1px solid #888;
    background: #fff;
-   padding: 7px 14px;background: -webkit-gradient(linear, left top, left bottom, from(#edf3f7), to(#d8e1e8));
+   padding: 7px 14px;
    -webkit-border-radius: 16px;
    -moz-border-radius: 16px;
    border-radius: 16px;
@@ -48,8 +48,10 @@ button {
 
 button:hover {
    border-top-color: #97c8e8;
-   background: #97c8e8;
-   color: #ccc;
+   background: #888;
+   color: #fff;
+   transition: 0.4s ease;
+   cursor: pointer;
 }
 
 button:active {
@@ -60,4 +62,41 @@ button:active {
 .navbar {
 	position: absolute;
 	right: 5vw;
+  top: 1vh;
+  height: 6vh;
+}
+
+.trendingNews {
+  position: absolute;
+  top: 7vh;
+  left: 0;
+  width: 100vw;
+  height: 20vh;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Sans-Serif;
+}
+
+.newsHead {
+  position: absolute;
+  left: 10vw;
+  right: 70vw;
+  font-weight: 100;
+  /*position: relative;*/
+  top: 3vh;
+  font-size: 40px;
+  left: 10vw;
+}
+
+.newsTag {
+  font-weight: 40;
+  position: absolute;
+  left: 10vw;
+  right: 70vw;
+  /*position: relative;*/
+  top: 13vh;
+  left: 10vw;
+  font-size: 15px;
 }
