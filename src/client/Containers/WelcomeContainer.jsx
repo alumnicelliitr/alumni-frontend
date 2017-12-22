@@ -6,7 +6,7 @@ class WelcomeContainer extends React.Component {
     return (
       <div className="homepage">
         <div className="navbar">
-        	 <button className="loginbutton">Login</button>
+        	 <div className="loginbutton">Login</div>
   			   <a href="#contact">Contact</a>
   			   <a href="#donate">Donate</a>
   			   <a href="#awards">Awards</a>
