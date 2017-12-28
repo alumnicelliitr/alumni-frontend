@@ -7,6 +7,7 @@ const renderApp = (title: string) =>
   <head>
     <title>${title}</title>
     <link rel="stylesheet" href="${STATIC_PATH}/css/style.css">
+    <script src="${STATIC_PATH}/script/script.js"></script>
   </head>
   <body>
     <div class="${APP_CONTAINER_CLASS}"></div>

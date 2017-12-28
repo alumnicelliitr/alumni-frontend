@@ -1,85 +1,197 @@
-
-.navbar a {
-  float: right;
-  display: block;
-  color: #282828;
-  text-align: center;
-  padding: 3.2vh 2.2vw;
-  text-decoration: none;
-  font-size: 1.19vw;
+.navbar {
+  position: absolute;
+  right: 2vw;
+  display: flex;
 }
 
-.navbar button {
-	float: right;
-	font-size: 1.19vw;
+.links-div {
+    position: absolute;
+    right: 10vw;
+    display: flex;
+    top: 2.0vh;
+}
+
+.nav-links a {
+  float: right;
+  padding: 1vw;
+  font-size: 1.19vw;
+  color: #282828;
+  text-decoration: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
 .loginbutton {
-   position: absolute;
-   right: 0vw;
-   top: 3vh;
-   border: 1px solid #888;
-   background: #fff;
-   padding: 7px 20px;
-   -webkit-border-radius: 16px;
-   -moz-border-radius: 16px;
-   border-radius: 16px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: #0f0a0f;
-   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
-   text-decoration: none;
-   vertical-align: middle;
+    position: absolute;
+    right: 2vw;
+    top: 3.5vh;
+    border: 1px solid #888;
+    background: #fff;
+    padding: 1vh 4vh;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 36px;
+    color: #0f0a0f;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
 }
 
 .loginbutton:hover {
-   border-top-color: #97c8e8;
-   background: #888;
-   color: #fff;
-   transition: 0.2s ease;
-   cursor: pointer;
+    border-top-color: #97c8e8;
+    background: #888;
+    color: #fff;
+    transition: 0.2s ease;
+    cursor: pointer;
 }
 
-.navbar {
+/*.navbar {
 	position: absolute;
 	right: 5vw;
   top: 1vh;
   height: 6vh;
-}
+}*/
 
 .trendingNews {
-  position: absolute;
-  top: 13vh;
-  left: 0;
-  width: 100vw;
-  height: 64.1vh;
-  background-color: black;
-  color: white;
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Sans-Serif;
+    position: absolute;
+    top: 13vh;
+    left: 0;
+    width: 100vw;
+    height: 64.1vh;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Sans-Serif;
 }
 
 .newsHead {
-  position: absolute;
-  left: 11.6vw;
-  right: 59.3vw;
+    position: absolute;
+    left: 11.6vw;
+    right: 59.3vw;
   /*right: 70vw;*/
-  font-weight: 100;
+    font-weight: 100;
   /*position: relative;*/
-  top: 13.33vh;
-  font-size: 4.14vw;
+    top: 13.33vh;
+    font-size: 4.14vw;
 }
 
 .newsTag {
-  font-weight: 40;
-  position: absolute;
-  left: 11.6vw;
-  right: 59.3vw;
+    font-weight: 40;
+    position: absolute;
+    left: 11.6vw;
+    right: 59.3vw;
   /*right: 70vw;*/
   /*position: relative;*/
-  top: 33.89vh;
-  font-size: 3.89vh;
+    top: 33.89vh;
+    font-size: 3.89vh;
+}
+
+
+.mou-text-heading-main {
+position: absolute;
+width: 535px;
+height: 89px;
+
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+font-size: 73.6023px;
+
+color: #6D6D6D;
+
+}
+
+.mou-text-heading-sub {
+position: absolute;
+width: 483px;
+height: 89px;
+top: 8vh;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 73.6px;
+
+color: #282828;
+
+}
+
+.mou-div {
+ position: absolute;
+ top: 77vh;
+ left: 0;
+ right: 0;
+ height: 64vh;
+ width: 100vw;
+ background-color: #fff;
+}
+
+.mou-text {
+  position: absolute;
+  left: 11.9vw;
+  top: 15.9vh;
+}
+
+.see-our-mou {
+position: absolute;
+width: 227px;
+height: 42px;
+top: 18vh;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 35px;
+
+color: #6D6D6D;
+
+}
+
+.view-mou-button {
+background: #1F87C4;
+position: absolute;
+/*width: 56px;
+height: 30px;*/
+border-radius: 30px; 
+top: 24vh;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 25px;
+}
+
+.view-text {
+  padding: 1vh 4vw;
+  color: #fff;
+  cursor: pointer;
+}
+
+.outer-circle {
+  background-color: #80bbd4;
+position: absolute;
+width: 31.77vw;
+height: 31.77vw;
+opacity: 0.23;
+border-radius: 50%;
+left: 61.6vw;
+top: 1vh;
+}
+
+.middle-circle {
+  background-color: #800000;
+  position: absolute;
+  opacity: 0.4;
+  left: 2.5vw;
+  top: 2.5vw;
+  border-radius: 50%;
+  height: 26.7vw;
+  width: 26.7vw;
+  z-index: 1000;
 }
