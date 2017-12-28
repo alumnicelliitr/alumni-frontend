@@ -70,7 +70,32 @@ class WelcomeContainer extends React.Component {
             </div>
           </div>
         </div>
-     
+        <div className="more-videos">
+          <div className="more-videos-head">
+            More of Video Repository
+          </div>
+          <div className="more-videos-sub">
+            Visit our Youtube channel
+          </div>
+          <div className="youtube-button">
+            Youtube channel
+          </div>
+        </div>
+        <div className="samp">
+          
+        </div>
+        <div className="alumni-cards">
+          
+        </div>
+        <div className="news-and-insight">
+          
+        </div>
+        <div className="subscribe">
+          
+        </div>
+        <div className="others">
+          
+        </div>
     </div>
     )
   }

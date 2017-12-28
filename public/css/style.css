@@ -195,3 +195,67 @@ top: 1vh;
   width: 26.7vw;
   z-index: 1000;
 }
+
+.video-text-heading {
+position: absolute;
+width: 185px;
+height: 89px;
+left: 55vw;
+top: 7vh;
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+font-size: 73.6023px;
+
+color: #FFFFFF;
+
+}
+
+.video-text-heading-sub {
+position: absolute;
+width: 355px;
+height: 89px;
+
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 73.6px;
+
+color: #FFFFFF;
+
+}
+
+.video-repo-div {
+  position: absolute;
+  height: 68.7vh;
+  width: 100vw;
+  left: 0;
+  top: 141vh;
+  background-color: #1f87c4;
+}
+
+.video-placeholder {
+  position: absolute;
+  left: 10vw;
+  top: 15vh;
+  background-color: #ddd;
+  width: 35vw;
+  height: 40vh;
+}
+
+.video-text-sub {
+position: absolute;
+width: 627px;
+height: 330px;
+left: 55vw;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 25px;
+top: 28vh;
+color: #FFFFFF;
+
+}
