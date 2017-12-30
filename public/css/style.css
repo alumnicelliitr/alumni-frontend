@@ -1307,3 +1307,75 @@ padding: 1vw;
   font-size: 2.6vw;
   color: #D3D3D3;
 }
+
+/*social links page*/
+
+.about-section-headings {
+  position: absolute;
+  top: 19.4vh;
+  left: 11.9vw;
+  display: flex;
+}
+
+.social-links-active {
+position: absolute;
+width: 7.2vw;
+height: 5.55vh;
+
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 2.6vw;
+
+color: #383838;
+
+}
+
+.dora-inactive, .team-inactive, .vision-inactive {
+position: absolute;
+width: 7.2vw;
+height: 5.55vh;
+
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 2.6vw;
+
+color: #D3D3D3;
+
+}
+
+.dora-inactive {
+  position: absolute;
+  left: 18.33vw;
+}
+
+.team-inactive {
+  position: absolute;
+  left: 37.5vw;
+}
+
+.social-links-active {
+  position: absolute;
+  left: 56vw;
+  width: 12.7vw;
+} 
+
+.links-container a {
+text-decoration: none;
+position: absolute;
+width: 32vw;
+height: 2.7vh;
+left: 11.9vw;
+top: 32.22vh;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 1.3vw;
+
+color: #6D6D6D;
+
+}
