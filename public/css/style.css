@@ -1027,3 +1027,158 @@ font-size: 23px;
 color: #FFFFFF;
 
 }
+
+/* know your alum */
+.know-your-alum-active {
+  position: absolute;
+  left: 11.9vw;
+  top: 19.6vh;
+}
+
+.know-your-alum-active-heading {
+position: absolute;
+width: 12.5vw;
+height: 5.55vh;
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+font-size: 2.6vw;
+color: #282828;
+
+}
+
+.know-your-alum-active-heading-sub {
+position: absolute;
+width: 6.14vw;
+height: 5.55vh;
+
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 2.6vw;
+
+color: #282828;
+
+}
+
+.know-your-alum-content-text {
+position: absolute;
+width: 76.5vw;
+height: 7.5vh;
+top: 15vh;
+left: 0;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: 3.7vh;
+font-size: 1.25vw;
+
+color: #6D6D6D;
+
+}
+
+.share-story-inactive-heading {
+position: absolute;
+width: 12.3vw;
+height: 5.55vh;
+left: 34.6vw;
+top: 19.6vh;
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+font-size: 2.6vw;
+
+color: #D3D3D3;
+
+}
+
+.share-story-inactive-heading-sub {
+position: absolute;
+width: 6.2vw;
+height: 5.55vh;
+
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 2.6vw;
+
+color: #D3D3D3;
+
+}
+
+.card-row-1 {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 30.3vh;
+}
+
+.card-1 {
+  width: 23.22vw;
+  height: 54.3vh;
+}
+
+.card-placeholder {
+  background-color: #b7b7b7;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 60%;
+  width: 100%;
+}
+
+.card-placeholder-2 {
+  background-color: #b7b7b7;
+  position: absolute;
+  top: 0;
+  left: 30vw;
+  height: 60%;
+  width: 100%;
+}
+
+.card-text {
+  border: 0.1vw solid #a6a6a6;
+  height: 25vh;
+}
+
+.card-text-2 {
+
+}
+
+.card-text-head {
+position: absolute;
+width: 141px;
+height: 30px;
+top: 35vh;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 25px;
+color: #000000;
+padding-left: 1vw;
+}
+
+.card-text-sub {
+position: absolute;
+top: 40vh;
+width: 21.4vw;
+height: 13.1vh;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: 35px;
+font-size: 21px;
+color: #303030;
+padding: 1vw;
+}
+
+.know-your-alum-content-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
