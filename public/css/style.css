@@ -637,3 +637,147 @@ padding: 1vh 3vw;
 color: #6D6D6D;
 
 }
+
+/* contact us page */
+
+.separator {
+  position: absolute;
+  background-color: #000;
+  height: 0.1vh;
+  width: 100vw;
+  top: 12.5vh;
+  left: 0;
+}
+
+.content-contact-us {
+  position: absolute;
+  top: 13vh;
+}
+
+.contact-us-active {
+  position: absolute;
+  left: 11.9vw;
+  top: 7.15vh;
+}
+
+.contact-us-active-heading {
+  position: absolute;
+  width: 8.9vw;
+  height: 5.55vh;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 2.6vw;
+  color: #282828;
+
+}
+
+.contact-us-active-heading-sub {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2.6vw;
+  color: #282828;
+}
+  
+.write-to-us-inactive {
+  position: absolute;
+  top: 7.15vh;
+  left: 34.63vw;
+}
+
+.write-to-us-inactive-heading {
+  position: absolute;
+  width: 8.9vw;
+  height: 5.55vh;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 50px;
+  color: #D3D3D3;
+
+}
+
+.write-to-us-inactive-heading-sub {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2.6vw;
+  color: #D3D3D3;
+
+}
+
+.phone, .email, .location {
+  display: flex;
+}
+
+.phone {
+  position: absolute;
+  left: 0;
+  top: 22vh;
+}
+
+.email {
+  position: absolute;
+  left: 0;
+  top: 30vh;
+}
+
+.location {
+  position: absolute;
+  left: 0;
+  top: 38vh;
+}
+
+.contact-links-text-1, .contact-links-text-2, .contact-links-text-3 {
+  left: 3vw;
+  position: absolute;
+  width: 14.2vw;
+  height: 3.33vh;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 1.5vw;
+  color: #6D6D6D;
+
+}
+
+.contact-follow-links {
+  position: absolute;
+  top: 49.5vh;
+  left: 0;
+}
+
+.contact-follow-links-head {
+  position: absolute;
+  width: 9vw;
+  height: 3.33vh;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 1.5vw;
+  color: #282828;
+}
+
+.contact-follow-links-content {
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 8vh;
+}
+
+.contact-follow-links-icon-1{
+  padding: 1vw;
+  padding-left: 0;
+}
+
+.contact-follow-links-icon-2, .contact-follow-links-icon-3 {
+  padding: 1vw;
+}

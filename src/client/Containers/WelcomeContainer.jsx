@@ -206,11 +206,10 @@ class WelcomeContainer extends React.Component {
               <div>Email</div>
               <div>Follow us on</div>
               <div className="contact-icons-dark">
-                <div><i</div>
-              </div>
             </div>
           </div>
         </div>
+    </div>
     </div>
     )
   }
