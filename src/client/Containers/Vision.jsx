@@ -1,40 +1,40 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-class WelcomeContainer extends React.Component {
+class Vision extends React.Component {
   render() {
     return (
-    <div class="vision">
-    <div class="navbar">
-          <div class="loginbutton">Login</div>
-            <div class="links-div">
-                <div class="nav-links"><a href="#about">About</a></div>
-                <div class="nav-links"><a href="#events">Events</a></div>
-                <div class="nav-links"><a href="#mou">MOUs</a></div>
-                <div class="nav-links"><a href="#initiatives">Initiatives</a></div>
-                <div class="nav-links"><a href="#awards">Awards</a></div>
-                <div class="nav-links"><a href="#donate">Donate</a></div>
-                <div class="nav-links"><a href="#contact">Contact</a></div>
+    <div className="vision">
+    <div className="navbar">
+          <div className="loginbutton">Login</div>
+            <div className="links-div">
+                <div className="nav-links"><a href="#about">About</a></div>
+                <div className="nav-links"><a href="#events">Events</a></div>
+                <div className="nav-links"><a href="#mou">MOUs</a></div>
+                <div className="nav-links"><a href="#initiatives">Initiatives</a></div>
+                <div className="nav-links"><a href="#awards">Awards</a></div>
+                <div className="nav-links"><a href="#donate">Donate</a></div>
+                <div className="nav-links"><a href="#contact">Contact</a></div>
           </div>
       </div>
-      <div class="separator">
+      <div className="separator">
         
       </div>
-      <div class="about-section-headings" id="vision">
-        <div class="vision-active">
+      <div className="about-section-headings" id="vision">
+        <div className="vision-active">
           Vision
         </div>
-        <div class="dora-inactive">
+        <div className="dora-inactive">
           DORA
         </div>
-        <div class="team-inactive">
+        <div className="team-inactive">
           Team
         </div>
-        <div class="social-links-inactive">
+        <div className="social-links-inactive">
           Social links
         </div>
       </div>
-      <div class="about-content-vision">
+      <div className="about-content-vision">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
  volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero er
@@ -44,11 +44,11 @@ wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobor
  dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
  wisi enim ad minim 
       </div>
-      <div class="about-content-vision-quote">
-      <div class="quote-container">
+      <div className="about-content-vision-quote">
+      <div className="quote-container">
         <img src="double-quotes.svg">
       </div>
-      <div class="quote-text">
+      <div className="quote-text">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
  erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea 
       </div>
@@ -58,4 +58,4 @@ wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobor
   }
 }
 
-export default WelcomeContainer
+export default Vision
