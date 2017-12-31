@@ -1,62 +1,62 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-class WelcomeContainer extends React.Component {
+class RecentEvents extends React.Component {
   render() {
     return (
     	<div className="recentevents">
-    		<div class="navbar">
-          <div class="loginbutton">Login</div>
-            <div class="links-div">
-          <div class="nav-links"><a href="#about">About</a></div>
-              <div class="nav-links"><a href="#events">Events</a></div>
-                <div class="nav-links"><a href="#mou">MOUs</a></div>
-                <div class="nav-links"><a href="#initiatives">Initiatives</a></div>
-                <div class="nav-links"><a href="#awards">Awards</a></div>
-                <div class="nav-links"><a href="#donate">Donate</a></div>
-                <div class="nav-links"><a href="#contact">Contact</a></div>
+    		<div className="navbar">
+          <div className="loginbutton">Login</div>
+            <div className="links-div">
+          <div className="nav-links"><a href="#about">About</a></div>
+              <div className="nav-links"><a href="#events">Events</a></div>
+                <div className="nav-links"><a href="#mou">MOUs</a></div>
+                <div className="nav-links"><a href="#initiatives">Initiatives</a></div>
+                <div className="nav-links"><a href="#awards">Awards</a></div>
+                <div className="nav-links"><a href="#donate">Donate</a></div>
+                <div className="nav-links"><a href="#contact">Contact</a></div>
           </div>
       </div>
-      <div class="separator">
+      <div className="separator">
         
       </div>
-      <div class="content-recent-events">
-        <div class="upcoming-events-inactive">
-          <div class="upcoming-events-inactive-heading">
-            <div class="upcoming-events-inactive-heading-main">
+      <div className="content-recent-events">
+        <div className="upcoming-events-inactive">
+          <div className="upcoming-events-inactive-heading">
+            <div className="upcoming-events-inactive-heading-main">
               Upcoming
             </div>
-            <div class="upcoming-events-inactive-heading-sub">
+            <div className="upcoming-events-inactive-heading-sub">
               Events
             </div>
           </div>
         </div>
-        <div class="recent-events-active">
-          <div class="recent-events-active-heading">
-            <div class="recent-events-active-heading-main">
+        <div className="recent-events-active">
+          <div className="recent-events-active-heading">
+            <div className="recent-events-active-heading-main">
               Recent
             </div>
-            <div class="recent-events-active-heading-sub">
+            <div className="recent-events-active-heading-sub">
               Events
             </div>
           </div>
-          <div class="recent-events-active-content">
-            <div class="event-name">
+          <div className="recent-events-active-content">
+            <div className="event-name">
               Global Alumni Meet
             </div>
-            <div class="event-date">
-              <div class="calender-icon">
+            <div className="event-date">
+              <div className="calender-icon">
                 <img src="calender-icon-red.svg">
               </div>
-            <div class="calender-date">
+            <div className="calender-date">
               23 March 2018
             </div>
           </div>
-          <div class="event-location">
-            <div class="location-icon">
+          <div className="event-location">
+            <div className="location-icon">
               <img src="location-icon-red.svg">
             </div>
-            <div class="location-text">
+            <div className="location-text">
               New Delhi
             </div>
           </div>
@@ -68,4 +68,4 @@ class WelcomeContainer extends React.Component {
   }
 }
 
-export default WelcomeContainer
+export default RecentEvents
