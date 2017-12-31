@@ -1597,3 +1597,160 @@ color: #A0A0A0;
   top: 80vh;
   display: flex;
 }
+
+/* write to us */
+.content-write-to-us {
+  position: absolute;
+  top: 13vh;
+}
+
+.write-to-us-active-content {
+  position: absolute;
+  top: 7.15vh;
+  left: 34.63vw;
+}
+
+.write-to-us-active-content-heading {
+  position: absolute;
+  width: 8.9vw;
+  height: 5.55vh;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 2.6vw;
+  color: #282828;
+
+}
+
+.write-to-us-active-content-heading-sub {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2.6vw;
+  color: #282828;
+}
+
+.contact-us-inactive {
+  position: absolute;
+  left: 11.9vw;
+  top: 7.15vh;
+}
+
+.contact-us-inactive-heading {
+  position: absolute;
+  width: 8.9vw;
+  height: 5.55vh;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 50px;
+  color: #D3D3D3;
+
+}
+
+.contact-us-inactive-heading-sub {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2.6vw;
+  color: #D3D3D3;
+
+}
+
+.write-to-us-active-content-email-form {
+  position: absolute;
+  margin-left: -22.5vw;
+  top: 20.43vh;
+}
+
+.write-to-us-active-content-email-form-heading {
+position: absolute;
+width: 8.9vw;
+height: 3.33vh;
+
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 1.5vw;
+
+color: #6D6D6D;
+
+}
+
+.write-to-us-active-content-email-form-content input{
+position: absolute;
+width: 32vw;
+height: 5vh;
+border-width: 0;
+background: #E5E5E5;
+font-size: 3vh;
+padding: 0.2vw;
+top: 5vh;
+}
+
+.write-to-us-active-content-comments-form-content input {
+position: absolute;
+width: 32vw;
+height: 13vh;
+border-width: 0;
+background: #E5E5E5;
+font-size: 3vh;
+padding: 0.2vw;
+}
+
+.write-to-us-active-content-comments-form-content {
+  position: absolute;
+  top: 5vh;
+}
+
+.write-to-us-active-content-comments-form {
+  position: absolute;
+  margin-left: -22.5vw;
+  top: 35vh;
+}
+
+.write-to-us-active-content-comments-form-heading {
+
+position: absolute;
+width: 11vw;
+height: 3.33vh;
+
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 30px;
+
+color: #6D6D6D;
+
+}
+
+.write-to-us-submit-button {
+position: absolute;
+width: 14.45vw;
+height: 5.2vh;
+top: 57vh;
+left: -4.5vw;
+background: #1F89C6;
+
+
+/* Submit */
+
+position: absolute;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 23px;
+vertical-align: middle;
+color: #FFFFFF;
+border-radius: 25px;
+border-width: 0;
+}
