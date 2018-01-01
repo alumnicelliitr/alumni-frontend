@@ -59,13 +59,13 @@ class ContactUs extends React.Component {
 	  			<div className="contact-follow-links">
 	  				<div className="contact-follow-links-head">Follow us on:</div>
 	  				<div className="contact-follow-links-content">
-	  					<div className="contact-follow-links-icon-1" />
+	  					<div className="contact-follow-links-icon-1">
 	  					<img src="twitter-icon.svg" />
 	  					</div>
-	  					<div className="contact-follow-links-icon-2" />
+	  					<div className="contact-follow-links-icon-2">
 	  					<img src="fb-icon.svg" />
 	  					</div>
-	  					<div className="contact-follow-links-icon-3" />
+	  					<div className="contact-follow-links-icon-3">
 	  					<img src="linkedin-icon.svg" />
 	  					</div>
 	  				</div>
