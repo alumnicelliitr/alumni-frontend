@@ -36,7 +36,7 @@ class WriteToUs extends React.Component {
             Enter mail ID
           </div>
           <div className="write-to-us-active-content-email-form-content">
-            <input type="text">
+            <input type="text" />
           </div>
         </div>
         <div className="write-to-us-active-content-comments-form">
@@ -44,7 +44,7 @@ class WriteToUs extends React.Component {
             Add comments
           </div>
           <div className="write-to-us-active-content-comments-form-content">
-            <input type="text">
+            <input type="text" />
           </div>
         </div>
         <button className="write-to-us-submit-button">
