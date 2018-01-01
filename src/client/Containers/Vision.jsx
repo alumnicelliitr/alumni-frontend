@@ -46,7 +46,7 @@ wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobor
       </div>
       <div className="about-content-vision-quote">
       <div className="quote-container">
-        <img src="double-quotes.svg">
+        <img src="double-quotes.svg" />
       </div>
       <div className="quote-text">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam

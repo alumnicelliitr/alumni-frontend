@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-className UpcomingEvents extends React.Component {
+class UpcomingEvents extends React.Component {
   render() {
     return (
     <div className="upcomingevents">
@@ -34,7 +34,7 @@ className UpcomingEvents extends React.Component {
         </div>
         <div className="event-date">
           <div className="calender-icon">
-            <img src="calender-icon.svg">
+            <img src="calender-icon.svg" />
           </div>
           <div className="calender-date">
             23 March 2018
@@ -42,7 +42,7 @@ className UpcomingEvents extends React.Component {
         </div>
         <div className="event-location">
           <div className="location-icon">
-            <img src="location-event.svg">
+            <img src="location-event.svg" />
           </div>
           <div className="location-text">
             New Delhi

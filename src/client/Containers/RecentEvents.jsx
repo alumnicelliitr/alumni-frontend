@@ -46,7 +46,7 @@ class RecentEvents extends React.Component {
             </div>
             <div className="event-date">
               <div className="calender-icon">
-                <img src="calender-icon-red.svg">
+                <img src="calender-icon-red.svg" />
               </div>
             <div className="calender-date">
               23 March 2018
@@ -54,7 +54,7 @@ class RecentEvents extends React.Component {
           </div>
           <div className="event-location">
             <div className="location-icon">
-              <img src="location-icon-red.svg">
+              <img src="location-icon-red.svg" />
             </div>
             <div className="location-text">
               New Delhi

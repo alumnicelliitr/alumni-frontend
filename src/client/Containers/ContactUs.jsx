@@ -33,7 +33,7 @@ class ContactUs extends React.Component {
 	  			<div className="contact-links">
 	  				<div className="phone">
 	  					<div className="contact-links-icon-1">
-	  						<img src="phone-icon.svg">
+	  						<img src="phone-icon.svg" />
 	  					</div>
 	  					<div className="contact-links-text-1">
 	  						+91-XXX-XXXX-XXX
@@ -41,7 +41,7 @@ class ContactUs extends React.Component {
 	  				</div>
 	  				<div className="email">
 	  					<div className="contact-links-icon-2">
-	  						<img src="email-icon.svg">
+	  						<img src="email-icon.svg" />
 	  					</div>
 	  					<div className="contact-links-text-2">
 	  						iarc@gmail.com
@@ -49,7 +49,7 @@ class ContactUs extends React.Component {
 	  				</div>
 	  				<div className="location">
 	  					<div className="contact-links-icon-3">
-	  						<img src="location-icon.svg">
+	  						<img src="location-icon.svg" />
 	  					</div>
 	  					<div className="contact-links-text-3">
 	  						IIT Roorkee Campus
@@ -59,14 +59,14 @@ class ContactUs extends React.Component {
 	  			<div className="contact-follow-links">
 	  				<div className="contact-follow-links-head">Follow us on:</div>
 	  				<div className="contact-follow-links-content">
-	  					<div className="contact-follow-links-icon-1">
-	  					<img src="twitter-icon.svg">
+	  					<div className="contact-follow-links-icon-1" />
+	  					<img src="twitter-icon.svg" />
 	  					</div>
-	  					<div className="contact-follow-links-icon-2">
-	  					<img src="fb-icon.svg">
+	  					<div className="contact-follow-links-icon-2" />
+	  					<img src="fb-icon.svg" />
 	  					</div>
-	  					<div className="contact-follow-links-icon-3">
-	  					<img src="linkedin-icon.svg">
+	  					<div className="contact-follow-links-icon-3" />
+	  					<img src="linkedin-icon.svg" />
 	  					</div>
 	  				</div>
 	  			</div>
