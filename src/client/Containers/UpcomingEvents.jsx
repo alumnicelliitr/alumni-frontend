@@ -6,17 +6,14 @@ class UpcomingEvents extends React.Component {
     return (
     <div className="upcomingevents">
     <div className="navbar">
-          <div className="loginbutton">Login</div>
-            <div className="links-div">
-          <div className="nav-links"><a href="#about">About</a></div>
-              <div className="nav-links"><a href="#events">Events</a></div>
-                <div className="nav-links"><a href="#mou">MOUs</a></div>
-                <div className="nav-links"><a href="#initiatives">Initiatives</a></div>
-                <div className="nav-links"><a href="#awards">Awards</a></div>
-                <div className="nav-links"><a href="#donate">Donate</a></div>
-                <div className="nav-links"><a href="#contact">Contact</a></div>
-          </div>
-      </div>
+          <div className="nav-links"><a href="about/vision">About</a></div>
+                <div className="nav-links"><a href="/events/recent">Events</a></div>
+                <div className="nav-links"><a href="/mou">MOUs</a></div>
+                <div className="nav-links"><a href="/initiatives">Initiatives</a></div>
+                <div className="nav-links"><a href="/awards">Awards</a></div>
+                <div className="nav-links"><a href="/donate">Donate</a></div>
+                <div className="nav-links"><a href="/contact">Contact</a></div>
+    </div>
     <div className="separator"></div>
     <div className="content-upcoming-events">
     <div className="content-upcoming-events-active">

@@ -5,14 +5,13 @@ class WelcomeContainer extends React.Component {
   render() {
     return (
 	<div class="navbar">
-	<div class="loginbutton">Login</div>
-  	<a href="#contact">Contact</a>
-  	<a href="#donate">Donate</a>
-  	<a href="#awards">Awards</a>
-  	<a href="#initiatives">Initiatives</a>
-  	<a href="#mou">MOUs</a>
-  	<a href="#events">Events</a>
- 	<a href="#about">About</a>
+	            <div className="nav-links"><a href="about/vision">About</a></div>
+                <div className="nav-links"><a href="/events/recent">Events</a></div>
+                <div className="nav-links"><a href="/mou">MOUs</a></div>
+                <div className="nav-links"><a href="/initiatives">Initiatives</a></div>
+                <div className="nav-links"><a href="/awards">Awards</a></div>
+                <div className="nav-links"><a href="/donate">Donate</a></div>
+                <div className="nav-links"><a href="/contact">Contact</a></div>
     </div>
     )
   }
