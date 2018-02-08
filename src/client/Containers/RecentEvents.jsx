@@ -13,8 +13,9 @@ class RecentEvents extends React.Component {
                 <div className="nav-links"><a href="/awards">Awards</a></div>
                 <div className="nav-links"><a href="/donate">Donate</a></div>
                 <div className="nav-links"><a href="/contact">Contact</a></div>
+        </div>
       <div className="separator">
-        
+
       </div>
       <div className="content-recent-events">
         <div className="upcoming-events-inactive">
@@ -44,18 +45,18 @@ class RecentEvents extends React.Component {
               <div className="calender-icon">
                 <img src="calender-icon-red.svg" />
               </div>
-            <div className="calender-date">
-              23 March 2018
+              <div className="calender-date">
+                23 March 2018
+              </div>
             </div>
-          </div>
-          <div className="event-location">
-            <div className="location-icon">
-              <img src="location-icon-red.svg" />
+            <div className="event-location">
+              <div className="location-icon">
+                <img src="location-icon-red.svg" />
+              </div>
+              <div className="location-text">
+                New Delhi
+              </div>
             </div>
-            <div className="location-text">
-              New Delhi
-            </div>
-          </div>
           </div>
         </div>
       </div>
