@@ -60,6 +60,7 @@ class RecentEvents extends React.Component {
         </div>
       </div>
       </div>
+      </div>
     )
   }
 }
