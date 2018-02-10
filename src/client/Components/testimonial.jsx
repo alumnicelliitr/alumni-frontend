@@ -1,14 +1,16 @@
 import React from 'react';
+import '../styles/testimonials.css';
 
 export default class Testimonial extends React.Component {
     render() {
       return (
           <div className="testimonial">
-            <div className="testimonial-heading">
+            <img src="/static/images/double-quotes.svg"/>
+            <h3 className="testimonial-heading">
               Testimonials
-            </div>
-            <div className="testimonial-thumbnail">
-              <img src=""/>
+            </h3>
+            <div className="testimonial-image">
+              <img/>
             </div>
             <div className="testimonial-content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar nibh nec nisi volutpat malesuada.

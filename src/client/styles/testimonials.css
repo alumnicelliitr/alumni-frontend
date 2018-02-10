@@ -1,0 +1,36 @@
+.testimonial{
+  background-color: #3880F4;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+.testimonial img {
+  opacity: 0.3;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 150px;
+  left: 270px;
+}
+.testimonial-heading{
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+}
+.testimonial-image{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.testimonial-content{
+  width: 40%;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
