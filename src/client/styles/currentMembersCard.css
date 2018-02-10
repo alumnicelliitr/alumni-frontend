@@ -1,0 +1,32 @@
+.current-members-card{
+  width: 250px;
+  height: 300px;
+}
+.current-members-card-image{
+  width: 230px;
+  height: 200px;
+}
+.current-members-card-content{
+  margin-left: 20px;
+  position: relative;
+}
+.list-bullet{
+  height: 15px;
+  width: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #A0A0A0;
+}
+.members-info div{
+  display: flex;
+  align-items: center;
+}
+.vertical-seperator {
+  height: 80px;
+  width: 1px;
+  border: 0.5px solid #3880F4;
+  position: absolute;
+  left: 20px;
+  top: -4px;
+}
