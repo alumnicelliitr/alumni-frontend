@@ -7,6 +7,9 @@ const renderApp = (title: string) =>
   <head>
     <title>${title}</title>
     <link rel="stylesheet" href="${STATIC_PATH}/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="${STATIC_PATH}/script/script.js"></script>
   </head>
   <body>
     <div class="${APP_CONTAINER_CLASS}"></div>
