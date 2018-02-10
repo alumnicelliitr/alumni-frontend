@@ -1,11 +1,14 @@
-html{
-  margin:0;
-  padding: 0;
-}
-body{
-  margin:0;
-  padding: 0;
-  font-family: 'Lato';
+/*.navbar {
+  position: absolute;
+  right: 2vw;
+  display: flex;
+}*/
+
+.links-div {
+    position: absolute;
+    right: 10vw;
+    display: flex;
+    top: 2.0vh;
 }
 .light-heading{
   font-weight: lighter;
@@ -165,7 +168,7 @@ background: #1F87C4;
 position: absolute;
 /*width: 56px;
 height: 30px;*/
-border-radius: 30px; 
+border-radius: 30px;
 top: 24vh;
 font-family: Lato;
 font-style: normal;
@@ -612,7 +615,7 @@ top: 5vh;
 
 .others-initiatives-div {
   position: absolute;
-  left: 30vw; 
+  left: 30vw;
   top: 5vh;
 }
 
@@ -688,7 +691,7 @@ color: #6D6D6D;
   font-size: 2.6vw;
   color: #282828;
 }
-  
+
 .write-to-us-inactive {
   position: absolute;
   top: 7.15vh;
@@ -1361,7 +1364,7 @@ color: #D3D3D3;
   position: absolute;
   left: 56vw;
   width: 12.7vw;
-} 
+}
 
 .links-container a {
 text-decoration: none;
@@ -1932,7 +1935,7 @@ color: #6D6D6D;
 position: absolute;
 width: 14.5vw;
 height: 14.5vw;
-left: 23vw; 
+left: 23vw;
 top: 178vh;
 background-color: #e5e5e5;
 border-radius: 50%;
