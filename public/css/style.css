@@ -2,7 +2,7 @@
   position: absolute;
   right: 2vw;
   display: flex;
-}*/
+}
 
 .links-div {
     position: absolute;
@@ -17,12 +17,6 @@
   font-size: 1.19vw;
   color: #282828;
   text-decoration: none;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
 }
 
 .loginbutton {
@@ -47,11 +41,17 @@
     color: #fff;
     transition: 0.2s ease;
     cursor: pointer;
+}*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
 /*.navbar {
-	position: absolute;
-	right: 5vw;
+  position: absolute;
+  right: 5vw;
   top: 1vh;
   height: 6vh;
 }*/
@@ -639,15 +639,6 @@ color: #6D6D6D;
 }
 
 /* contact us page */
-
-.separator {
-  position: absolute;
-  background-color: #000;
-  height: 0.1vh;
-  width: 100vw;
-  top: 12.5vh;
-  left: 0;
-}
 
 .content-contact-us {
   position: absolute;
