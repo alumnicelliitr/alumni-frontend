@@ -1,20 +1,16 @@
 import React from 'react';
+import FoundingMemberCard from './foundingMemberscard.jsx';
+import '../styles/foundingMembers.css';
 
 export default class FoundingMembers extends React.Component {
   render() {
     return (
-        <div className="founding-members">
-          <div className="founding-members-card">
-            <img src=""/>
-            <div className="founding-members-card-content">
-              <div className="members-info-list">
-                <ul>
-                  <li><span>Name</span></li>
-                  <li><span>Batch</span></li>
-                  <li><span>Branch</span></li>
-                </ul>
-              </div>
-            </div>
+        <div className="founding-members container">
+          <h2 className="founding-members-heading">Founding <br/><span className="founding-members-subheading">Members</span></h2>
+          <div className="founding-members-card-container container">
+            <FoundingMemberCard/>
+            <FoundingMemberCard/>
+            <FoundingMemberCard/>
           </div>
         </div>
       );
