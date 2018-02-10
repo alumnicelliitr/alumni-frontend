@@ -1,23 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router'
+import Navbar from '../Components/navbar.jsx';
 
 class WelcomeContainer extends React.Component {
   render() {
     return (
       <div className="homepage">
-        <div className="navbar">
-        	 <div className="loginbutton">Login</div>
-           <div className="links-div">
-  			      <div className="nav-links"><a href="about/vision">About</a></div>
-                <div className="nav-links"><a href="/events/recent">Events</a></div>
-                <div className="nav-links"><a href="/mou">MOUs</a></div>
-                <div className="nav-links"><a href="/initiatives">Initiatives</a></div>
-                <div className="nav-links"><a href="/awards">Awards</a></div>
-                <div className="nav-links"><a href="/donate">Donate</a></div>
-                <div className="nav-links"><a href="/contact">Contact</a></div>
-          </div>
-	  	  </div>
-      
+        <Navbar/>
         <div className="trendingNews">
           <div className="newsHead">Trending News Will Come Here</div>
           <div className="newsTag">Trending News Tagline(if any)</div>
@@ -45,7 +34,7 @@ class WelcomeContainer extends React.Component {
             <div className="outer-circle">
               <div className="middle-circle">
                 <div className="inner-circle">
-                  
+
                 </div>
               </div>
             </div>
@@ -53,7 +42,7 @@ class WelcomeContainer extends React.Component {
         </div>
         <div className="video-repo-div">
           <div className="video-placeholder">
-            
+
           </div>
           <div className="video-text">
             <div className="video-text-heading">
@@ -86,10 +75,10 @@ class WelcomeContainer extends React.Component {
             Student Alumni Mentorship Programme
           </div>
           <div className="samp-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tncidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci taton ullamcorper suscipit loborts nisl ut aliquip ex ea comm\odo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse moleste consequat, vel illum dolore eu feugiat 
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tncidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci taton ullamcorper suscipit loborts nisl ut aliquip ex ea comm\odo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse moleste consequat, vel illum dolore eu feugiat
           </div>
           <div className="samp-placeholder">
-            
+
           </div>
           <div className="register-button">
             Register
@@ -127,17 +116,17 @@ class WelcomeContainer extends React.Component {
             <div className="cardrow">
               <div className="news-card-1">
                 <div className="news-card-1-ph">
-                  
+
                 </div>
                 <div className="">
-                  
+
                 </div>
               </div>
               <div className="news-card-2">
-                
+
               </div>
               <div className="news-card-3">
-                
+
               </div>
             </div>
           </div>
