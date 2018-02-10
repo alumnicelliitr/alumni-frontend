@@ -1,19 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router'
+import Navbar from '../Components/navbar.jsx';
 
 class RecentEvents extends React.Component {
   render() {
     return (
     	<div className="recentevents">
-    		<div className="navbar">
-                <div className="nav-links"><a href="about/vision">About</a></div>
-                <div className="nav-links"><a href="/events/recent">Events</a></div>
-                <div className="nav-links"><a href="/mou">MOUs</a></div>
-                <div className="nav-links"><a href="/initiatives">Initiatives</a></div>
-                <div className="nav-links"><a href="/awards">Awards</a></div>
-                <div className="nav-links"><a href="/donate">Donate</a></div>
-                <div className="nav-links"><a href="/contact">Contact</a></div>
-        </div>
+    		<Navbar/>
       <div className="separator">
 
       </div>

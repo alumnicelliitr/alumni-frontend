@@ -1,22 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router'
+import Navbar from '../Components/navbar.jsx';
 
 class Initiatives extends React.Component {
   render() {
     return (
-    	<div classNameName="initiatives">
-    	<div className="navbar">
-          <div className="loginbutton">Login</div>
-            <div className="links-div">
-                <div className="nav-links"><a href="about/vision">About</a></div>
-                <div className="nav-links"><a href="/events/recent">Events</a></div>
-                <div className="nav-links"><a href="/mou">MOUs</a></div>
-                <div className="nav-links"><a href="/initiatives">Initiatives</a></div>
-                <div className="nav-links"><a href="/awards">Awards</a></div>
-                <div className="nav-links"><a href="/donate">Donate</a></div>
-                <div className="nav-links"><a href="/contact">Contact</a></div>
-          </div>
-      </div>
+    	<div className="initiatives">
+      <Navbar/>
       <div className="separator"></div>
       <div className="initiatives-samp-section">
       <div className="in-samp-heading">
@@ -28,13 +18,13 @@ class Initiatives extends React.Component {
           </div>
       </div>
       <div className="in-samp-text">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan 
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan
       </div>
       <div className="in-samp-register-button">
           Register
       </div>
       <div className="in-samp-placeholder">
-          
+
       </div>
       </div>
       <div className="initiatives-connect-section">
@@ -47,10 +37,10 @@ class Initiatives extends React.Component {
           </div>
       </div>
       <div className="connect-text">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolorin hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan 
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolorin hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan
       </div>
       <div className="connect-section-placeholder">
-          
+
       </div>
       </div>
       <div className="crowdfunding-section">
@@ -63,10 +53,10 @@ class Initiatives extends React.Component {
             </div>
         </div>
         <div className="crowdfunding-section-placeholder">
-              
+
         </div>
         <div className="crowdfunding-section-text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diamnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan 
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diamnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan
         </div>
         <div className="crowdfunding-visit-button">
               Visit
@@ -83,7 +73,7 @@ class Initiatives extends React.Component {
                   </div>
               </div>
               <div className="video-repo-section-text">
-                  
+
               </div>
           </div>
           <div className="lecture-series-section">
@@ -97,10 +87,10 @@ class Initiatives extends React.Component {
               </div>
           </div>
           <div className="initiatives-video-window">
-              
+
           </div>
           <div className="initiatives-video-window-text">
-              
+
           </div>
           <div className="youtube-channel-button">
               YouTube Channel
@@ -108,21 +98,21 @@ class Initiatives extends React.Component {
       </div>
       <div className="webinars">
           <div className="webinars-heading">
-              
+
           </div>
           <div className="webinars-text">
-              
+
           </div>
           <div className="webinars-placeholder">
-              
+
           </div>
       </div>
       <div className="streaming">
           <div className="live-streaming-heading">
-              
+
           </div>
           <div className="live-streaming-text">
-              
+
           </div>
           <div className="watch-button">
               Watch
