@@ -1,0 +1,6 @@
+.navbar {
+  position: fixed;
+  top:0;
+  right: 2vw;
+  display: flex;
+}
