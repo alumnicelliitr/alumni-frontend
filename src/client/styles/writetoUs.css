@@ -1,0 +1,17 @@
+.write-to-us-container{
+  width:90%;
+  margin: auto;
+}
+.write-to-us-container div{
+  width: 60%;
+}
+.form-field{
+  background-color: #E5E5E5 !important;
+}
+.label-field{
+  font-size: 1.5em !important;
+}
+.button-container{
+  display: flex;
+  justify-content: flex-end;
+}
