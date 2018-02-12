@@ -15,7 +15,7 @@ import Alum from '../Containers/Alum'
 import Story from '../Containers/Story'
 import Donate from '../Containers/Donate'
 import ContactUs from '../Containers/ContactUs'
-import WriteToUs from '../Containers/WriteToUs'
+import Contact from '../Containers/WriteToUs'
 
 import * as rC from './routeConstants'
 
@@ -76,11 +76,7 @@ const routes = {
     },
     {
       path: rC.CONTACT_US_ROUTE,
-      component: ContactUs,
-    },
-    {
-      path: rC.WRITE_TO_US_ROUTE,
-      component: WriteToUs,
+      component: Contact,
     },
     {
       path: '*',
