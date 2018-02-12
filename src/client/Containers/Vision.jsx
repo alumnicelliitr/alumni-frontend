@@ -13,17 +13,21 @@ class Vision extends React.Component {
         <Navbar/>
         <div className="vision">
           <div className="about-content">
-            <div className="row ">
+            <div className="row">
+              <div className="tabs-list-container">
               <div className="col s12 container">
-                <ul className="tabs">
-                  <li className="tab col s3"><a href="#vision">Vision</a></li>
-                  <li className="tab col s3"><a href="#dora">DORA</a></li>
-                  <li className="tab col s3"><a href="#team">Team</a></li>
+                <ul className="tabs tab-menu">
+                  <li className="tab col s3 "><a href="#vision" className="grey-text tab-link">Vision</a></li>
+                  <li className="tab col s3"><a href="#dora" className="grey-text tab-link">DORA</a></li>
+                  <li className="tab col s3"><a href="#team" className="grey-text tab-link">Team</a></li>
+                  <li className="tab col s3"><a href="#social" className="grey-text tab-link">Social Links</a></li>
                 </ul>
+              </div>
               </div>
               <div id="vision" className="about-containers"><VisionTab/></div>
               <div id="dora" className="about-containers"><Dora/></div>
               <div id="team" className="about-containers"><Team/></div>
+              <div id="social" className="about-containers">Social Links</div>
             </div>
           </div>
         </div>
