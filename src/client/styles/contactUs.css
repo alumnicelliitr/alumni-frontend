@@ -1,0 +1,32 @@
+.contactus-container{
+  width: 70%;
+  margin: auto;
+}
+.contact-links{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  padding-top: 30px;
+}
+.contact-row{
+  display: flex;
+  width: 30%;
+  margin-top: 20px;
+  color: #6D6D6D;
+}
+.contact-row div{
+  margin-left: 30px;
+}
+.contact-follow-links-head{
+  font-size: 1.5em;
+}
+.contact-follow-links{
+  margin-top: 30px;
+  width: 30%;
+}
+.contact-follow-links-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
