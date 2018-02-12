@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import Navbar from '../Components/navbar.jsx';
 import ContactUs from '../Components/contactUs.jsx';
+import WriteToUs from '../Components/writetoUs.jsx';
 
 import '../styles/contact.css';
 class Contact extends React.Component {
@@ -20,7 +21,7 @@ class Contact extends React.Component {
         </div>
         </div>
         <div id="contact-us" className="about-containers"><ContactUs/></div>
-        <div id="write-to-us" className="about-containers">write to us</div>
+        <div id="write-to-us" className="about-containers"><WriteToUs/></div>
       </div>
     </div>
   </div>
