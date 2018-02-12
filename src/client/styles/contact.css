@@ -1,0 +1,19 @@
+.contact-container {
+  margin-top: 100px;
+}
+#team{
+  width: 100%;
+}
+.tab-menu{
+  width: 80%;
+  margin:auto;
+}
+
+.tabs-list-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab li{
+  font-size: 50px;
+}
