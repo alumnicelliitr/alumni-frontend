@@ -11,7 +11,6 @@ class Vision extends React.Component {
     return (
       <div>
         <Navbar/>
-        <div className="vision">
           <div className="about-content">
             <div className="row">
               <div className="tabs-list-container">
@@ -29,7 +28,6 @@ class Vision extends React.Component {
               <div id="team" className="about-containers"><Team/></div>
               <div id="social" className="about-containers">Social Links</div>
             </div>
-          </div>
         </div>
     </div>
     );
