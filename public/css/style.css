@@ -665,7 +665,7 @@ color: #6D6D6D;
 
 }
 
-/* contact us page */
+/* contact us page
 
 .content-contact-us {
   position: absolute;
@@ -799,7 +799,7 @@ color: #6D6D6D;
 .contact-follow-links-icon-2, .contact-follow-links-icon-3 {
   padding: 1vw;
 }
-
+*/
 /* write to us */
 
 .content-write-to-us {
@@ -1201,124 +1201,6 @@ padding: 1vw;
   left: 0;
 }
 
-/*recent events*/
-.content-recent-events {
-    position: absolute;
-    top: 13vh;
-}
-
-.recent-events-active {
-    position: absolute;
-    left: 36vw;
-    top: 7.15vh;
-}
-
-.recent-events-active-heading {
-  position: absolute;
-    width: 8.9vw;
-    height: 5.55vh;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    font-size: 2.6vw;
-    color: #282828;
-}
-
-.recent-events-active-heading-sub {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 2.6vw;
-  color: #282828;
-}
-
-.recent-events-active-content {
-  display: flex;
-  position: absolute;
-  left: -24.1vw;
-  top: 20.15vh;
-}
-
-.event-name {
-  position: absolute;
-  width: 13.6vw;
-  height: 3.33vh;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 1.5vw;
-  color: #282828;
-}
-
-.event-date {
-  position: absolute;
-  width: 15vw;
-  height: 3.33vh;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 1.5vw;
-  color: #282828;
-  left: 30vw;
-}
-
-.event-location {
-  position: absolute;
-  width: 13.6vw;
-  height: 3.33vh;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 1.5vw;
-  color: #282828;
-  left: 60vw;
-}
-
-.event-date img, .event-location img {
-  padding: 0 1vw;
-}
-
-.event-date {
-  display: flex;
-}
-
-.event-location {
-  display: flex;
-}
-
-.upcoming-events-inactive {
-  position: absolute;
-  left: 11.9vw;
-  top: 7.15vh;
-}
-
-.upcoming-events-inactive-heading {
-  position: absolute;
-  width: 8.9vw;
-  height: 5.55vh;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  font-size: 50px;
-  color: #D3D3D3;
-}
-
-.upcoming-events-inactive-heading-sub {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 2.6vw;
-  color: #D3D3D3;
-}
-
 /*social links page*/
 
 .about-section-headings {
@@ -1388,128 +1270,6 @@ line-height: normal;
 font-size: 1.3vw;
 
 color: #6D6D6D;
-
-}
-
-/* upcoming events */
-.content-upcoming-events {
-    position: absolute;
-    top: 13vh;
-}
-
-.content-upcoming-events-active {
-    position: absolute;
-    left: 11.9vw;
-    top: 7.15vh;
-}
-
-.upcoming-events-heading {
-    position: absolute;
-    width: 8.9vw;
-    height: 5.55vh;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    font-size: 2.6vw;
-    color: #282828;
-}
-
-.event-date {
-  display: flex;
-}
-
-.event-location {
-  display: flex;
-}
-
-.upcoming-events-content-box {
-  display: flex;
-}
-
-.upcoming-events-heading-sub {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 2.6vw;
-  color: #282828;
-}
-
-.event-name {
-  position: absolute;
-  width: 13.6vw;
-  height: 3.33vh;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 1.5vw;
-  color: #282828;
-}
-
-.event-date {
-  position: absolute;
-  width: 15vw;
-  height: 3.33vh;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 1.5vw;
-  color: #282828;
-  left: 30vw;
-}
-
-.event-location {
-  position: absolute;
-  width: 13.6vw;
-  height: 3.33vh;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 1.5vw;
-  color: #282828;
-  left: 60vw;
-}
-
-.event-date img, .event-location img {
-  padding: 0 1vw;
-}
-
-.upcoming-events-content-box {
-  position: absolute;
-  top: 20vh;
-}
-
-.content-recent-events-inactive {
-  position: absolute;
-  top: 7.15vh;
-  left: 36vw;
-}
-
-.recent-events-inactive-heading {
-  position: absolute;
-  width: 8.9vw;
-  height: 5.55vh;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  font-size: 50px;
-  color: #D3D3D3;
-
-}
-
-.recent-events-inactive-heading-sub {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 2.6vw;
-  color: #D3D3D3;
 
 }
 
