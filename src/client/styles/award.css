@@ -1,0 +1,28 @@
+.award-name {
+	width: 25.3vw;
+	height: 8.2vh;
+	font-family: Lato;	
+	font-style: bold;
+	font-size: 58px;
+	line-height: 88px;
+	text-align: left;
+	color: #282828;
+}
+
+.award-description {
+	width: 34.5vw;
+	height: 26.2vh;
+	color: #6D6D6D;
+	font-family: Lato;
+	font-style: normal;
+	font-size: 19.2px;
+	line-height: 40px;
+	text-align: left;
+}
+
+.award-pic {
+	border-radius: 50%;
+	background-color: #e5e5e5;
+	width: 404px;
+	height: 404px;
+}
