@@ -1706,3 +1706,37 @@ color: #1F87C4;
 left: 52.8%;
 top: 210.8vh;
 }
+
+.video-lecture-section {
+  position: absolute;
+  width: 100vw;
+  height: 142vh;
+  background-color: #1f87c4;
+  top: 215vh;
+}
+
+.video-repo-section {
+  position: absolute;
+  width: 50vw;
+  height: 50%;
+}
+
+.lecture-series-section {
+  position: absolute;
+  width: 50vw;
+  height: 50%;
+  left: 50vw;
+}
+
+.video-repo-section-heading, .lecture-series-section-heading {
+  position: relative;
+  left: 11.8vw;
+  font-family: Lato;
+  font-size: 59px;
+  top: 5.55vh;
+  color: white;
+}
+
+.video-repo-heading-main, .lecture-series-heading-main {
+  font-weight: 300;
+}

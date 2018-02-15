@@ -85,6 +85,9 @@ class Initiatives extends React.Component {
                       Series
                   </div>
               </div>
+              <div className="lecture-series-section-text">
+
+              </div>
           </div>
           <div className="initiatives-video-window">
 
