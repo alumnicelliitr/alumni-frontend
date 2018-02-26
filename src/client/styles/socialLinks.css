@@ -1,0 +1,8 @@
+.sociallinks-container{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+.sociallinks-container img {
+  height: 150px;
+}
