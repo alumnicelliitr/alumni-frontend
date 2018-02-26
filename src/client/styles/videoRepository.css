@@ -1,0 +1,33 @@
+.initiative-blue-banner{
+  background-color: #1F87C4;
+  color: #fff;
+  padding: 30px 0;
+}
+.initiative-banner-content-container{
+  display: flex;
+  justify-content: space-between;
+}
+.video-repo-card{
+  width: 40%;
+}
+.initiative-video-container{
+  width: 450px;
+  height: 300px;
+  background-color: lightgrey;
+  border: 10px solid grey;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 50px;
+}
+.youtube-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  background-color: #DD3333;
+  border-radius: 50px;
+  margin: auto;
+  font-size: 1.2em;
+}
