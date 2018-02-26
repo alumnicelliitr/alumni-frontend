@@ -1,126 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router'
 import Navbar from '../Components/navbar.jsx';
+import InitiativeCard from '../Components/initiativeCard.jsx';
+import VideoRepository from '../Components/videoRepository.jsx';
+import LiveStreaming from '../Components/liveStreaming.jsx';
+import '../styles/initiatives.css';
 
 class Initiatives extends React.Component {
   render() {
+    const content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem justo, pulvinar convallis faucibus non, rhoncus vitae leo. Pellentesque ut est erat. Duis id ultrices nisi. Quisque ornare lorem ex, sit amet euismod tortor mollis at. Phasellus ullamcorper nibh nec vehicula volutpat. Donec lacinia sagittis lectus, maximus malesuada metus auctor in. Donec gravida dui odio, suscipit dignissim dui rutrum accumsan. Mauris sit amet nulla non nisl porttitor sagittis. Sed vestibulum consectetur convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ullamcorper libero rhoncus mi pharetra iaculis. Praesent a lacinia arcu.";
     return (
-    	<div className="initiatives">
-      <Navbar/>
-      <div className="separator"></div>
-      <div className="initiatives-samp-section">
-      <div className="in-samp-heading">
-          <div className="in-samp-heading-main">
-              Student Alumni
-          </div>
-          <div className="in-samp-heading-sub">
-              Mentorship Program
-          </div>
-      </div>
-      <div className="in-samp-text">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan
-      </div>
-      <div className="in-samp-register-button">
-          Register
-      </div>
-      <div className="in-samp-placeholder">
-
-      </div>
-      </div>
-      <div className="initiatives-connect-section">
-      <div className="connect-heading">
-          <div className="connect-heading-main">
-              Connect On
-          </div>
-          <div className="connect-heading-sub">
-              Request
-          </div>
-      </div>
-      <div className="connect-text">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolorin hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan
-      </div>
-      <div className="connect-section-placeholder">
-
-      </div>
-      </div>
-      <div className="crowdfunding-section">
-        <div className="crowdfunding-section-heading">
-            <div className="crowdfunding-section-heading-main">
-                Crowd
-            </div>
-            <div className="crowdfunding-section-heading-sub">
-                Funding
-            </div>
-        </div>
-        <div className="crowdfunding-section-placeholder">
-
-        </div>
-        <div className="crowdfunding-section-text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diamnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero erovcumsan
-        </div>
-        <div className="crowdfunding-visit-button">
-              Visit
+    	<div>
+        <Navbar/>
+        <div className="initiatives-container">
+          <InitiativeCard lightHeading="Student Alumni" darkHeading="Mentorship Program" content={content}/>
+          <InitiativeCard lightHeading="Connect on" darkHeading="Request" content={content}/>
+          <VideoRepository/>
+          <InitiativeCard darkHeading="Webinars" content={content}/>
+          <LiveStreaming/>
         </div>
       </div>
-      <div className="video-lecture-section">
-          <div className="video-repo-section">
-              <div className="video-repo-section-heading">
-                  <div className="video-repo-heading-main">
-                      Video
-                  </div>
-                  <div className="video-repo-heading-sub">
-                      Repository
-                  </div>
-              </div>
-              <div className="video-repo-section-text">
-
-              </div>
-          </div>
-          <div className="lecture-series-section">
-              <div className="lecture-series-section-heading">
-                  <div className="lecture-series-heading-main">
-                      Lecture
-                  </div>
-                  <div className="lecture-series-heading-sub">
-                      Series
-                  </div>
-              </div>
-          </div>
-          <div className="initiatives-video-window">
-
-          </div>
-          <div className="initiatives-video-window-text">
-
-          </div>
-          <div className="youtube-channel-button">
-              YouTube Channel
-          </div>
-      </div>
-      <div className="webinars">
-          <div className="webinars-heading">
-
-          </div>
-          <div className="webinars-text">
-
-          </div>
-          <div className="webinars-placeholder">
-
-          </div>
-      </div>
-      <div className="streaming">
-          <div className="live-streaming-heading">
-
-          </div>
-          <div className="live-streaming-text">
-
-          </div>
-          <div className="watch-button">
-              Watch
-          </div>
-      </div>
-      </div>
-    )
+    );
   }
 }
 
-export default Initiatives
+export default Initiatives;
