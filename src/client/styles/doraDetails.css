@@ -1,0 +1,10 @@
+.dora-name{
+  color: #3880F4;
+  font-size: 1.2em;
+}
+.dora-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
