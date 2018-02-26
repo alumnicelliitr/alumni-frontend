@@ -1,0 +1,18 @@
+.message-dora{
+  color: #fff;
+  background-color: #3880F4;
+  padding: 30px 0;
+  margin-top: 65px;
+  width: 100%;
+}
+.message-dora-content{
+  display: flex;
+  justify-content: space-between;
+}
+.message{
+  width: 50%;
+}
+.message-video{
+  width: 40%;
+  border: 5px solid #E5E5E5;
+}
