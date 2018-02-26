@@ -4,6 +4,8 @@ import Navbar from '../Components/navbar.jsx';
 import VisionTab from '../Components/vision.jsx';
 import Dora from '../Components/dora.jsx';
 import Team from '../Components/team.jsx';
+import SocialLinks from '../Components/socialLinks.jsx';
+
 import '../styles/about.css';
 
 class Vision extends React.Component {
@@ -26,7 +28,7 @@ class Vision extends React.Component {
               <div id="vision" className="about-containers"><VisionTab/></div>
               <div id="dora" className="about-containers"><Dora/></div>
               <div id="team" className="about-containers"><Team/></div>
-              <div id="social" className="about-containers">Social Links</div>
+              <div id="social" className="about-containers"><SocialLinks/></div>
             </div>
         </div>
     </div>
