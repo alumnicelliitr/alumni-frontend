@@ -6,7 +6,7 @@ export default class CurrentMembers extends React.Component {
   render() {
     return (
         <div className="current-members container">
-          <h2 className="current-members-heading">Current <br/><span className="current-members-subheading">Members</span></h2>
+          <h3 className="current-members-heading">Current <br/><span className="current-members-subheading">Members</span></h3>
           <div className="current-members-card-container">
             <CurrentMemberCard/>
             <CurrentMemberCard/>

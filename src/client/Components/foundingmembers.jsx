@@ -6,7 +6,7 @@ export default class FoundingMembers extends React.Component {
   render() {
     return (
         <div className="founding-members container">
-          <h2 className="founding-members-heading">Founding <br/><span className="founding-members-subheading">Members</span></h2>
+          <h3 className="light-heading">Founding <br/><span className="dark-subheading">Members</span></h3>
           <div className="founding-members-card-container container">
             <FoundingMemberCard/>
             <FoundingMemberCard/>

@@ -1,3 +1,5 @@
+/*#################################
+#####################################*/
 html{
   margin:0;
   padding: 0;
@@ -6,6 +8,14 @@ body{
   margin:0;
   padding: 0;
 }
+.light-heading{
+  font-weight: lighter;
+}
+.dark-subheading{
+  font-weight: normal;
+}
+/*#########################################
+###########################################*/
 /*.navbar {
   position: absolute;
   right: 2vw;
@@ -308,24 +318,9 @@ color: #6D6D6D;
 
 }
 
-.youtube-button {
-/* Youtube channel */
-
-position: absolute;
-width: 183px;
-height: 30px;
-padding: 1vh 3vw;
+top: 67vh;
+left: 42.77vw;
 border-radius: 30px;
-top: 20vh;
-left: 10.2vw;
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
-line-height: normal;
-font-size: 25px;
-background-color: #ff0000;
-color: #FFFFFF;
-}
 
 .samp {
   height: 81.2vh;
@@ -381,16 +376,6 @@ top: 23vh;
 .register-button {
 background: #F26C21;
 position: absolute;
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
-line-height: normal;
-font-size: 25px;
-padding: 1vh 3vw;
-color: #FFFFFF;
-top: 67vh;
-left: 42.77vw;
-border-radius: 30px;
 
 }
 
@@ -398,8 +383,21 @@ border-radius: 30px;
   position: absolute;
   height: 55.83vh;
   top: 322.6vh;
+font-weight: 300;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 25px;
+padding: 1vh 3vw;
+color: #FFFFFF;
   background-color: #f2f2f2;
   left: 0;
+line-height: normal;
+font-size: 73.6023px;
+top: 9.5vh;
+color: #6D6D6D;
+
   width: 100vw;
 }
 
@@ -410,12 +408,6 @@ height: 89px;
 left: 11.87vw;
 font-family: Lato;
 font-style: normal;
-font-weight: 300;
-line-height: normal;
-font-size: 73.6023px;
-top: 9.5vh;
-color: #6D6D6D;
-
 }
 
 .alumni-cards-heading-sub {
@@ -1253,30 +1245,6 @@ font-size: 1.3vw;
 color: #6D6D6D;
 
 }
-
-/* vision */
-.about-section-headings {
-  position: absolute;
-  top: 19.4vh;
-  left: 11.9vw;
-  display: flex;
-}
-
-.vision-active {
-position: absolute;
-width: 7.2vw;
-height: 5.55vh;
-
-font-family: Lato;
-font-style: normal;
-font-weight: bold;
-line-height: normal;
-font-size: 2.6vw;
-
-color: #383838;
-
-}
-
 .dora-inactive, .team-inactive, .social-links-inactive {
 position: absolute;
 width: 7.2vw;
@@ -1307,49 +1275,6 @@ color: #D3D3D3;
   left: 56vw;
   width: 12.7vw;
 }
-
-.about-content-vision {
-  position: absolute;
-  left: 11.9vw;
-  top: 40.8vh;
-  right: 13.125vw;
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
-line-height: 3.7vh;
-font-size: 2.22vh;
-
-color: #6D6D6D;
-
-}
-
-.quote-text {
-position: absolute;
-width: 72.44vw;
-height: 7.5vh;
-left: 3vw;
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
-line-height: 3.7vh;
-font-size: 1.25vw;
-
-color: #A0A0A0;
-
-}
-
-.quote-container {
-  position: absolute;
-  top: -2vh;
-}
-
-.about-content-vision-quote {
-  position: absolute;
-  left: 11.9vw;
-  top: 80vh;
-  display: flex;
-}
-
 /* write to us */
 .content-write-to-us {
   position: absolute;
@@ -1508,7 +1433,7 @@ border-width: 0;
 }
 
 
-/* initiatives */
+/* initiatives
 
 .in-samp-heading {
 position: absolute;
@@ -1706,3 +1631,4 @@ color: #1F87C4;
 left: 52.8%;
 top: 210.8vh;
 }
+*/
