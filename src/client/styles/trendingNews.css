@@ -1,0 +1,15 @@
+.trending-news{
+  margin-top: 68px;
+}
+.carousel{
+  height: 400px !important;
+}
+.carousel-links {
+  position: relative;
+}
+.image-heading{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: #fff;
+}
