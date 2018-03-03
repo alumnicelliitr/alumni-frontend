@@ -1,0 +1,36 @@
+.video-landing-container{
+  background-color: #1F87C4;
+  color: #fff;
+  padding: 20px 0;
+}
+.video-landing-container .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-image{
+  width: 350px;
+  border: solid 20px lightgrey;
+}
+.video-content{
+  width: 50%;
+}
+.more-video{
+  padding: 20px 0;
+  background-color: #f2f2f2;
+}
+.more-content span{
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+.youtube-landing-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  background-color: #DD3333;
+  border-radius: 50px;
+  margin-top: 20px;
+}
