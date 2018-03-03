@@ -1,0 +1,27 @@
+.landing-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  line-height: 2;
+}
+.links-list{
+  display: flex;
+  flex-direction: column;
+}
+.heading-link{
+  font-size: 1.3em;
+  color: #282828;
+}
+.subheading-link{
+  font-size: 1.1em;
+  color: #6D6D6D;
+}
+.follow-icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140%;
+}
+.follow-icon{
+  width: 30px;
+}
