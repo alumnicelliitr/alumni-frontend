@@ -7,6 +7,7 @@ html{
 body{
   margin:0;
   padding: 0;
+  color: 'Roboto';
 }
 .light-heading{
   font-weight: lighter;
@@ -16,51 +17,6 @@ body{
 }
 /*#########################################
 ###########################################*/
-/*.navbar {
-  position: absolute;
-  right: 2vw;
-  display: flex;
-}
-
-.links-div {
-    position: absolute;
-    right: 10vw;
-    display: flex;
-    top: 2.0vh;
-}
-
-.nav-links a {
-  float: right;
-  padding: 1vw;
-  font-size: 1.19vw;
-  color: #282828;
-  text-decoration: none;
-}
-
-.loginbutton {
-    position: absolute;
-    right: 2vw;
-    top: 3.5vh;
-    border: 1px solid #888;
-    background: #fff;
-    padding: 1vh 4vh;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 36px;
-    color: #0f0a0f;
-    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
-    text-decoration: none;
-    vertical-align: middle;
-}
-
-.loginbutton:hover {
-    border-top-color: #97c8e8;
-    background: #888;
-    color: #fff;
-    transition: 0.2s ease;
-    cursor: pointer;
-}*/
-
 .sticky {
   position: fixed;
   top: 0;
@@ -73,42 +29,6 @@ body{
   top: 1vh;
   height: 6vh;
 }*/
-
-.trendingNews {
-    position: absolute;
-    top: 13vh;
-    left: 0;
-    width: 100vw;
-    height: 64.1vh;
-    background-color: black;
-    color: white;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Sans-Serif;
-}
-
-.newsHead {
-    position: absolute;
-    left: 11.6vw;
-    right: 59.3vw;
-  /*right: 70vw;*/
-    font-weight: 100;
-  /*position: relative;*/
-    top: 13.33vh;
-    font-size: 4.14vw;
-}
-
-.newsTag {
-    font-weight: 40;
-    position: absolute;
-    left: 11.6vw;
-    right: 59.3vw;
-  /*right: 70vw;*/
-  /*position: relative;*/
-    top: 33.89vh;
-    font-size: 3.89vh;
-}
-
 
 .mou-text-heading-main {
 position: absolute;
@@ -175,12 +95,6 @@ color: #6D6D6D;
 background: #1F87C4;
 position: absolute;
 /*width: 56px;
-height: 30px;*/
-border-radius: 30px;
-top: 24vh;
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
 line-height: normal;
 font-size: 25px;
 }
@@ -346,22 +260,7 @@ color: #282828;
 
 }
 
-.samp-text {
-  /* Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tncidunt ut laor eet dolore magna aliquam erat volutpat. Ut wisi en im ad minim veniam, quis nostrud exerci taton ulla mcorper suscipit loborts nisl ut aliquip ex ea comm odo consequat. Duis autem vel eum iriure dolor in h endrerit in vulputate velit esse moleste consequat, vel illum dolore eu feugiat */
 
-position: absolute;
-width: 842px;
-height: 336px;
-top: 30vh;
-font-family: Lato;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-font-size: 35px;
-left: 11.6vw;
-color: #6D6D6D;
-
-}
 
 .samp-placeholder {
 position: absolute;
