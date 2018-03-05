@@ -7,7 +7,7 @@ html{
 body{
   margin:0;
   padding: 0;
-  color: 'Roboto';
+  font-family: 'Roboto';
 }
 .light-heading{
   font-weight: lighter;
