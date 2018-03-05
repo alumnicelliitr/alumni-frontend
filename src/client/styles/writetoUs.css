@@ -1,17 +1,33 @@
 .write-to-us-container{
-  width:90%;
-  margin: auto;
+  padding: 20px 0;
+  color: #6D6D6D;
 }
 .write-to-us-container div{
-  width: 60%;
+  width: 75%;
 }
-.form-field{
-  background-color: #E5E5E5 !important;
+.label {
+  font-size: 1.3em;
+  margin: 10px 0;
 }
-.label-field{
-  font-size: 1.5em !important;
+.form-container input {
+  width: 100%;
+  background-color: #E5E5E5;
+  padding: 10px 5px;
+  border: none;
+  font-size: 1.2em;
 }
-.button-container{
-  display: flex;
-  justify-content: flex-end;
+.form-container input:focus {
+  outline: none;
+}
+.form-container textarea {
+  width: 100%;
+  background-color: #E5E5E5;
+  padding: 10px 5px;
+  border: none;
+  resize: none;
+  height: 200px;
+  font-size: 1.2em;
+}
+.form-container textarea:focus {
+  outline: none;
 }

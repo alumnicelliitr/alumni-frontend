@@ -5,30 +5,46 @@ import VisionTab from '../Components/vision.jsx';
 import Dora from '../Components/dora.jsx';
 import Team from '../Components/team.jsx';
 import SocialLinks from '../Components/socialLinks.jsx';
-
+import Tabs from '../Components/tabs.jsx';
 import '../styles/about.css';
 
 class Vision extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeTab: 0
+    };
+  }
+
+  tabClick(clickTab) {
+    this.setState({
+      activeTab: clickTab
+    });
+  }
+
   render() {
+    const tabs = [
+      {lightHeading: '',darkHeading: 'Vision'},
+      {lightHeading: '',darkHeading: 'DORA'},
+      {lightHeading: '',darkHeading: 'Team'},
+      {lightHeading: '',darkHeading: 'Social Links'}
+    ];
+
+    const tabContent = [
+      ( <div id="vision" className="about-containers"><VisionTab/></div> ),
+      ( <div id="dora" className="about-containers"><Dora/></div> ),
+      ( <div id="team" className="about-containers"><Team/></div> ),
+      ( <div id="social" className="about-containers"><SocialLinks/></div> )
+    ];
     return (
       <div>
         <Navbar/>
           <div className="about-content">
             <div className="row">
-              <div className="tabs-list-container">
-              <div className="col s12 container">
-                <ul className="tabs tab-menu">
-                  <li className="tab col s3 "><a href="#vision" className="grey-text tab-link">Vision</a></li>
-                  <li className="tab col s3"><a href="#dora" className="grey-text tab-link">DORA</a></li>
-                  <li className="tab col s3"><a href="#team" className="grey-text tab-link">Team</a></li>
-                  <li className="tab col s3"><a href="#social" className="grey-text tab-link">Social Links</a></li>
-                </ul>
+              <div className="container">
+                <Tabs tabs={tabs} onClick={(clickTab) => this.tabClick(clickTab)} activeTab={this.state.activeTab} />
               </div>
-              </div>
-              <div id="vision" className="about-containers"><VisionTab/></div>
-              <div id="dora" className="about-containers"><Dora/></div>
-              <div id="team" className="about-containers"><Team/></div>
-              <div id="social" className="about-containers"><SocialLinks/></div>
+              {tabContent[this.state.activeTab]}
             </div>
         </div>
     </div>
