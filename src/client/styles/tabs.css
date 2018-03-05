@@ -1,0 +1,15 @@
+.tabs-container{
+  display: flex;
+}
+.custom-tab{
+  display: flex;
+  flex-direction: column;
+  color: #D3D3D3;
+  font-size: 2.5em;
+  line-height: 1;
+  width: 400px;
+  cursor: pointer;
+}
+.active-tab{
+  color: #282828;
+}
