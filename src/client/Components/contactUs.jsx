@@ -14,9 +14,9 @@ export default class ContactUs extends React.Component {
             </div>
             <div className="email contact-row">
               <img src="/static/images/email-icon.svg" />
-              <div className="contact-links-text-2">
+              <a className="contact-links-text-2" href="mailto:iarc@gmail.com">
                 iarc@gmail.com
-              </div>
+              </a>
             </div>
             <div className="location contact-row">
               <img src="/static/images/location-icon.svg" />
@@ -28,9 +28,9 @@ export default class ContactUs extends React.Component {
           <div className="contact-follow-links">
             <div className="contact-follow-links-head">Follow us on:</div>
             <div className="contact-follow-links-container">
-              <img src="/static/images/twitter-icon.svg" />
-              <img src="/static/images/fb-icon.svg" />
-              <img src="/static/images/linkedin-icon.svg" />
+              <a href="https://www.linkedin.com/company/iarciitr/"><img src="/static/images/linkedin-icon.svg"/></a>
+              <a href="https://www.facebook.com/alumnicelliitr/"><img src="/static/images/fb-icon.svg"/></a>
+              <a href="https://twitter.com/alumnicelliitr"><img src="/static/images/twitter-icon.svg"/></a>
             </div>
           </div>
         </div>

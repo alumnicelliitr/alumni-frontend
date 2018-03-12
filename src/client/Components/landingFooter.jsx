@@ -35,10 +35,10 @@ export default class LandingFooter extends React.Component {
           <a className="subheading-link" href="#">Email</a>
           <a className="subheading-link" href="#">Follow Us On</a>
           <div className="follow-icons">
-            <a href="#"><img src="/static/images/twitter-dark.svg" className="follow-icon"/></a>
-            <a href="#"><img src="/static/images/fb-dark.svg" className="follow-icon"/></a>
-            <a href="#"><img src="/static/images/in-dark.svg" className="follow-icon"/></a>
-            <a href="#"><img src="/static/images/youtube-dark.svg" className="follow-icon"/></a>
+            <a href="https://twitter.com/alumnicelliitr"><img src="/static/images/twitter-dark.svg" className="follow-icon"/></a>
+            <a href="https://www.facebook.com/alumnicelliitr/"><img src="/static/images/fb-dark.svg" className="follow-icon"/></a>
+            <a href="https://www.linkedin.com/company/iarciitr"><img src="/static/images/in-dark.svg" className="follow-icon"/></a>
+            <a href="https://www.youtube.com/channel/UCodyYSNBkcFMrZbOUZ0qlBw"><img src="/static/images/youtube-dark.svg" className="follow-icon"/></a>
           </div>
         </div>
       </div>
