@@ -2,8 +2,8 @@
   padding: 20px 0;
   color: #6D6D6D;
 }
-.write-to-us-container div{
-  width: 75%;
+.write-to-us-inner-container{
+  width: 50%;
 }
 .label {
   font-size: 1.3em;
@@ -15,6 +15,9 @@
   padding: 10px 5px;
   border: none;
   font-size: 1.2em;
+}
+.invalid {
+  border: 2px solid rgba(227, 0, 0, 0.5);
 }
 .form-container input:focus {
   outline: none;
@@ -29,5 +32,26 @@
   font-size: 1.2em;
 }
 .form-container textarea:focus {
+  outline: none;
+}
+.submit-button-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  background-color: #1F87C4;
+  border: none;
+  border-radius: 50px;
+  font-size: 1em;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.submit-button:focus {
   outline: none;
 }
