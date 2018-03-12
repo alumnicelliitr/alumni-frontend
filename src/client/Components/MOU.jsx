@@ -11,7 +11,7 @@ export default class MOU extends React.Component {
           <a className="view-button" href="#">View</a>
         </div>
         <div className="image-outer">
-          <img className="image-inner" src="/static/images/grey.jpg"/>
+          <img className="image-inner" src="/static/images/mou.png"/>
         </div>
       </div>
     );

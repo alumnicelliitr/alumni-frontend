@@ -11,7 +11,7 @@ export default class SAMP extends React.Component {
           <div className="samp-content">
             {content}
           </div>
-          <img className="samp-image" src="/static/images/grey.jpg"/>
+          <img className="samp-image" src="/static/images/samp.png"/>
         </div>
         <a className="register-button" href="#">Register</a>
       </div>
