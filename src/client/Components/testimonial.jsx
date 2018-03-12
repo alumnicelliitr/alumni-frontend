@@ -5,7 +5,7 @@ export default class Testimonial extends React.Component {
     render() {
       return (
           <div className="testimonial">
-            <img src="/static/images/double-quotes.svg"/>
+            <img className="quote-icon" src="/static/images/double-quotes.svg"/>
             <h3 className="testimonial-heading">
               Testimonials
             </h3>
