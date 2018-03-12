@@ -6,13 +6,15 @@
   justify-content: space-around;
   position: relative;
 }
-.testimonial img {
+.quote-icon{
+  background-color: #3880F4;
   opacity: 0.3;
   height: 150px;
   width: 150px;
   position: absolute;
   top: 150px;
   left: 270px;
+  border: none;
 }
 .testimonial-heading{
   font-weight: lighter;
