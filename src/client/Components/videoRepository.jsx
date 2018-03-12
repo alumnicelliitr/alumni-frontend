@@ -22,9 +22,12 @@ export default class VideoRepository extends React.Component {
               <VideoRepositoryCard lightHeading="Video" darkHeading="Repository" content={content}/>
               <VideoRepositoryCard lightHeading="Lecture" darkHeading="Series" content={content}/>
             </div>
-            <div className="initiative-video-container"></div>
+            <div className="video-repo-iframe-container container">
+              <img className="video-repo-image" src="/static/images/imac-template.png"/>
+              <iframe className="video-repo-iframe" src="https://www.youtube.com/embed/VeSApPYcCBM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+            </div>
             <h3 className="light-heading" style={{"textAlign":"center"}}>See more of these at our Youtube channel</h3>
-            <a className="youtube-button" href="#">YouTube channel</a>
+            <a className="youtube-button" href="https://www.youtube.com/channel/UCodyYSNBkcFMrZbOUZ0qlBw">YouTube channel</a>
           </div>
         </div>
       );

@@ -8,12 +8,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.video-image{
-  width: 350px;
-  border: solid 20px lightgrey;
-}
 .video-content{
-  width: 50%;
+  width: 40%;
 }
 .more-video{
   padding: 20px 0;
@@ -33,4 +29,20 @@
   background-color: #DD3333;
   border-radius: 50px;
   margin-top: 20px;
+}
+.iframe-container{
+  position: relative;
+}
+.video-image{
+  width: 400px;
+  height: 300px;
+}
+.iframe-video{
+  position: absolute;
+  top:15px;
+  left: 15px;
+  z-index: 5;
+  width: 370px;
+  height: 195px;
+  border: none;
 }

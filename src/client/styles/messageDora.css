@@ -5,14 +5,20 @@
   margin-top: 65px;
   width: 100%;
 }
-.message-dora-content{
+.message-dora-container{
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.message{
+.message-dora-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
 }
 .message-video{
-  width: 40%;
-  border: 5px solid #E5E5E5;
+  width: 370px;
+  height: 300px;
+  border: 20px solid #E5E5E5;
+  border-radius: 10px;
 }
