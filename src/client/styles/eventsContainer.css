@@ -1,0 +1,19 @@
+.events-tab-container{
+  display: flex;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+.events-tab{
+  width: 200px;
+  color: #D3D3D3;
+  cursor: pointer;
+}
+.active-recent-tab{
+  color: #FF2C2C;
+}
+.active-upcoming-tab{
+  color: #1F89C6;
+}
+.events-content{
+  margin-top: 20px;
+}

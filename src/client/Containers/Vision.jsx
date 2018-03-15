@@ -6,6 +6,8 @@ import Dora from '../Components/dora.jsx';
 import Team from '../Components/team.jsx';
 import SocialLinks from '../Components/socialLinks.jsx';
 import Tabs from '../Components/tabs.jsx';
+import LandingFooter from '../Components/landingFooter.jsx';
+
 import '../styles/about.css';
 
 class Vision extends React.Component {
@@ -47,7 +49,8 @@ class Vision extends React.Component {
               {tabContent[this.state.activeTab]}
             </div>
         </div>
-    </div>
+        <LandingFooter/>
+      </div>
     );
   }
 }

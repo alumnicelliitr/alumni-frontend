@@ -1,6 +1,7 @@
 import React from 'react';
 import AwardsCard from '../Components/awardsCard.jsx';
 import Navbar from '../Components/navbar.jsx';
+import LandingFooter from '../Components/landingFooter.jsx';
 
 import '../styles/awards.css';
 
@@ -43,6 +44,7 @@ export default class Awards extends React.Component {
             {cards}
           </div>
         </div>
+        <LandingFooter/>
       </div>
     );
   }

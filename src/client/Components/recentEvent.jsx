@@ -5,11 +5,13 @@ import '../styles/recentEvent.css';
 
 export default class RecentEvent extends React.Component {
   render() {
+    let events = this.props.recent.map((event) => {
+      return (<EventCard CalenderimagePath="calender-icon-red.svg" LocationImagePath="location-icon-red.svg" title={event.title} date={event.end_date} venue={event.venue}/>);
+    });
+
     return (
         <div className="recent-events-container">
-          <EventCard CalenderimagePath="calender-icon-red.svg" LocationImagePath="location-icon-red.svg"/>
-          <EventCard CalenderimagePath="calender-icon-red.svg" LocationImagePath="location-icon-red.svg"/>
-          <EventCard CalenderimagePath="calender-icon-red.svg" LocationImagePath="location-icon-red.svg"/>
+          {events}
         </div>
       );
   }
