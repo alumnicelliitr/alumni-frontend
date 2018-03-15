@@ -4,6 +4,8 @@ import Navbar from '../Components/navbar.jsx';
 import InitiativeCard from '../Components/initiativeCard.jsx';
 import VideoRepository from '../Components/videoRepository.jsx';
 import LiveStreaming from '../Components/liveStreaming.jsx';
+import LandingFooter from '../Components/landingFooter.jsx';
+
 import '../styles/initiatives.css';
 
 class Initiatives extends React.Component {
@@ -19,6 +21,7 @@ class Initiatives extends React.Component {
           <InitiativeCard darkHeading="Webinars" content={content}/>
           <LiveStreaming/>
         </div>
+        <LandingFooter/>
       </div>
     );
   }

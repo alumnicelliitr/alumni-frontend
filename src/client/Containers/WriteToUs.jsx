@@ -4,6 +4,7 @@ import Navbar from '../Components/navbar.jsx';
 import ContactUs from '../Components/contactUs.jsx';
 import WriteToUs from '../Components/writetoUs.jsx';
 import Tabs from '../Components/tabs.jsx';
+import LandingFooter from '../Components/landingFooter.jsx';
 
 import '../styles/contact.css';
 class Contact extends React.Component {
@@ -43,6 +44,7 @@ class Contact extends React.Component {
             {tabContent[this.state.activeTab]}
           </div>
         </div>
+        <LandingFooter/>
       </div>
     );
   }

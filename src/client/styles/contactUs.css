@@ -1,6 +1,9 @@
 .contactus-container{
-  width: 70%;
-  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-card{
+  width: 100%;
 }
 .contact-links{
   display: flex;
@@ -10,7 +13,6 @@
 }
 .contact-row{
   display: flex;
-  width: 30%;
   margin-top: 20px;
   color: #6D6D6D;
 }
@@ -30,7 +32,7 @@
 }
 .contact-follow-links{
   margin-top: 30px;
-  width: 30%;
+  width: 40%;
 }
 .contact-follow-links-container{
   display: flex;

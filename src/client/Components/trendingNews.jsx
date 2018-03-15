@@ -1,8 +1,43 @@
 import React from 'react';
 import '../styles/trendingNews.css';
 
+class TrendingNewsCard extends React.Component {
+  render() {
+    return (
+      <a className="carousel-item carousel-links">
+        <img src={this.props.image}/>
+        <div className="image-heading"><h1>{this.props.title}</h1></div>
+      </a>
+    );
+  }
+}
+
+TrendingNewsCard.defaultProps = {
+  image: '/static/images/grey.jpg'
+};
+
 export default class TrendingNews extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoaded: false,
+      data: [],
+    };
+  }
+
   componentDidMount(){
+    let request = new Request('https://institute-alumni-relation-cell.herokuapp.com/api/website/headlines/',{
+      method:'get',
+    });
+    fetch(request)
+    .then((res) => res.json())
+    .then((res) => {
+      this.setState({
+        isLoaded: true,
+        data:res,
+      });
+    });
+
     $('.carousel.carousel-slider').carousel({fullWidth: true});
     $('.moveNextCarousel').click(function(e){
       e.preventDefault();
@@ -18,6 +53,10 @@ export default class TrendingNews extends React.Component {
   }
 
   render() {
+    let newsCards = this.state.data.map((news) => {
+      return (<TrendingNewsCard image={news.image} title={news.title} />);
+    });
+
     return (
       <div className="trending-news">
         <div className="carousel carousel-slider center" data-indicators="true">
@@ -29,13 +68,7 @@ export default class TrendingNews extends React.Component {
               <a className=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i className="material-icons right middle-indicator-text">chevron_right</i></a>
             </div>
           </div>
-          <a className="carousel-item carousel-links" href="#one!">
-            <img src="/static/images/grey.jpg"/>
-            <div className="image-heading"><h1>Some News</h1><h2>Tagline</h2></div>
-          </a>
-          <a className="carousel-item" href="#two!"><img src="/static/images/grey.jpg"/></a>
-          <a className="carousel-item" href="#three!"><img src="/static/images/grey.jpg"/></a>
-          <a className="carousel-item" href="#four!"><img src="/static/images/grey.jpg"/></a>
+          {newsCards}
         </div>
       </div>
     );
