@@ -17,6 +17,8 @@ import Donate from '../Containers/Donate';
 import ContactUs from '../Containers/ContactUs';
 import Contact from '../Containers/WriteToUs';
 import Awards from '../Containers/awards.jsx';
+import AboutEvent from '../Containers/aboutEvent.jsx';
+import Publications from '../Containers/publications.jsx';
 import * as rC from './routeConstants';
 
 const routes = {
@@ -81,6 +83,14 @@ const routes = {
     {
       path: rC.AWARDS_ROUTE,
       component: Awards,
+    },
+    {
+      path: rC.ABOUT_EVENT_ROUTE,
+      component: AboutEvent,
+    },
+    {
+      path: rC.PUBLICATIONS,
+      component: Publications,
     },
     {
       path: '*',
