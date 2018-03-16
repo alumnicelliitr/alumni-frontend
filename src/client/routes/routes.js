@@ -94,6 +94,14 @@ const routes = {
       component: AlumniDashboard,
     },
     {
+      path: rC.ABOUT_EVENT_ROUTE,
+      component: AboutEvent,
+    },
+    {
+      path: rC.PUBLICATIONS,
+      component: Publications,
+    },
+    {
       path: '*',
       component: NotFoundContainer,
     },
