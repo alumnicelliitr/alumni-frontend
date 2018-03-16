@@ -4,7 +4,7 @@ import '../styles/trendingNews.css';
 class TrendingNewsCard extends React.Component {
   render() {
     return (
-      <a className="carousel-item carousel-links">
+      <a className="carousel-item carousel-links center">
         <img src={this.props.image}/>
         <div className="image-heading"><h1>{this.props.title}</h1></div>
       </a>
@@ -26,6 +26,18 @@ export default class TrendingNews extends React.Component {
   }
 
   componentDidMount(){
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    $('.moveNextCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('next');
+    });
+
+    $('.movePrevCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('prev');
+    });
     let request = new Request('https://institute-alumni-relation-cell.herokuapp.com/api/website/headlines/',{
       method:'get',
     });
@@ -37,25 +49,15 @@ export default class TrendingNews extends React.Component {
         data:res,
       });
     });
-
-    $('.carousel.carousel-slider').carousel({fullWidth: true});
-    $('.moveNextCarousel').click(function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      $('.carousel').carousel('next');
-   });
-
-   $('.movePrevCarousel').click(function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      $('.carousel').carousel('prev');
-   });
   }
 
   render() {
-    let newsCards = this.state.data.map((news) => {
-      return (<TrendingNewsCard image={news.image} title={news.title} />);
-    });
+    let newsCards;
+    if(this.state.isLoaded) {
+      newsCards = this.state.data.map((news, index) => {
+        return (<TrendingNewsCard image={news.image} title={news.title} key={index}/>);
+      });
+    }
 
     return (
       <div className="trending-news">

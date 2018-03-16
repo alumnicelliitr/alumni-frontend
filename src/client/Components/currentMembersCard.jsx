@@ -9,7 +9,7 @@ export default class CurrentMemberCard extends React.Component {
           <div className="current-members-card-content">
             <div className="members-info">
               <div><div className="list-bullet"/>{this.props.name}</div>
-              <div><div className="list-bullet"/>{this.props.batch}</div>
+              {/*<div><div className="list-bullet"/>{this.props.batch}</div>*/}
               <div><div className="list-bullet"/>{this.props.branch}</div>
             </div>
             <div className="vertical-seperator"/>

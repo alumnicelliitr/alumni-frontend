@@ -3,31 +3,9 @@ import CurrentMemberCard from './currentMembersCard.jsx';
 import '../styles/currentMembers.css';
 
 export default class CurrentMembers extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoaded: false,
-      data: [],
-    };
-  }
-
-  componentDidMount() {
-    let request = new Request('https://institute-alumni-relation-cell.herokuapp.com/api/website/members/',{
-      method:'get',
-    });
-    fetch(request)
-    .then((res) => res.json())
-    .then((res) => {
-      this.setState({
-        isLoaded: true,
-        data: res,
-      });
-    });
-  }
-
   render() {
-    const members = this.state.data.map((member) => {
-      return (<CurrentMemberCard name={member.name} branch={member.branch} batch={member.batch} image={member.image} />);
+    const members = this.props.members.map((member) => {
+      return (<CurrentMemberCard name={member.user.name} branch={member.user.branch} image={member.user.image} />);
     });
 
     return (
@@ -36,7 +14,6 @@ export default class CurrentMembers extends React.Component {
           <div className="current-members-card-container">
             {members}
           </div>
-        }
         </div>
       );
   }
