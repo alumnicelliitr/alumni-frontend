@@ -23,7 +23,7 @@
   align-items: center;
 }
 .vertical-seperator {
-  height: 80px;
+  height: 60px;
   width: 1px;
   border: 0.5px solid #3880F4;
   position: absolute;

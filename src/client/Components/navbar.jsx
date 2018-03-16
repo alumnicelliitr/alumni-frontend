@@ -14,10 +14,11 @@ export default class Navbar extends React.Component {
             <Link to="/mou" className="nav-links">MOUs</Link>
             <Link to="/initiatives" className="nav-links">Initiatives</Link>
             <Link to="/awards" className="nav-links">Awards</Link>
+            <Link to="/publications" className="nav-links">Publications</Link>
             <Link to="/donate" className="nav-links">Donate</Link>
             <Link to="/contact" className="nav-links">Contact</Link>
           </div>
-          <a className="loginbutton" href="https://channeli.in/oauth/client_id=7bad4b14038cda823f3c&redirect_url=alumni.iitr.ac.in/dashboard/">Login</a>
+          <a className="loginbutton">Login</a>
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import '../styles/eventCard.css';
 
 export default class EventCard extends React.Component {
@@ -6,7 +7,9 @@ export default class EventCard extends React.Component {
     return (
         <div className="events-container">
           <div className="event-name">
+            <Link to={`/event/${this.props.id}`}>
             {this.props.title}
+            </Link>
           </div>
           <div className="event-date">
             <div className="calender-icon">

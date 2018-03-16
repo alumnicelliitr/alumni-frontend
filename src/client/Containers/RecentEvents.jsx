@@ -21,7 +21,7 @@ class RecentEvents extends React.Component {
     let request = new Request('https://institute-alumni-relation-cell.herokuapp.com/api/website/events/',{
       method:'get',
     });
-    fetch(recentRequest)
+    fetch(request)
     .then((res) => res.json())
     .then((res) => {
       this.setState({
@@ -34,20 +34,26 @@ class RecentEvents extends React.Component {
 
   tabClick(clickTab) {
     this.setState({
-      activeTab: clickTab
+      activeTab: clickTab,
+      isLoaded: this.state.isLoaded,
+      data: this.state.data,
     });
   }
-
   render() {
-    const events = [{lightHeading:'Alumni',darkHeading: 'Meets'},{lightHeading:'Guest',darkHeading: 'Lecture'},{lightHeading:'Re-',darkHeading: 'Union'}];
+    const eventTabs = this.state.data.map((obj) => { return { lightHeading:Object.keys(obj)[0] } })
+
+    let eventContent;
+    if(this.state.isLoaded){
+      eventContent = (<EventContainer events={this.state.data[this.state.activeTab][eventTabs[this.state.activeTab].lightHeading]}/>);
+    }
 
     return (
     	<div className="recentevents">
     		<Navbar/>
         <div className="content-recent-events container">
           <div className="row">
-            <Tabs tabs={events} onClick={(clickTab) => this.tabClick(clickTab)} activeTab={this.state.activeTab} />
-            <EventContainer events={this.state.data.Golden}/>
+            <Tabs tabs={eventTabs} onClick={(clickTab) => this.tabClick(clickTab)} activeTab={this.state.activeTab} />
+            {eventContent}
           </div>
         </div>
         <LandingFooter/>
