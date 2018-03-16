@@ -18,3 +18,5 @@ export const PUBLICATIONS = '/publications'
 
 export const ALUM_DASHBOARD_ROUTE = '/dashboard/alumni'
 export const STUDENT_DASHBOARD_ROUTE = '/dashboard/student'
+export const ABOUT_EVENT_ROUTE = '/event/:id'
+export const PUBLICATIONS = '/publications'
