@@ -1,3 +1,16 @@
 .awards-container{
+  width: 90%;
+  margin: auto;
   margin-top: 100px;
+}
+.donate-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  font-size: 1.2em;
+  background-color: #2D9CDB;
+  border-radius: 5px;
+  color: white;
 }
