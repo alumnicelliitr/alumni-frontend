@@ -47,3 +47,7 @@ a.middle-indicator-text{
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
+.image {
+  max-width: 100%;
+  max-height: 100%;
+}

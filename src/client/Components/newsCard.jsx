@@ -3,15 +3,16 @@ import '../styles/newsCard.css';
 
 export default class NewsCard extends React.Component {
   render() {
-    const content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem justo, pulvinar convallis faucibus non, rhoncus vitae leo. a lacinia arcu.'
     return (
-      <div className="news-card">
-        <img className="news-card-image" src="/static/images/grey.jpg"/>
-        <div className="news-card-content">
-          {content}
-          <span className="read-article">Read Article</span>
+      <a href={this.props.link}>
+        <div className="news-card">
+          <img className="news-card-image" src={this.props.thumbnail}/>
+          <div className="news-card-content" >
+            {this.props.title}
+          <span className="read-article" >Read Article</span>
+          </div>
         </div>
-      </div>
+      </a>
     );
   }
 }
