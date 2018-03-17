@@ -11,6 +11,11 @@ import SubscribeNewsletter from '../Components/subscribeNewsletter.jsx';
 import LandingFooter from '../Components/landingFooter.jsx';
 
 class WelcomeContainer extends React.Component {
+  componentDidMount(){
+    var url = new URL(location.href);
+    const c = url.searchParams.get("code");
+    console.log(c);
+  }
   render() {
     return (
       <div className="homepage">
