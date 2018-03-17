@@ -15,11 +15,12 @@ export default class NewsBanner extends React.Component {
   componentWillMount() {
     fetch(
       `${MEDIUM_RSS_URL}?rss_url=${RSS_FEED_URL}`,
-    ).then((res) =>
+    ).then((res) => 
        res.json()
     ).then((res) => {
+      console.log(res.items)
       this.setState({
-        data:res.items,
+        data:res.items.slice(0,3),
       })
       })
   }
@@ -35,8 +36,8 @@ export default class NewsBanner extends React.Component {
           </div>
         </div>
         <div className="news-card-container">
-        {this.state.data.slice(0,3).map(blog => (
-          <NewsCard link={blog.link} thumbnail={blog.thumbnail} desc={blog.description} title={blog.title}/>
+        {this.state.data.map(blog => (
+          <NewsCard link={this.state.link} thumbnail={blog.thumbnail} desc={blog.description} title={blog.title}/>
         ))}
         </div>
       </div>

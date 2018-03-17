@@ -9,6 +9,7 @@ export default class NewsCard extends React.Component {
           <img className="news-card-image" src={this.props.thumbnail}/>
           <div className="news-card-content" >
             {this.props.title}
+          <span className="read-article" >Read Article</span>
           </div>
         </div>
       </a>
