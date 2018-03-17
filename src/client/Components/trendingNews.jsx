@@ -1,62 +1,81 @@
-import React from 'react';
-import '../styles/trendingNews.css';
-
-class TrendingNewsCard extends React.Component {
-  render() {
-    return (
-      <a className="carousel-item carousel-links">
-        <img src={this.props.image}/>
-        <div className="image-heading"><h1>{this.props.title}</h1></div>
-      </a>
-    );
-  }
-}
-
-TrendingNewsCard.defaultProps = {
-  image: '/static/images/grey.jpg'
-};
+import React from 'react'
+import '../styles/trendingNews.css'
+import { MEDIUM_RSS_URL, RSS_FEED_URL, API_DOMAIN } from '../../shared/config'
 
 export default class TrendingNews extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       isLoaded: false,
       data: [],
-    };
+    }
+    this.initializeCarousel = this.initializeCarousel.bind(this)
   }
 
-  componentDidMount(){
-    let request = new Request('https://institute-alumni-relation-cell.herokuapp.com/api/website/headlines/',{
-      method:'get',
-    });
+  componentWillMount() {
+    const request = new Request(`${API_DOMAIN}api/website/headlines/`, {
+      method: 'get',
+    })
+    fetch(`${MEDIUM_RSS_URL}?rss_url=${RSS_FEED_URL}`)
+      .then(res => res.json())
+      .then((res) => {    
+        this.setState({
+          data: res.items,
+        })
+      })
     fetch(request)
-    .then((res) => res.json())
-    .then((res) => {
-      this.setState({
-        isLoaded: true,
-        data:res,
-      });
-    });
+      .then(res => res.json())
+      .then((res) => {   
+        const { data } =  this.state
+        this.setState({
+          isLoaded: true,
+          data: [...data, ...res],
+        })
+      })
+  }
+  
+  componentDidMount() {
+    // $('.carousel').carousel()
+    this.initializeCarousel()
+    $('.movePrevCarousel').click((e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      $('.carousel').carousel('prev')
+    })
+    
+    $('.moveNextCarousel').click((e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      $('.carousel').carousel('next')
+    })
+  }
 
-    $('.carousel.carousel-slider').carousel({fullWidth: true});
-    $('.moveNextCarousel').click(function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      $('.carousel').carousel('next');
-   });
+  initializeCarousel() {
+    const slider = $('.carousel')
+    slider.carousel()
+    this.state.data.forEach((news) => {
+      if (news.id) {
+        slider.append(`<a class="carousel-item carousel-links">
+        <img class="image" src=${news.image} alt=${news.title}/>
+        <div class="image-heading"><h1>${news.title}</h1></div>
+      </a>`)
+      } else {
+        slider.append(`<a class="carousel-item carousel-links">
+        <img class="image" src=${news.thumbnail} alt=${news.title}/>
+        <div class="image-heading"><h1>${news.title}</h1></div>
+      </a>`)
+      }
+    })
+    this.reinitializeCarousel()
+  }
 
-   $('.movePrevCarousel').click(function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      $('.carousel').carousel('prev');
-   });
+  reinitializeCarousel() {
+    $('.carousel').carousel('destroy')
+    $('.carousel').carousel() 
   }
 
   render() {
-    let newsCards = this.state.data.map((news) => {
-      return (<TrendingNewsCard image={news.image} title={news.title} />);
-    });
-
+    this.reinitializeCarousel()
     return (
       <div className="trending-news">
         <div className="carousel carousel-slider center" data-indicators="true">
@@ -68,9 +87,10 @@ export default class TrendingNews extends React.Component {
               <a className=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i className="material-icons right middle-indicator-text">chevron_right</i></a>
             </div>
           </div>
-          {newsCards}
+          {this.initializeCarousel()}
+          {this.reinitializeCarousel()}
         </div>
       </div>
-    );
+    )
   }
 }
