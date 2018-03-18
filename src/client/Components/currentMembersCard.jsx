@@ -8,9 +8,8 @@ export default class CurrentMemberCard extends React.Component {
           <img src={this.props.image} className="current-members-card-image"/>
           <div className="current-members-card-content">
             <div className="members-info">
-              <div><div className="list-bullet"/>{this.props.name}</div>
-              {/*<div><div className="list-bullet"/>{this.props.batch}</div>*/}
-              <div><div className="list-bullet"/>{this.props.branch}</div>
+              <div><a href={this.props.socials[0] || 'https://twitter.com/alumnicelliitr'}><img className="image" src="/static/images/twitter-icon.svg"/></a>{this.props.name}</div>
+              <div><a href={this.props.socials[0] || 'https://twitter.com/alumnicelliitr'}><img className="image" src="/static/images/fb-icon.svg"/></a>{this.props.branch}</div>
             </div>
             <div className="vertical-seperator"/>
           </div>
