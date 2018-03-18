@@ -1,5 +1,4 @@
 import React from 'react';
-import Carousel from 'nuka-carousel';
 import '../styles/trendingNews.css';
 import { MEDIUM_RSS_URL, RSS_FEED_URL, API_DOMAIN } from '../../shared/config';
 

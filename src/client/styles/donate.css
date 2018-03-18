@@ -3,10 +3,3 @@
   margin: auto;
   margin-top: 100px;
 }
-.donate-container .donate-button-container{
-  display: flex;
-  justify-content: flex-end;
-}
-.donate-container .donate-button-container p{
-  text-align: center;
-}

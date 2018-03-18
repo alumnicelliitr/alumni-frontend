@@ -15,10 +15,9 @@ export default class NewsBanner extends React.Component {
   componentWillMount() {
     fetch(
       `${MEDIUM_RSS_URL}?rss_url=${RSS_FEED_URL}`,
-    ).then((res) => 
+    ).then((res) =>
        res.json()
     ).then((res) => {
-      console.log(res.items)
       this.setState({
         data:res.items.slice(0,3),
       })
