@@ -22,10 +22,16 @@ export default class ToggleRow extends React.Component {
     const content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem justo, p dignissim dui rutrum accumsan. Mauris sit amet nulla non nisl porttitor sagittis. Sed vestibulum consectetur convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ullamcorper libero rhoncus mi pharetra iaculis. Praesent a lacinia arcu.";
     if (this.state.show) {
       toggleContent = (
+        <div>
           <div className="toggle-about">
             <h5>About</h5>
             <p>{this.props.description}</p>
           </div>
+          <div className="donate-button-container">
+            <p>Donate for an award</p>
+            <a className="donate-button" href={this.props.link}>Donate</a>
+          </div>
+        </div>
         );
       imageSrc = "/static/images/up-arrow.svg"
     }
