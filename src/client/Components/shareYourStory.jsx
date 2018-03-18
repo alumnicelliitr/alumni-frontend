@@ -2,6 +2,7 @@ import React from 'react';
 import PublicationCard from './publicationCard.jsx';
 import '../styles/shareYourStory.css';
 import { baseUrl } from '../config.js';
+import Loader from './loader.jsx';
 
 export default class ShareYourStory extends React.Component {
   constructor(props){
@@ -37,6 +38,7 @@ export default class ShareYourStory extends React.Component {
 
     return (
       <div>
+        { !this.state.isLoaded ? (<Loader/>) : ''}
         <p className="publications-description">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
           quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo

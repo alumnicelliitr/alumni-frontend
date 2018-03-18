@@ -4,6 +4,7 @@ import LandingFooter from '../Components/landingFooter.jsx';
 import ToggleRow from '../Components/toggleRow.jsx';
 import { baseUrl } from '../config.js';
 import '../styles/donate.css';
+import Loader from '../Components/loader.jsx';
 
 export default class Donate extends React.Component {
   constructor(props){
@@ -37,15 +38,10 @@ export default class Donate extends React.Component {
     }
     return (
       <div>
+        { !this.state.isLoaded ? (<Loader/>) : ''}
         <Navbar/>
         <div className="donate-container">
           {rows}
-          <div className="donate-button-container">
-            <div>
-              <p>Donate for an award</p>
-              <a className="donate-button" href="#">Donate</a>
-            </div>
-          </div>
         </div>
         <LandingFooter/>
       </div>
