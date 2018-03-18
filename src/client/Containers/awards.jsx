@@ -3,6 +3,7 @@ import ToggleRow from '../Components/toggleRow.jsx';
 import Navbar from '../Components/navbar.jsx';
 import LandingFooter from '../Components/landingFooter.jsx';
 import { baseUrl } from '../config.js';
+import Loader from '../Components/loader.jsx';
 
 import '../styles/awards.css';
 
@@ -38,13 +39,10 @@ export default class Awards extends React.Component {
     }
     return (
       <div>
+        { !this.state.isLoaded ? (<Loader/>) : ''}
         <Navbar />
         <div className="awards-container">
           {rows}
-          <div className="donate-button-container">
-            <p>Donate for an award</p>
-            <a className="donate-button" href="#">Donate</a>
-          </div>
         </div>
         <LandingFooter/>
       </div>

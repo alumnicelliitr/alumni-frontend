@@ -4,6 +4,7 @@ import Navbar from '../Components/navbar.jsx';
 import EventContainer from '../Components/EventContainer.jsx';
 import Tabs from '../Components/tabs.jsx';
 import LandingFooter from '../Components/landingFooter.jsx';
+import Loader from '../Components/loader.jsx';
 
 import '../styles/events.css';
 
@@ -49,7 +50,8 @@ class RecentEvents extends React.Component {
 
     return (
     	<div className="recentevents">
-    		<Navbar/>
+    		{ !this.state.isLoaded ? (<Loader/>) : ''}
+        <Navbar/>
         <div className="content-recent-events container">
           <div className="row">
             <Tabs tabs={eventTabs} onClick={(clickTab) => this.tabClick(clickTab)} activeTab={this.state.activeTab} />
