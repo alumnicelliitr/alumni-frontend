@@ -1,0 +1,22 @@
+input[type="text"], textarea[type="text"] {
+    background: #BDBDBD !important;
+    width: 100%;
+    border: none;
+    color: #828282;
+    border-radius: 2%;
+    padding: 1% 1%;
+    margin: 1% 0%;
+}
+
+.collapsible-body {
+    background: #FAFAFA;
+}
+
+.submit-button {
+    background: #1F87C4;
+    width: 107px;
+    height: 30px;
+    left: 47vw;
+    border-radius: 0%;
+    color: #FFFFFF;   
+}
