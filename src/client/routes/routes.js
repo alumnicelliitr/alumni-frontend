@@ -18,6 +18,7 @@ import Awards from '../Containers/awards.jsx';
 import AboutEvent from '../Containers/aboutEvent.jsx';
 import Publications from '../Containers/publications.jsx';
 import MOU from '../Containers/MOU.jsx';
+import AlumniDashboard from '../Containers/DashboardContainer/'
 import * as rC from './routeConstants';
 
 const routes = {
@@ -86,6 +87,11 @@ const routes = {
     {
       path: rC.MOU_ROUTE,
       component: MOU,
+      // Add authorisation wrapper
+    },
+    {
+      path: rC.ALUM_DASHBOARD_ROUTE,
+      component: AlumniDashboard,
     },
     {
       path: '*',
