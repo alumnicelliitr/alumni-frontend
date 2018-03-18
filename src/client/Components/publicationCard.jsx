@@ -7,7 +7,8 @@ export default class PublicationCard extends React.Component {
       <div className="publication-card">
         <img src={this.props.thumbnail} className="publication-card-image"/>
         <div className="publication-card-content">
-          {this.props.title}
+          <span className="heading">{this.props.title}</span>
+          <p>{this.props.description}</p>
         </div>
       </div>
     );

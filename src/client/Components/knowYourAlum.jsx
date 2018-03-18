@@ -11,10 +11,10 @@ export default class KnowYourAlum extends React.Component {
           quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
         </p>
         <div className="publication-card-container">
-          <PublicationCard/>
-          <PublicationCard/>
-          <PublicationCard/>
-          <PublicationCard/>
+          <PublicationCard thumbnail="/static/images/grey.jpg" title="some title"/>
+          <PublicationCard thumbnail="/static/images/grey.jpg" title="some title"/>
+          <PublicationCard thumbnail="/static/images/grey.jpg" title="some title"/>
+          <PublicationCard thumbnail="/static/images/grey.jpg" title="some title"/>
         </div>
       </div>
     );
