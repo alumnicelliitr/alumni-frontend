@@ -5,7 +5,7 @@ import '../styles/foundingMembers.css';
 export default class FoundingMembers extends React.Component {
   render() {
     const members = this.props.members.map((member) => {
-      return (<FoundingMemberCard name={member.user.name} branch={member.user.branch} batch={member.user.batch} image={member.user.image} />);
+      return (<FoundingMemberCard {...member.user} />);
     });
 
     return (

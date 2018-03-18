@@ -5,7 +5,7 @@ import '../styles/currentMembers.css';
 export default class CurrentMembers extends React.Component {
   render() {
     const members = this.props.members.map((member) => {
-      return (<CurrentMemberCard name={member.user.name} branch={member.user.branch} image={member.user.image} />);
+      return (<CurrentMemberCard {...member.user} />);
     });
 
     return (

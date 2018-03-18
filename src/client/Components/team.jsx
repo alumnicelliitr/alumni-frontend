@@ -2,6 +2,7 @@ import React from 'react';
 import FoundingMembers from '../Components/foundingmembers.jsx';
 import Testimonial from '../Components/testimonial.jsx';
 import CurrentMembers from '../Components/currentMembers.jsx';
+import Loader from './loader.jsx';
 
 export default class Team extends React.Component {
   constructor(props){
@@ -30,11 +31,16 @@ export default class Team extends React.Component {
     let foundingMembers;
     let currentMembers;
     if (this.state.isLoaded){
-      foundingMembers = (<FoundingMembers members={this.state.founding}/>);
-      currentMembers = (<CurrentMembers members={this.state.current} />);
+      if (this.state.founding.length > 0){
+        foundingMembers = (<FoundingMembers members={this.state.founding}/>);
+      }
+      if (this.state.current.length > 0){
+        currentMembers = (<CurrentMembers members={this.state.current} />);
+      }
     }
     return (
         <div className="team">
+          { !this.state.isLoaded ? (<Loader/>) : ''}
           {foundingMembers}
           {currentMembers}
           <Testimonial/>
