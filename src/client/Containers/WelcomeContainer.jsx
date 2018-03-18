@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux';
 import Navbar from '../Components/navbar.jsx';
 import TrendingNews from '../Components/trendingNews.jsx';
 import MOU from '../Components/MOU.jsx';
@@ -9,12 +10,24 @@ import AlumniCardsBanner from '../Components/alumniCardsBanner.jsx';
 import NewsBanner from '../Components/newsBanner.jsx';
 import SubscribeNewsletter from '../Components/subscribeNewsletter.jsx';
 import LandingFooter from '../Components/landingFooter.jsx';
+import { baseUrl } from '../config.js';
+import Loader from '../Components/loader.jsx';
+import { recieveUser, logoutUser } from '../actions/user_actions.js';
 
 class WelcomeContainer extends React.Component {
   componentDidMount(){
     var url = new URL(location.href);
-    const c = url.searchParams.get("code");
-    console.log(c);
+    const code = url.searchParams.get("code");
+    if (code){
+      let request = new Request(`http://127.0.0.1:8999/api/core/login/?code=${code}`,{
+        method:'get',
+      });
+      fetch(request)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
+    }
   }
   render() {
     return (
@@ -33,4 +46,15 @@ class WelcomeContainer extends React.Component {
   }
 }
 
-export default WelcomeContainer
+function mapStateToProps(state) {
+  return {
+    isLoggedIn: state.user.isLoggedIn,
+    user: state.user.user,
+  }
+}
+
+const mapDispatchToProps = ({
+  recieveUser,
+  logoutUser
+});
+export default connect(mapStateToProps, mapDispatchToProps)(WelcomeContainer);

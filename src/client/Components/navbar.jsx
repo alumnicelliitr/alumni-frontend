@@ -18,7 +18,7 @@ export default class Navbar extends React.Component {
             <Link to="/donate" className="nav-links">Donate</Link>
             <Link to="/contact" className="nav-links">Contact</Link>
           </div>
-          <a className="loginbutton" href="https://channeli.in/oauth/?client_id=7bad4b14038cda823f3c&redirect_url=alumni.iitr.ac.in/home/">Login</a>
+          <a className="loginbutton" href="https://channeli.in/oauth/?client_id=7bad4b14038cda823f3c&redirect_url=alumni.iitr.ac.in/dashboard/">Login</a>
         </div>
       </div>
     );
