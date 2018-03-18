@@ -100,6 +100,7 @@ const routes = {
     {
       path: rC.PUBLICATIONS,
       component: Publications,
+      // Add authorisation wrapper
     },
     {
       path: '*',
