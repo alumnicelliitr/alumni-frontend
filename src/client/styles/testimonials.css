@@ -1,6 +1,7 @@
 .testimonial{
   background-color: #3880F4;
   padding: 20px 40px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
