@@ -19,7 +19,7 @@ export default class NewsBanner extends React.Component {
        res.json()
     ).then((res) => {
       this.setState({
-        data:res.items.slice(0,3),
+        data:res.items,
       })
       })
   }
@@ -35,8 +35,8 @@ export default class NewsBanner extends React.Component {
           </div>
         </div>
         <div className="news-card-container">
-        {this.state.data.map(blog => (
-          <NewsCard link={this.state.link} thumbnail={blog.thumbnail} desc={blog.description} title={blog.title}/>
+        {this.state.data.slice(0,3).map(blog => (
+          <NewsCard link={blog.link} thumbnail={blog.thumbnail} desc={blog.description} title={blog.title}/>
         ))}
         </div>
       </div>
