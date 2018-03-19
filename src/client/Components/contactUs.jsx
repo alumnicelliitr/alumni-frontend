@@ -7,6 +7,12 @@ export default class ContactUs extends React.Component {
       <div className="contactus-container container">
         <div className="contact-card">
             <div className="contact-links">
+              <div className="contact-row">
+                <img src="/static/images/contact-header.svg" />
+                <div>
+                  DORA
+                </div>
+              </div>
               <div className="phone contact-row">
                 <img src="/static/images/phone-icon.svg" />
                 <div className="contact-links-text-1">
@@ -37,6 +43,12 @@ export default class ContactUs extends React.Component {
           </div>
           <div className="contact-card">
             <div className="contact-links">
+              <div className="contact-row">
+                <img src="/static/images/contact-header.svg" />
+                <div>
+                  IARC
+                </div>
+              </div>
               <div className="phone contact-row">
                 <img src="/static/images/phone-icon.svg" />
                 <div className="contact-links-text-1">
