@@ -8,14 +8,7 @@
   height: 50%;
 }
 .news-card-content{
-  position: relative;
-  font-size: 0.8em;
+  font-size: 1.2em;
   height: 50%;
   padding: 0 5px;
-}
-.read-article{
-  position: absolute;
-  bottom: 5%;
-  left: 5px;
-  color: #1F87C4;
 }
