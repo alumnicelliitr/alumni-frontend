@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
+import createAlumniCard from  '../../actions/'
 
 import './AlumniCard.css'
+
+const generateState = () => ({
+  alumCard: {
+    affirmation: false,
+    office_add: '',
+    residence_add: '',
+    address: '',
+    photo: '',
+    photo_sign: '',
+    photo_degree: '',
+  },
+})
 
 class AlumniCard extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      affirmation: false,
-    }
+    this.state = generateState()
     this.handleAffirmation = this.handleAffirmation.bind(this)
   }
 
@@ -16,11 +27,26 @@ class AlumniCard extends Component {
   }
 
   handleAffirmation() {
-    console.log(this.state);
-    
     this.setState({
       affirmation: !this.state.affirmation,
     })
+  }
+
+  handleChange = (e) => {
+    const { alumCard } = this.state
+    alumCard[e.target.name] = e.target.value
+    this.setState({
+      alumCard,
+    })
+  }
+
+  handleSubmit = () => {
+    const error = {}
+    if(!this.state.affirmation) {
+        error.affirmation = 'Affirmation requires'
+        return
+    }
+    // createAlumniCard(data)
   }
 
   render() {
@@ -35,8 +61,10 @@ class AlumniCard extends Component {
                   placeholder="Present Designation"
                   className="browser-default"
                   type="text"
-                  name="office_add"
-                  
+                  name="present_desig"
+                  required
+                  value={this.state.user.present_desig}
+                  onChange={this.handleChange}
                 />
                 <textarea
                   placeholder="Present Office Address(With PIN code)"
@@ -45,6 +73,8 @@ class AlumniCard extends Component {
                   rows="7"
                   name="office_add"
                   required
+                  value={this.state.user.office_add}
+                  onChange={this.handleChange}
                 />
                 <textarea
                   placeholder="Present Residence Address (With PIN Code) [NOTE: This address would be printed on the card]"
@@ -53,14 +83,18 @@ class AlumniCard extends Component {
                   rows="7"
                   name="residence_add"
                   required
+                  value={this.state.user.residence_add}
+                  onChange={this.handleChange}
                 />
                 <textarea
                   placeholder="Delivery Address (With PIN Code) [Card would be sent to this address] "
                   className="browser-default"
                   type="text"
                   rows="7"
-                  name="office_add"
+                  name="delivery_add"
                   required
+                  value={this.state.user.delivery_add}
+                  onChange={this.handleChange}
                 />
                 <textarea
                   placeholder="Address for Future Correspondence"
@@ -69,17 +103,19 @@ class AlumniCard extends Component {
                   rows="7"
                   name="address"
                   required
+                  value={this.state.user.address}
+                  onChange={this.handleChange}
                 />
                 <div>
                   <label>Photo</label>
                   <input name="photo" type="file" alt="photo" required />
                 </div>
                 <div>
-                  <label>Photo</label>
+                  <label>Photo Sign</label>
                   <input name="photo_sign" type="file" alt="photo_sign" required />
                 </div>
                 <div>
-                  <label>Photo</label>
+                  <label>Photo Degree</label>
                   <input name="photo_degree" type="file" alt="photo_degree" required />
                 </div>
                 <p onClick={this.handleAffirmation} >
