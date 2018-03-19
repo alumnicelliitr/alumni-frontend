@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/trendingNews.css';
 import { MEDIUM_RSS_URL, RSS_FEED_URL, API_DOMAIN } from '../../shared/config';
+import Loader from './loader.jsx';
 
 export default class TrendingNews extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ export default class TrendingNews extends React.Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const request = new Request(`${API_DOMAIN}api/website/headlines/`, {
       method: 'get',
     })
@@ -32,6 +33,9 @@ export default class TrendingNews extends React.Component {
           data: [...data, ...res],
         })
       })
+  }
+
+  componentDidMount(){
     $('.main-carousel').flickity({
       cellAlign: 'left',
       wrapAround: true,
@@ -52,6 +56,7 @@ export default class TrendingNews extends React.Component {
 
     return (
       <div className="trending-news">
+        { !this.state.isLoaded ? (<Loader/>) : ''}
         <div className="main-carousel">
         </div>
       </div>
