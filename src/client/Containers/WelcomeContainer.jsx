@@ -12,7 +12,7 @@ import SubscribeNewsletter from '../Components/subscribeNewsletter.jsx';
 import LandingFooter from '../Components/landingFooter.jsx';
 import { baseUrl } from '../config.js';
 import Loader from '../Components/loader.jsx';
-import { recieveUser, logoutUser } from '../actions/user_actions.js';
+import { recieveUser, logoutUser, } from '../actions/user_actions.js'
 
 class WelcomeContainer extends React.Component {
   componentDidMount(){
@@ -55,6 +55,6 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = ({
   recieveUser,
-  logoutUser
+  logoutUser,
 });
 export default connect(mapStateToProps, mapDispatchToProps)(WelcomeContainer);

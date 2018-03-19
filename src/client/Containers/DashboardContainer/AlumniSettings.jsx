@@ -15,7 +15,7 @@ class AlumniCard extends Component {
         officeNo: '',
         email: '',
       },
-
+      image: '',
     }
   }
 
@@ -23,13 +23,24 @@ class AlumniCard extends Component {
     $('select').material_select();
   }
 
+  onImageChange(event) {
+    if (event.target.files && event.target.files[0]) {
+        let reader = new FileReader();
+        reader.onload = (e) => {
+            this.setState({image: e.target.result});
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+}
+
   render() {
     return (
       <div className="container">
         <div className="row">
             <div className="col s4">
+                <input onChange={this.onImageChange.bind(this)} id="image" type="file" alt="Login" />
                 <div className="settings-image">
-                <input id="image" type="image" alt="Login" />
+                <img id="target" src={this.state.image}/>
               </div>
             </div>
             <div className="col s8">
