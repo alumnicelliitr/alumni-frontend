@@ -8,8 +8,6 @@ import Team from '../Containers/Team';
 import SocialLinks from '../Containers/SocialLinks';
 import UpcomingEvents from '../Containers/UpcomingEvents';
 import RecentEvents from '../Containers/RecentEvents';
-import MouGeneral from '../Containers/MouGeneral';
-import MouParticular from '../Containers/MouParticular';
 import Initiatives from '../Containers/Initiatives';
 import Alum from '../Containers/Alum';
 import Story from '../Containers/Story';
@@ -19,6 +17,7 @@ import Contact from '../Containers/WriteToUs';
 import Awards from '../Containers/awards.jsx';
 import AboutEvent from '../Containers/aboutEvent.jsx';
 import Publications from '../Containers/publications.jsx';
+import MOU from '../Containers/MOU.jsx';
 import * as rC from './routeConstants';
 
 const routes = {
@@ -53,14 +52,6 @@ const routes = {
       component: RecentEvents,
     },
     {
-      path: rC.MOU_GENERAL_ROUTE,
-      component: MouGeneral,
-    },
-    {
-      path: rC.MOU_PARTICULAR_ROUTE,
-      component: MouParticular,
-    },
-    {
       path: rC.INITIATIVES_ROUTE,
       component: Initiatives,
     },
@@ -91,6 +82,10 @@ const routes = {
     {
       path: rC.PUBLICATIONS,
       component: Publications,
+    },
+    {
+      path: rC.MOU_ROUTE,
+      component: MOU,
     },
     {
       path: '*',
