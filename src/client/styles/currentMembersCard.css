@@ -3,14 +3,7 @@
   height: 300px;
 }
 .current-members-card-image{
-  width: 230px;
+  width: 100%;
   height: 200px;
 }
-.current-members-card-content{
-  margin-left: 20px;
-  position: relative;
-}
-.members-info div{
-  display: flex;
-  align-items: center;
-}
+
