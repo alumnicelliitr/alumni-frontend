@@ -7,12 +7,12 @@ class AlumniCard extends Component {
     super(props)
     this.state = {
       user: {
-        firstName: '',
-        lastName: '',
+        first_name: '',
+        last_name: '',
         mobile: '',
         branch: '',
         batch: '',
-        officeNo: '',
+        office_no: '',
         email: '',
       },
       image: '',
@@ -31,7 +31,24 @@ class AlumniCard extends Component {
         };
         reader.readAsDataURL(event.target.files[0]);
     }
-}
+  }
+
+  handleChange = (e) => {
+    const { alumCard } = this.state
+    alumCard[e.target.name] = e.target.value
+    this.setState({
+      alumCard,
+    })
+  }
+
+  handleSubmit = () => {
+    const error = {}
+    if(!this.state.affirmation) {
+        error.affirmation = 'Affirmation requires'
+        return
+    }
+    // createAlumniCard(data)
+  }
 
   render() {
     return (
@@ -49,17 +66,19 @@ class AlumniCard extends Component {
                 <input
                   className="browser-default"
                   type="text"
+                  name="first_name"
                 />
                 <label>Last Name</label>
                 <input
                   className="browser-default"
                   type="text"
+                  name="last_name"
                 />
                 <div className="row">
                   <div className="col s6">
                   <label>Branch</label>
                   <div className="browser-default">
-                    <select>
+                    <select name="branch">
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">Option 1</option>
                       <option value="2">Option 2</option>
@@ -70,7 +89,7 @@ class AlumniCard extends Component {
                   <div className="col s6">
                   <label>Batch</label>
                   <div className="browser-default">
-                    <select>
+                    <select name="batch">
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">Option 1</option>
                       <option value="2">Option 2</option>
@@ -85,6 +104,7 @@ class AlumniCard extends Component {
                   <input
                     className="browser-default"
                     type="text"
+                    name="mobile"
                   />
                   </div>
                   </div>
@@ -93,6 +113,7 @@ class AlumniCard extends Component {
                   <input
                     className="browser-default"
                     type="text"
+                    name="office"
                  />
                   </div>
                   </div>
@@ -101,6 +122,7 @@ class AlumniCard extends Component {
                 <input
                   className="browser-default"
                   type="text"
+                  name="email"
                 />
                 <button className="submit-button" >Submit</button>
               </form>
