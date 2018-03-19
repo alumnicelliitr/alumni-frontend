@@ -1,11 +1,13 @@
 import 'whatwg-fetch'
 
+import { getToken } from '../../shared/Auth'
 
 let statusToSend = true
 
 const headers = {
-//   Accept: 'application/json',
-//   'Content-Type': 'application/json',
+  Authorization: `Token ${getToken()}`,
+  Accept: 'application/json',
+  'Content-Type': 'application/json',
 }
 
 function handleErrors(response) {
