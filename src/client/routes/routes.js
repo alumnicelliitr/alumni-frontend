@@ -15,10 +15,9 @@ import Donate from '../Containers/Donate';
 import ContactUs from '../Containers/ContactUs';
 import Contact from '../Containers/WriteToUs';
 import Awards from '../Containers/awards.jsx';
+import AlumniDashboard from '../Containers/DashboardContainer/'
 import AboutEvent from '../Containers/aboutEvent.jsx';
 import Publications from '../Containers/publications.jsx';
-import MOU from '../Containers/MOU.jsx';
-import AlumniDashboard from '../Containers/DashboardContainer/'
 import UserWrapper from '../Containers/UserWrapper'
 import * as rC from './routeConstants';
 
