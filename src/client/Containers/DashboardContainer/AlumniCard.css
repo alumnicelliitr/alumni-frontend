@@ -2,7 +2,7 @@ input[type="text"], textarea[type="text"] {
     background: #BDBDBD !important;
     width: 100%;
     border: none;
-    color: #828282;
+    color: black;
     border-radius: 2%;
     padding: 1% 1%;
     margin: 1% 0%;
@@ -19,4 +19,8 @@ input[type="text"], textarea[type="text"] {
     left: 47vw;
     border-radius: 0%;
     color: #FFFFFF;   
+}
+
+input:focus {
+    background: white;
 }

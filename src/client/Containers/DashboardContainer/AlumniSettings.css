@@ -33,8 +33,17 @@ input[type="text"], textarea[type="text"] {
     width: 21vw;
     height: 41vh;
     background: #E8E8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .container {
     margin-top: 3%;
+}
+.settings-image > img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }

@@ -19,6 +19,7 @@ import AboutEvent from '../Containers/aboutEvent.jsx';
 import Publications from '../Containers/publications.jsx';
 import MOU from '../Containers/MOU.jsx';
 import AlumniDashboard from '../Containers/DashboardContainer/'
+import UserWrapper from '../Containers/UserWrapper'
 import * as rC from './routeConstants';
 
 const routes = {
@@ -100,13 +101,23 @@ const routes = {
     {
       path: rC.PUBLICATIONS,
       component: Publications,
-      // Add authorisation wrapper
+
+    },
+    {
+      path: '/dashboard',
+      component: UserWrapper,
+      childRoutes: [
+        {
+          path: '/dashboard/alumni',
+          component: AlumniDashboard,
+        },
+      ],
     },
     {
       path: '*',
       component: NotFoundContainer,
     },
   ],
-};
+}
 
-export default routes;
+export default routes
