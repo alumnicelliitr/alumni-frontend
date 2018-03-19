@@ -13,19 +13,20 @@
 .video-repo-iframe-container{
   padding: 20px 0;
   position: relative;
-}
-.video-repo-image{
   display: block;
   width: 500px;
-  height: 400px;
   margin: auto;
+}
+.video-repo-image{
+  width: 500px;
+  height: 400px;
 }
 .video-repo-iframe{
   position: absolute;
   width: 460px;
   height: 260px;
   top: 41px;
-  left: 101px;
+  left: 20px;
 }
 .youtube-button{
   display: flex;
