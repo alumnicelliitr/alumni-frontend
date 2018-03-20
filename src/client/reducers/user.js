@@ -4,6 +4,8 @@ const initialState = {
 };
 
 export default function user(state = initialState, action) {
+  console.log(action)
+  
   const { data } = action;
 
   switch(action.type) {

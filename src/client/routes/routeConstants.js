@@ -19,3 +19,5 @@ export const PUBLICATIONS = '/publications'
 export const ALUM_DASHBOARD_ROUTE = '/dashboard/alumni'
 export const STUDENT_DASHBOARD_ROUTE = '/dashboard/student'
 
+export const TEMPORARY_LOGIN_ROUTE = '/login/user'
+

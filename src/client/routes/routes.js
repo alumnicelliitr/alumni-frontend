@@ -19,11 +19,17 @@ import AlumniDashboard from '../Containers/DashboardContainer/'
 import AboutEvent from '../Containers/aboutEvent.jsx';
 import Publications from '../Containers/publications.jsx';
 import UserWrapper from '../Containers/UserWrapper'
-import * as rC from './routeConstants';
+import TemporaryLoginContainer from '../Containers/TemporaryLoginContainer'
+
+import * as rC from './routeConstants'
 
 const routes = {
   component: Base,
   childRoutes: [
+    {
+      path: rC.TEMPORARY_LOGIN_ROUTE,
+      component: TemporaryLoginContainer,
+    },
     {
       path: rC.WELCOME_ROUTE,
       component: WelcomeContainer,
@@ -84,11 +90,11 @@ const routes = {
       path: rC.PUBLICATIONS,
       component: Publications,
     },
-    {
-      path: rC.MOU_ROUTE,
-      component: MOU,
-      // Add authorisation wrapper
-    },
+    // {
+    //   path: rC.MOU_ROUTE,
+    //   component: MOU,
+    //   // Add authorisation wrapper
+    // },
     {
       path: rC.ALUM_DASHBOARD_ROUTE,
       component: AlumniDashboard,

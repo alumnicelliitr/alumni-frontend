@@ -36,8 +36,8 @@ export default class NewsBanner extends React.Component {
           </div>
         </div>
         <div className="news-card-container">
-        {this.state.data.map(blog => (
-          <NewsCard link={this.state.link} thumbnail={blog.thumbnail} desc={blog.description} title={blog.title}/>
+        {this.state.data.map((blog, key) => (
+          <NewsCard key={key} link={this.state.link} thumbnail={blog.thumbnail} desc={blog.description} title={blog.title}/>
         ))}
         </div>
       </div>

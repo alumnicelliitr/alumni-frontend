@@ -14,7 +14,7 @@ function handleErrors(response) {
   // let status = true
   if (!response.ok) {
     if (response.status === 401) {
-      window.location.pathname = '/'
+      // window.location.pathname = '/'
     }
     //   } else if (response.status === 404) {
     //     status = false

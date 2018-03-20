@@ -1,25 +1,39 @@
+import { browserHistory } from 'react-router'
+
 import { fetchAPI, fetchAPIGET } from './fetchAPI'
-import { recieveUser, logoutUser, } from './user_actions.js'
+import { recieveUser, logoutUser } from './user_actions'
 
-import { API_DOMAIN } from '../../shared/config'
+import { API_DOMAIN, IMG_OAUTH_REDIRECT } from '../../shared/config'
 
-export const fetchUser = () => (dispatch) => {
-  const url = new URL(location.href)
-  const code = url.searchParams.get("code")
-  if (code) {
-    const request = new Request(`http://127.0.0.1:8999/api/core/login/?code=${code}`,{
-      method: 'get',
-    })
-    fetch(request)
-      .then(res => res.json())
-      .then(res => {
-        dispatch(recieveUser(res))
-      })
-  }
+export const ImgOauthRedirect = () => {  
+  window.location.href = IMG_OAUTH_REDIRECT
 }
 
-export const logout = () => dispatch => {
+export const fetchUser = code => (dispatch) => {
+  fetch(`${API_DOMAIN}api/core/login/?code=${code}`)
+    .then(response =>
+      [response.json(), response.status],
+    ).then(([res, status]) => {
+      if (status === 202) {
+        res.then((json) => {
+          const { user, token } = json
+          window.localStorage.setItem('token', token)
+          dispatch(recieveUser(user))
+          setTimeout(() => {
+          }, 1000)
+        })
+      } else {
+      // Handle Not authorised.
+      }
+    }).catch((err) => {
+      throw new Error(err)
+    })
+}
 
+export const logout = () => (dispatch) => {
+  localStorage.removeItem('token')
+  dispatch(logoutUser())
+  browserHistory.push('/')
 }
 
 export const fetchEvent = () => (dispatch) => {
