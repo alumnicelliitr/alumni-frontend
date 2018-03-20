@@ -45,7 +45,7 @@ export default class TrendingNews extends React.Component {
 
   render() {
     if (this.state.isLoaded) {
-      this.state.data.map((slide) => {
+      this.state.data.map((slide, key) => {
         const $cellElems = $(`<div class="carousel-cell">
             <img class="carousel-image" src=${slide.thumbnail ? slide.thumbnail : '/static/images/grey.jpg'}/>
             <h4 class="carousel-heading">${slide.title}</h4>

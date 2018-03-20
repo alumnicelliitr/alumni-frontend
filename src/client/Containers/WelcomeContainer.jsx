@@ -16,18 +16,18 @@ import { recieveUser, logoutUser, } from '../actions/user_actions.js'
 
 class WelcomeContainer extends React.Component {
   componentDidMount(){
-    var url = new URL(location.href);
-    const code = url.searchParams.get("code");
-    if (code){
-      let request = new Request(`http://127.0.0.1:8999/api/core/login/?code=${code}`,{
-        method:'get',
-      });
-      fetch(request)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
-    }
+    // var url = new URL(location.href);
+    // const code = url.searchParams.get("code");
+    // if (code){
+    //   let request = new Request(`http://127.0.0.1:1337/api/core/login/?code=${code}`,{
+    //     method:'get',
+    //   });
+    //   fetch(request)
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     console.log(res);
+    //   });
+    // }
   }
   render() {
     return (
