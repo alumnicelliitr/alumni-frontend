@@ -32,12 +32,13 @@ class WelcomeContainer extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => ({
 
-}
+})
 
 const mapDispatchToProps = ({
   recieveUser,
   logoutUser,
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(WelcomeContainer);
