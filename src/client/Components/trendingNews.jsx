@@ -25,9 +25,7 @@ export default class TrendingNews extends React.Component {
     })
     fetch(`${MEDIUM_RSS_URL}?rss_url=${RSS_FEED_URL}`)
       .then(res => res.json())
-      .then((res) => { 
-        console.log(res);
-           
+      .then((res) => {
         this.setState({
           isLoaded: true,
           data: res.items,
@@ -35,7 +33,7 @@ export default class TrendingNews extends React.Component {
       })
     fetch(request)
       .then(res => res.json())
-      .then((res) => {   
+      .then((res) => {
         const { data } =  this.state
         this.setState({
           isLoaded: true,
@@ -56,8 +54,10 @@ export default class TrendingNews extends React.Component {
     if (this.state.isLoaded) {
       this.state.data.forEach((slide) => {
         const $cellElems = $(`<div class="carousel-cell">
+            <a href="${slide.guid}">
             <img class="carousel-image" src=${slide.thumbnail.includes('https://cdn-images') ? slide.thumbnail : '/static/images/grey.jpg'} >
             <h4 class="carousel-heading">${slide.title}</h4>
+            </a>
           </div>`);
         $('.main-carousel').flickity( 'append', $cellElems );
       });

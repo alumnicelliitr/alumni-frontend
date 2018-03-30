@@ -8,28 +8,20 @@
     margin: 1% 0%;
 }
 
-.photo{font-size:15px;
-       color: black;}
-
-.photoChoose{
-    background-color: #2D9CDB;
-    width: 211px;
-    height: 54px;
-    color: white;
+.upload-images-container{
+  display: flex;
+  justify-content: space-between;
+}
+.image-uploader{
+  padding: 0 10px;
+}
+.image-uploader label{
+  font-size: 1em;
 }
 
 .collapsible-body {
     background: #FAFAFA;
 }
-
-/*.submit-button {
-    background: #1F87C4;
-    width: 107px;
-    height: 30px;
-    left: 47vw;
-    border-radius: 0%;
-    color: #FFFFFF;
-}*/
 
 input:focus {
     background: white;
