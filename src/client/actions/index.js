@@ -7,7 +7,7 @@ import { recieveUser, logoutUser } from './user_actions'
 
 import { API_DOMAIN, IMG_OAUTH_REDIRECT } from '../../shared/config'
 
-export const ImgOauthRedirect = () => {  
+export const ImgOauthRedirect = () => {
   window.location.href = IMG_OAUTH_REDIRECT
 }
 
@@ -26,7 +26,7 @@ export const fetchUser = code => (dispatch) => {
           }
           window.localStorage.setItem('pk', atob(user.enr_no))
           console.log(user, recieveUser, 'logged In...')
-          
+
           dispatch(recieveUser(user))
           setTimeout(() => {
             window.location.href = '/user/dashboard'
@@ -83,6 +83,18 @@ export const createKYA = data => {
   axios({
     method: 'post',
     url: `${API_DOMAIN}api/website/knowYourAlum/create`,
+    headers,
+    data,
+  }).then((response) => {
+  }).catch((err) => {
+  })
+  console.log(data);
+}
+
+export const createSYS = data => {
+  axios({
+    method: 'post',
+    url: `${API_DOMAIN}api/website/shareYourStory/create`,
     headers,
     data,
   }).then((response) => {

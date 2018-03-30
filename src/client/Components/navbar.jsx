@@ -27,7 +27,10 @@ class Navbar extends React.Component {
           {!isUserAuthenticated() ? (
             <a className="loginbutton" onClick={ImgOauthRedirect}>Login</a>
           ):(
+            <div className="logged-buttons">
             <a className="loginbutton" onClick={this.props.logoutUserfromAPI}>Logout</a>
+            <Link to="/dashboard/alumni"><img src={this.props.user.image} className="profile-image-icon" onError={(e) => e.target.src = '/static/images/grey.jpg'}/></Link>
+            </div>
           )}
         </div>
       </div>

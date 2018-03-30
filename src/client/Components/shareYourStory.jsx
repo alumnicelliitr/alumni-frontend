@@ -40,8 +40,7 @@ export default class ShareYourStory extends React.Component {
       <div>
         { !this.state.isLoaded ? (<Loader/>) : ''}
         <p className="publications-description">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-          quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+          ‘Share your Story’ is a communication channel between the students and the alumni that renders a platform to the alumni where they can share their success stories and other insightful experiences over a wide variety of topics. Alumni can speak about their professional life, personal experiences, life at the institute, involvement in academics, cultural and technical activities and some really interesting gossips while students can gain knowledge from their valuable experiences.
         </p>
         <div className="publication-card-container">
           {cards}
