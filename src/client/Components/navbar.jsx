@@ -1,10 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router';
-import '../styles/navbar.css';
+import React from 'react'
+import { Link } from 'react-router'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-import { ImgOauthRedirect } from '../actions/'
+import '../styles/navbar.css'
 
-export default class Navbar extends React.Component {
+import { ImgOauthRedirect, logoutUserfromAPI } from '../actions/'
+import { isUserAuthenticated } from '../../shared/Auth'
+
+class Navbar extends React.Component {
   render() {
     return (
       <div className="navbar">
@@ -20,9 +24,23 @@ export default class Navbar extends React.Component {
             <Link to="/donate" className="nav-links">Donate</Link>
             <Link to="/contact" className="nav-links">Contact</Link>
           </div>
-          <a className="loginbutton" onClick={ImgOauthRedirect}>Login</a>
+          {!isUserAuthenticated() ? (
+            <a className="loginbutton" onClick={ImgOauthRedirect}>Login</a>
+          ):(
+            <a className="loginbutton" onClick={this.props.logoutUserfromAPI}>Logout</a>
+          )}
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  user: state.user,
+})
+
+const mapDispatchToProps = dispatch => ({
+  logoutUserfromAPI: bindActionCreators(logoutUserfromAPI, dispatch),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
+
 import Navbar from '../../Components/navbar.jsx';
 // import VisionTab from '../Components/vision.jsx';
 // import Dora from '../Components/dora.jsx';
@@ -10,11 +12,12 @@ import LandingFooter from '../../Components/landingFooter.jsx';
 
 // import '../styles/about.css';
 
-class Vision extends React.Component {
+class UserDashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: 0
+      activeTab: 0,
+      user: {},
     };
   }
 
@@ -27,6 +30,17 @@ class Vision extends React.Component {
     })
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      user: nextProps.user,
+    })
+    if(nextProps.user.isAlumni) {
+      this.setState({
+        AlumniCard: null,
+      })
+    }
+  }
+
   tabClick(clickTab) {
     this.setState({
       activeTab: clickTab
@@ -34,15 +48,27 @@ class Vision extends React.Component {
   }
 
   render() {
-    const tabs = [
-      {lightHeading: '',darkHeading: 'Alumni Card'},
-      {lightHeading: '',darkHeading: ' Profile Settings'},
-    ];
-
-    const tabContent = [
-      ( <div id="alumniCard" className="about-containers">{this.state.AlumniCard}</div> ),
-      ( <div id=" settings" className="about-containers">{this.state.AlumniSettings}</div> ),
-    ];
+    let tabs = []
+    let tabContent = []
+    if(!this.state.user.isAlumni) {
+      tabs = [
+        {lightHeading: '',darkHeading: 'Alumni Card'},
+        {lightHeading: '',darkHeading: ' Profile Settings'},
+      ];
+  
+      tabContent = [
+        ( <div id="alumniCard" className="about-containers">{this.state.AlumniCard}</div> ),
+        ( <div id=" settings" className="about-containers">{this.state.AlumniSettings}</div> ),
+      ];
+    } else {
+      tabs = [
+        {lightHeading: '',darkHeading: ' Profile Settings'},
+      ];
+  
+      tabContent = [
+        ( <div id=" settings" className="about-containers">{this.state.AlumniSettings}</div> ),
+      ];
+    }
     return (
       <div>
         <Navbar/>
@@ -60,5 +86,9 @@ class Vision extends React.Component {
   }
 }
 
-export default Vision
+const mapStateToProps = state => ({
+  user: state.user,
+})
+
+export default connect(mapStateToProps, null)(UserDashboard)
 
