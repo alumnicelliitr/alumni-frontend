@@ -3,7 +3,7 @@ import '../styles/videoLanding.css';
 
 export default class VideoLanding extends React.Component {
   render() {
-    const content = 'Lorem ipsum dolor sit amet, consect ut est erat. Duis id ultrices nisi. Quisque ornare lorem ex, sit amet euismod tortor mollis at. Phasellus ullamcorper nibh nec vehicula volutpat. Donec lacinia sagittis lectus, maximus malesuada metus auctor in. Donec gravida dui odio, suscipit dignissim dui rutrum accumsan. Mauris sit amet nulla non nisl porttitor sagittis. Sed vestibulum consectetur convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ullamcorper libero rhoncus mi pharetra iaculis. Praesent a lacinia arcu.'
+    const content = 'Video Repository is a source for students to envision the possibilities for their own vocational goals, and to collect wisdom from the more experienced personalities who are willing to share their knowledge.Under this initiative, any alumnus can share his/her experiences and knowledge through a small informal interview or talk and send us a video of the same. These videos will be posted regularly on the facebook page and the website of IARC.'
     return (
       <div>
         <div className="video-landing-container">

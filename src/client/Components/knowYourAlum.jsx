@@ -7,8 +7,7 @@ export default class KnowYourAlum extends React.Component {
     return (
       <div>
         <p className="publications-description">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-          quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+          IIT Roorkee has several affluent, influential and recognised alumni working in various sectors around the globe. The foundation of a strong and connected alumni network is the acquaintance with one's alumni. The ‘Know your Alum’ initiative of IARC works towards this cause and aims to bridge the gap between the students and the alumni by providing students an opportunity to know the eminent alumni of the institute and communicate with them.
         </p>
         <div className="publication-card-container">
           <PublicationCard thumbnail="/static/images/grey.jpg" title="some title"/>

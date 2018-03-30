@@ -10,7 +10,7 @@ export default class DoraDetails extends React.Component {
           <div className="dora-details">
             <div className="dora-image"><img src="/static/images/sample.jpg"/></div>
             <div className="dora-content">
-              <div className="dora-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem justo, pulvinar convallis faucibus non, rhoncus vitae leo. Pellentesque ut est erat. Duis id ultrices nisi. Quisque ornare lorem ex, sit amet euismod tortor mollis at. Phasellus ullamcorper nibh nec vehicula volutpat. Donec lacinia sagittis lectus, maximus malesuada metus auctor in. Donec gravida dui odio, suscipit dignissim dui rutrum accumsan. Mauris sit amet nulla non nisl porttitor sagittis. Sed vestibulum consectetur convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ullamcorper libero rhoncus mi pharetra iaculis. Praesent a lacinia arcu.</div>
+              <div className="dora-about">The Dean of Resources and Alumni Affairs (DORA) looks over the functioning of the Institute Alumni Relations Cell (IARC), and acts as a channel between the IARC and the administration. The guidance and support of DORA has always been a source of motivation for both the alumni and the IARC to work together to strengthen the cooperation between the alumni and the institute, and it is under the aegis of DORA that the IARC has undertaken several initiatives for the same.</div>
               <div className="dora-contact">
                 <div className="phone contact-row">
                   <img src="/static/images/phone-icon.svg" />

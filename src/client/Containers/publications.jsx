@@ -6,7 +6,7 @@ import KnowYourAlum from '../Components/knowYourAlum.jsx';
 import ShareYourStory from '../Components/shareYourStory.jsx';
 import '../styles/publications.css';
 
-import { createKYA } from '../actions'
+import { createKYA, createSYS } from '../actions'
 
 export default class Publications extends React.Component {
   constructor(props){
@@ -48,7 +48,12 @@ export default class Publications extends React.Component {
     formData.append("thumbnail", imagefile.files[0]);
     formData.append("description", story.value);
     formData.append("title", "RANDOM title");
-    createKYA(formData)
+    if(this.state.activeTab == 0){
+      createKYA(formData);
+    }
+    else {
+      createSYS(formData);
+    }
   }
 
   readURL(input) {

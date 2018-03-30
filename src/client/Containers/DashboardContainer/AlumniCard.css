@@ -22,14 +22,14 @@
     background: #FAFAFA;
 }
 
-.submit-button {
+/*.submit-button {
     background: #1F87C4;
     width: 107px;
     height: 30px;
     left: 47vw;
     border-radius: 0%;
-    color: #FFFFFF;   
-}
+    color: #FFFFFF;
+}*/
 
 input:focus {
     background: white;

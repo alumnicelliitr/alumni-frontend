@@ -52,8 +52,21 @@
     transition: 0.2s ease;
     cursor: pointer;
 }
-.separator{
+/*.separator{
   border: 0.5px solid #000;
   height: 1px;
   width: 100%;
+}*/
+.logged-buttons {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  width: 170px;
+  justify-content: space-between;
+}
+.profile-image-icon{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
 }

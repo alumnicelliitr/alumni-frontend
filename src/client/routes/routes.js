@@ -18,6 +18,7 @@ import Awards from '../Containers/awards'
 import AlumniDashboard from '../Containers/DashboardContainer/index'
 import AboutEvent from '../Containers/aboutEvent'
 import Publications from '../Containers/publications'
+import MOU from '../Containers/MOU'
 import UserWrapper from '../Containers/UserWrapper'
 import TemporaryLoginContainer from '../Containers/TemporaryLoginContainer'
 import DistinguishedAlumniContainer from '../Containers/DistinguishedAlumniContainer'
@@ -91,11 +92,11 @@ const routes = {
       path: rC.PUBLICATIONS,
       component: Publications,
     },
-    // {
-    //   path: rC.MOU_ROUTE,
-    //   component: MOU,
+    {
+      path: rC.MOU_ROUTE,
+      component: MOU,
     //   // Add authorisation wrapper
-    // },
+    },
     {
       path: rC.ALUM_DASHBOARD_ROUTE,
       component: AlumniDashboard,

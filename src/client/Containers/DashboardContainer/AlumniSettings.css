@@ -8,7 +8,7 @@ input[type="text"], textarea[type="text"] {
     margin: 1% 0%;
 }
 
-.submit-button {
+/*.submit-button {
     background: #1F87C4;
     width: 107px;
     height: 30px;
@@ -19,7 +19,7 @@ input[type="text"], textarea[type="text"] {
     line-height: normal;
     font-size: 25px;
     color: #FFFFFF;
-}
+}*/
 
 .dropdown {
     width: 100%;

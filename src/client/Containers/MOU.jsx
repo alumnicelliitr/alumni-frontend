@@ -40,8 +40,10 @@ export default class MOU extends React.Component {
       <div>
         <Navbar/>
         { !this.state.isLoaded ? (<Loader/>) : ''}
-        <div className="mou container">
-          {cards}
+        <div className="mou">
+          <div className="container">
+            {cards}
+          </div>
         </div>
         <LandingFooter/>
       </div>

@@ -6,7 +6,7 @@ export default class NewsCard extends React.Component {
     return (
       <a href={this.props.link}>
         <div className="news-card">
-          <img className="news-card-image" src={this.props.thumbnail}/>
+          <img className="news-card-image" src={this.props.thumbnail} onError={(e) => e.target.src = '/static/images/grey.jpg'}/>
           <div className="news-card-content" >
             {this.props.title}
           <span className="read-article" >Read Article</span>
