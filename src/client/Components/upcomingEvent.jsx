@@ -11,7 +11,11 @@ export default class UpcomingEvent extends React.Component {
 
     return (
         <div className="upcoming-events-container">
-         {events}
+         {events.length > 0 ? (
+           <div>{events}</div>
+         ):(
+           <div>No Upcoming Event </div>
+         )}
         </div>
       );
   }

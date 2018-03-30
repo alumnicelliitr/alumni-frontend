@@ -13,7 +13,7 @@ export default class Team extends React.Component {
       current: [],
     };
   }
-  componentDidMount() {
+  componentWillMount() {
     let request = new Request('https://institute-alumni-relation-cell.herokuapp.com/api/core/team/',{
       method:'get',
     });

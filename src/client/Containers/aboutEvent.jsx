@@ -13,7 +13,7 @@ export default class AboutEvent extends React.Component {
       data: {},
     }
   }
-  componentDidMount(){
+  componentWillMount(){
     const id = this.props.params.id;
     let request = new Request(`${baseUrl}/api/website/event/${id}/`,{
       method:'get',

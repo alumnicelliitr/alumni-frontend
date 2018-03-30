@@ -18,15 +18,16 @@ class RecentEvents extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     let request = new Request('https://institute-alumni-relation-cell.herokuapp.com/api/website/events/',{
       method:'get',
     });
     fetch(request)
     .then((res) => res.json())
     .then((res) => {
+      console.log(res);
+      
       this.setState({
-        activeTab: this.state.activeTab,
         isLoaded: true,
         data: res,
       });
@@ -41,11 +42,11 @@ class RecentEvents extends React.Component {
     });
   }
   render() {
-    const eventTabs = this.state.data.map((obj) => { return { lightHeading:Object.keys(obj)[0] } })
+    const eventTabs = this.state.data.map((obj) => { return { lightHeading:Object.keys(obj)[0].split(' ')[0], darkHeading: Object.keys(obj)[0].split(' ')[1], all: Object.keys(obj)[0]} })
 
     let eventContent;
     if(this.state.isLoaded){
-      eventContent = (<EventContainer events={this.state.data[this.state.activeTab][eventTabs[this.state.activeTab].lightHeading]}/>);
+      eventContent = (<EventContainer events={this.state.data[this.state.activeTab][eventTabs[this.state.activeTab].all]}/>);
     }
 
     return (

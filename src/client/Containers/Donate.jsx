@@ -14,7 +14,7 @@ export default class Donate extends React.Component {
       data: {},
     }
   }
-  componentDidMount(){
+  componentWillMount(){
     let request = new Request(`${baseUrl}/api/website/donation_schemes/`,{
       method:'get',
     });

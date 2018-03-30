@@ -29,7 +29,7 @@ class Navbar extends React.Component {
           ):(
             <div className="logged-buttons">
             <a className="loginbutton" href="/user/logout">Logout</a>
-            <Link to="/dashboard/alumni"><img src={this.props.user.image} className="profile-image-icon" onError={(e) => e.target.src = '/static/images/grey.jpg'}/></Link>
+            <Link to="/user/dashboard"><img src={this.props.user.image || '/static/images/grey.jpg'} className="profile-image-icon" onError={(e) => e.target.src = '/static/images/grey.jpg'}/></Link>
             </div>
           )}
         </div>
