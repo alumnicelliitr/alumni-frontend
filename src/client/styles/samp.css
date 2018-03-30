@@ -4,7 +4,7 @@
 .samp-container div{
   display: flex;
   justify-content: space-between;
-}
+}/**/
 .samp-container h2{
   text-align: center;
   color: #282828;

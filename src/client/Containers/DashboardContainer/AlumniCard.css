@@ -1,11 +1,21 @@
-input[type="text"], textarea[type="text"] {
-    background: #BDBDBD !important;
+.input-field {
+    background: #FFFFFF !important;
     width: 100%;
     border: none;
     color: black;
-    border-radius: 2%;
+    border-radius: 2%; /**/
     padding: 1% 1%;
     margin: 1% 0%;
+}
+
+.photo{font-size:15px;
+       color: black;}
+
+.photoChoose{
+    background-color: #2D9CDB;
+    width: 211px;
+    height: 54px;
+    color: white;
 }
 
 .collapsible-body {
