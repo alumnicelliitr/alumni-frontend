@@ -13,7 +13,8 @@ export const CLIENT_ID = '7bad4b14038cda823f3c'
 export const REDIRECT_URL = 'alumni.iitr.ac.in/dashboard/'
 
 export const MEDIUM_RSS_URL = 'https://api.rss2json.com/v1/api.json'
-export const RSS_FEED_URL = 'https://medium.com/feed/@janicegill_29095?sort=top&days=1&amount=2'
+export const RSS_FEED_URL = 'https://medium.com/feed/personal-growth'
+// export const RSS_FEED_URL = 'https://medium.com/feed/institute-alumni-relations-cell-iit-roorkee'
 
 export const API_DOMAIN = 'https://institute-alumni-relation-cell.herokuapp.com/'
 
