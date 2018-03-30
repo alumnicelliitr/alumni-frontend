@@ -19,7 +19,7 @@ const generateState = () => ({
   affirmation: false,
   canRegister: true,
 })
-
+/**/
 class AlumniCard extends Component {
   constructor(props) {
     super(props)
@@ -96,6 +96,7 @@ class AlumniCard extends Component {
               {this.state.canRegister ? (
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                 <input
+                  className="input-field"
                   placeholder="Present Designation"
                   className="browser-default"
                   type="text"
@@ -105,6 +106,7 @@ class AlumniCard extends Component {
                   onChange={this.handleChange}
                 />
                 <textarea
+                  className="input-field"
                   placeholder="Present Office Address(With PIN code)"
                   className="browser-default"
                   type="text"
@@ -115,6 +117,7 @@ class AlumniCard extends Component {
                   onChange={this.handleChange}
                 />
                 <textarea
+                  className="input-field"
                   placeholder="Present Residence Address (With PIN Code) [NOTE: This address would be printed on the card]"
                   className="browser-default"
                   type="text"
@@ -125,6 +128,7 @@ class AlumniCard extends Component {
                   onChange={this.handleChange}
                 />
                 <textarea
+                  className="input-field"
                   placeholder="Delivery Address (With PIN Code) [Card would be sent to this address] "
                   className="browser-default"
                   type="text"
@@ -135,6 +139,7 @@ class AlumniCard extends Component {
                   onChange={this.handleChange}
                 />
                 <textarea
+                  className="input-field"
                   placeholder="Address for Future Correspondence"
                   className="browser-default"
                   type="text"
@@ -145,8 +150,9 @@ class AlumniCard extends Component {
                   onChange={this.handleChange}
                 />
                 <div>
-                  <label>Photo</label>
-                  <input onChange={this.handleImage} name="photo" type="file" alt="photo" required />
+                  <label className="photo">Photo</label></div>
+                  <div>
+                  <input className="photoChoose" onChange={this.handleImage} name="photo" type="file" alt="photo" required />
                 </div>
                 <div>
                   <label>Photo Sign</label>
