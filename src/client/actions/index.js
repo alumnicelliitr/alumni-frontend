@@ -30,7 +30,7 @@ export const fetchUser = code => (dispatch) => {
           dispatch(recieveUser(user))
           setTimeout(() => {
             window.location.href = '/user/dashboard'
-          }, 500)
+          }, 1000)
         })
       } else {
         window.location.href = '/'
@@ -45,7 +45,9 @@ export const logoutUserfromAPI = () => (dispatch) => {
     console.log(response)
     localStorage.clear()
     dispatch(logoutUser())
-    window.location.href = '/'
+    setTimeout(() => {
+      window.location.href = '/'
+    }, 1000)
     // browserHistory.push('/')
   })
 }
@@ -122,4 +124,27 @@ export const checkAlumniCard = (cb) => {
   fetchAPIGET(`${API_DOMAIN}api/website/alumni_card`, (json, status) => {
     cb(status === 200, json)
   })
+}
+
+const header1 = {
+  'Authorization': `Token ${getToken()}`,
+  // 'Content-Type': 'multipart/form-data'
+}
+
+export const registerDistinguishedAlumniCard = (data, cb) => {
+  console.log(data);
+  
+  axios({
+    method: 'post',
+    url: `${API_DOMAIN}api/core/nominate/`,
+    headers: header1,
+    data,
+  }).then((response) => {
+    Materialize.toast('Successfully Nominated', 2000)
+    cb(response.status === 201, response.data)
+  }).catch((err) => {
+    console.log(err);
+    Materialize.toast(err.response.message, 2000)
+  })
+  console.log(data);
 }

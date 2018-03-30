@@ -21,6 +21,7 @@ import Publications from '../Containers/publications'
 import MOU from '../Containers/MOU'
 import UserWrapper from '../Containers/UserWrapper'
 import TemporaryLoginContainer from '../Containers/TemporaryLoginContainer'
+import TemporaryLogoutContainer from '../Containers/TemporaryLogoutContainer'
 import DistinguishedAlumniContainer from '../Containers/DistinguishedAlumniContainer'
 
 import * as rC from './routeConstants'
@@ -123,6 +124,10 @@ const routes = {
     {
       path: '/distinguished',
       component: DistinguishedAlumniContainer,
+    },
+    {
+      path: '/user/logout',
+      component: TemporaryLogoutContainer,
     },
     {
       path: '*',

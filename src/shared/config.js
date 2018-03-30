@@ -18,4 +18,3 @@ export const RSS_FEED_URL = 'https://medium.com/feed/@janicegill_29095?sort=top&
 export const API_DOMAIN = 'https://institute-alumni-relation-cell.herokuapp.com/'
 
 export const IMG_OAUTH_REDIRECT = `http://people.iitr.ernet.in/oauth/?client_id=${CLIENT_ID}&redirect_url=${REDIRECT_URL}`
-// 7bad4b14038cda823f3c

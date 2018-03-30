@@ -20,85 +20,88 @@ class AlumniCard extends Component {
   constructor(props) {
     super(props)
     this.state = generateState()
-    this.handleAffirmation = this.handleAffirmation.bind(this)
   }
 
   componentDidMount() {
     $('.collapsible').collapsible()
   }
 
-  handleAffirmation() {
-    this.setState({
-      affirmation: !this.state.affirmation,
-    })
-  }
-
-  handleChange = (e) => {
-    const { alumCard } = this.state
-    alumCard[e.target.name] = e.target.value
-    this.setState({
-      alumCard,
-    })
-  }
-
-  handleSubmit = () => {
-    const error = {}
-    if(!this.state.affirmation) {
-        error.affirmation = 'Affirmation requires'
-        return
-    }
-    // createAlumniCard(data)
-  }
-
   render() {
     return (
       <div>
             <div>
-              <form onSubmit={(e) => e.preventDefault()} action="http://localhost:1337/api/website/alumni_card/register" method="POST" encType="multipart/form-data">
+              <form>
               <input
                   placeholder="Name"
                   className="browser-default"
                   type="text"
-                  name="name"
+                  name="nominator_name"
                   required
-                  value={this.state.user.name}
-                  onChange={this.handleChange}
+                  value={this.props.nominator.nominator_name}
+                  onChange={this.props.handleChange}
                 />
                 <input
                   placeholder="Email"
                   className="browser-default"
                   type="text"
-                  name="email"
+                  name="nominator_email"
                   required
-                  value={this.state.user.email}
-                  onChange={this.handleChange}
+                  value={this.props.nominator.nominator_email}
+                  onChange={this.props.handleChange}
                 />
                 <input
                   placeholder="Contact No.(with Country Code)"
                   className="browser-default"
                   type="text"
-                  name="contact"
+                  name="nominator_contact"
                   required
-                  value={this.state.user.contact}
-                  onChange={this.handleChange}
+                  value={this.props.nominator.nominator_contact}
+                  onChange={this.props.handleChange}
                 />
                 <input
                   placeholder="Degree obtained from the University of Roorkee/IIT Roorkee"
                   className="browser-default"
                   type="text"
-                  name="contact"
+                  name="nominator_designation"
                   required
-                  value={this.state.user.contact}
-                  onChange={this.handleChange}
+                  value={this.props.nominator.nominator_designation}
+                  onChange={this.props.handleChange}
                 />
                 <input
-                  placeholder="Year of Graduation:"
+                  placeholder="Address"
                   className="browser-default"
                   type="text"
-                  name="contact"
+                  name="nominator_address"
                   required
-                  value={this.state.user.contact}
-                  onChange={this.handleChange}
+                  value={this.props.nominator.nominator_address}
+                  onChange={this.props.handleChange}
+                />
+                <input
+                  placeholder="Affiliations"
+                  className="browser-default"
+                  type="text"
+                  name="nominator_affiliation"
+                  required
+                  value={this.props.nominator.nominator_affiliation}
+                  onChange={this.props.handleChange}
+                />
+                <input
+                  placeholder="Year of Graduation"
+                  className="browser-default"
+                  type="text"
+                  name="nominator_yearpass"
+                  required
+                  value={this.props.nominator.nominator_yearpass}
+                  onChange={this.props.handleChange}
+                />
+                <input
+                  placeholder="Year of Graduation"
+                  className="browser-default"
+                  type="text"
+                  name="nominator_yearpass"
+                  required
+                  value={this.props.nominator.nominator_yearpass}
+                  onChange={this.props.handleChange}
                 />
               </form>
             </div>

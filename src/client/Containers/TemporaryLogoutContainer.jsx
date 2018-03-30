@@ -2,20 +2,16 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { fetchUser } from '../actions/'
+import { logoutUserfromAPI } from '../actions/'
 import CircularLoader from '../Components/CircularLoader'
-class TemporaryLoginContainer extends Component {
+class TemporaryLogoutContainer extends Component {
 	constructor(props) {
 		super(props)
-		this.state = {
-				code: '',
-		}
 	}
 
 
 	componentWillMount() {
-		const { code } = this.props.location.query
-		this.props.fetchUser(code)
+		this.props.logoutUserfromAPI()
 	}
 
 	render() {
@@ -28,7 +24,7 @@ class TemporaryLoginContainer extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-	fetchUser: bindActionCreators(fetchUser, dispatch),
+	logoutUserfromAPI: bindActionCreators(logoutUserfromAPI, dispatch),
   })
 
-export default connect(null, mapDispatchToProps)(TemporaryLoginContainer)
+export default connect(null, mapDispatchToProps)(TemporaryLogoutContainer)
