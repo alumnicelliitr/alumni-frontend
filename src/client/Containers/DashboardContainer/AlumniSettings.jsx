@@ -52,11 +52,11 @@ class AlumniCard extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="alumni-settings container">
         <div className="row">
             <div className="col s4">
-                <input onChange={this.onImageChange.bind(this)} id="image" type="file" alt="Login" />
-                <div className="settings-image">
+              <input onChange={this.onImageChange.bind(this)} id="image" type="file" alt="Login" />
+              <div className="settings-image">
                 <img id="target" src={this.state.image}/>
               </div>
             </div>

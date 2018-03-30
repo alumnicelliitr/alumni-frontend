@@ -32,7 +32,7 @@ class AlumniCard extends Component {
       this.setState({
         canRegister,
       })
-    }) 
+    })
   }
 
   componentDidMount() {
@@ -61,7 +61,7 @@ class AlumniCard extends Component {
         return
     }
     console.log(e);
-    
+
     const formData = new FormData();
     for(let key in this.state.alumCard) {
       formData.append(key, this.state.alumCard[key])
@@ -149,18 +149,25 @@ class AlumniCard extends Component {
                   value={this.state.alumCard.address}
                   onChange={this.handleChange}
                 />
-                <div>
-                  <label className="photo">Photo</label></div>
-                  <div>
-                  <input className="photoChoose" onChange={this.handleImage} name="photo" type="file" alt="photo" required />
-                </div>
-                <div>
-                  <label>Photo Sign</label>
-                  <input onChange={this.handleImage} name="photo_sign" type="file" alt="photo_sign" required />
-                </div>
-                <div>
-                  <label>Photo Degree</label>
-                  <input onChange={this.handleImage} name="photo_degree" type="file" alt="photo_degree" required />
+                <div className="upload-images-container">
+                  <div className="image-uploader">
+                    <label className="photo">Photo</label>
+                    <div>
+                      <input className="photoChoose" onChange={this.handleImage} name="photo" type="file" alt="photo" required />
+                    </div>
+                  </div>
+                  <div className="image-uploader">
+                    <label>Photo Sign</label>
+                    <div>
+                      <input onChange={this.handleImage} name="photo_sign" type="file" alt="photo_sign" required />
+                    </div>
+                  </div>
+                  <div className="image-uploader">
+                    <label>Photo Degree</label>
+                    <div>
+                      <input onChange={this.handleImage} name="photo_degree" type="file" alt="photo_degree" required />
+                    </div>
+                  </div>
                 </div>
                 <p onClick={this.handleAffirmation} >
                   <input  checked={this.state.affirmation} type="checkbox" required />

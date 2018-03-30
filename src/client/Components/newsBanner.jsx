@@ -15,7 +15,7 @@ export default class NewsBanner extends React.Component {
   componentWillMount() {
     fetch(
       `${MEDIUM_RSS_URL}?rss_url=${RSS_FEED_URL}`,
-    ).then((res) => 
+    ).then((res) =>
        res.json()
     ).then((res) => {
       console.log(res.items)
@@ -30,10 +30,12 @@ export default class NewsBanner extends React.Component {
       <div className="news-banner-container container">
         <div className="news-banner-header">
           <h3 className="light-heading">News & Insight</h3>
-          <div>
-            <img className="menu-icon responsive" src="/static/images/menu.svg"/>
-            View all articles
-          </div>
+          <a href="https://medium.com/institute-alumni-relations-cell-iit-roorkee">
+            <div className="medium-blog-icon">
+              <img className="menu-icon responsive" src="/static/images/menu.svg"/>
+              View all articles
+            </div>
+          </a>
         </div>
         <div className="news-card-container">
         {this.state.data.map((blog, key) => (
