@@ -15,13 +15,15 @@ export default class Awards extends React.Component {
       data: {},
     }
   }
-  componentDidMount(){
+  componentWillMount(){
     let request = new Request(`${baseUrl}/api/website/awards/`,{
       method:'get',
     });
     fetch(request)
     .then((res) => res.json())
     .then((res) => {
+      console.log(res);
+      
       this.setState({
         isLoaded: true,
         data: res,
