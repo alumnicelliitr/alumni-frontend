@@ -1,28 +1,15 @@
-const initialState = {
-  isLoggedIn: false,
-  user: {},
-};
+import initialState from './initialState'
 
-export default function user(state = initialState, action) {
-  console.log(action)
-  
-  const { data } = action;
-
-  switch(action.type) {
-    case 'RECIEVE_USER': {
-      return {
-        isLoggedIn: true,
-        user: data,
-      }
-    }
-    case 'LOGOUT_USER': {
-      return {
-        isLoggedIn: false,
-        user: {}
-      }
-    }
-    default: {
+const user = (state = initialState.user, action) => {
+  console.log(action, state, action.user)
+  switch (action.type) {
+    case 'RECEIVE_USER':
+      return Object.assign({}, state, action.user)
+    case 'LOGOUT_USER':
+      return Object.assign({}, {})
+    default:
       return state
-    }
   }
 }
+
+export default user

@@ -1,12 +1,8 @@
-export function recieveUser(user){
-  return {
-    type: 'RECIEVE_USER',
-    data: user,
-  };
-};
+export const recieveUser = user => ({
+  type: 'RECEIVE_USER',
+  user,
+})
 
-export function logoutUser(){
-  return {
-    type: 'LOGOUT_USER',
-  }
-};
+export const logoutUser = () => ({
+  type: 'LOGOUT_USER',
+})

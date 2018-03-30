@@ -27,4 +27,6 @@ export const authenticateUser = (token) => {
    * @returns {string}
    */
   export const getToken = () => window.localStorage.getItem('token')
+
+  export const getPK = () => btoa(window.localStorage.getItem('pk'))
   

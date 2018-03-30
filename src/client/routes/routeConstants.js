@@ -21,3 +21,5 @@ export const STUDENT_DASHBOARD_ROUTE = '/dashboard/student'
 
 export const TEMPORARY_LOGIN_ROUTE = '/login/user'
 
+export const DISTINGUISHED_ROUTE = '/distinguished'
+

@@ -14,7 +14,6 @@ class TemporaryLoginContainer extends Component {
 
 
 	componentWillMount() {
-		// check this
 		const { code } = this.props.location.query
 		this.props.fetchUser(code)
 	}

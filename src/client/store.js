@@ -1,11 +1,20 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import rootReducer from './reducers'
+import initialState from './reducers/initialState'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(thunk))
-);
+const logger = store => next => (action) => {
+  console.group(action.type)
+  console.info('dispatching', action)
+  let result = next(action)
+  console.log('next state', store.getState())
+  console.groupEnd(action.type)
+  return result
+}
 
-export default store;
+// let createStoreWithMiddleware = applyMiddleware(logger)(createStore)
+
+// let yourApp = combineReducers(reducers)
+// let store = createStoreWithMiddleware(yourApp)
+
+export default applyMiddleware(logger, thunk)(createStore)(rootReducer, initialState)

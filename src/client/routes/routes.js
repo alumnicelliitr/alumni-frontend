@@ -1,25 +1,26 @@
-import Base from '../Components/Pages/Base';
+import Base from '../Components/Pages/Base'
 
-import WelcomeContainer from '../Containers/WelcomeContainer';
-import NotFoundContainer from '../Containers/NotFoundContainer';
-import Vision from '../Containers/Vision';
-import Dora from '../Containers/Dora';
-import Team from '../Containers/Team';
-import SocialLinks from '../Containers/SocialLinks';
-import UpcomingEvents from '../Containers/UpcomingEvents';
-import RecentEvents from '../Containers/RecentEvents';
-import Initiatives from '../Containers/Initiatives';
-import Alum from '../Containers/Alum';
-import Story from '../Containers/Story';
-import Donate from '../Containers/Donate';
-import ContactUs from '../Containers/ContactUs';
-import Contact from '../Containers/WriteToUs';
-import Awards from '../Containers/awards.jsx';
-import AlumniDashboard from '../Containers/DashboardContainer/'
-import AboutEvent from '../Containers/aboutEvent.jsx';
-import Publications from '../Containers/publications.jsx';
+import WelcomeContainer from '../Containers/WelcomeContainer'
+import NotFoundContainer from '../Containers/NotFoundContainer'
+import Vision from '../Containers/Vision'
+import Dora from '../Containers/Dora'
+import Team from '../Containers/Team'
+import SocialLinks from '../Containers/SocialLinks'
+import UpcomingEvents from '../Containers/UpcomingEvents'
+import RecentEvents from '../Containers/RecentEvents'
+import Initiatives from '../Containers/Initiatives'
+import Alum from '../Containers/Alum'
+import Story from '../Containers/Story'
+import Donate from '../Containers/Donate'
+import ContactUs from '../Containers/ContactUs'
+import Contact from '../Containers/WriteToUs'
+import Awards from '../Containers/awards'
+import AlumniDashboard from '../Containers/DashboardContainer/index'
+import AboutEvent from '../Containers/aboutEvent'
+import Publications from '../Containers/publications'
 import UserWrapper from '../Containers/UserWrapper'
 import TemporaryLoginContainer from '../Containers/TemporaryLoginContainer'
+import DistinguishedAlumniContainer from '../Containers/DistinguishedAlumniContainer'
 
 import * as rC from './routeConstants'
 
@@ -109,14 +110,18 @@ const routes = {
 
     },
     {
-      path: '/dashboard',
+      path: '/user',
       component: UserWrapper,
       childRoutes: [
         {
-          path: '/dashboard/alumni',
+          path: '/user/dashboard',
           component: AlumniDashboard,
         },
       ],
+    },
+    {
+      path: '/distinguished',
+      component: DistinguishedAlumniContainer,
     },
     {
       path: '*',

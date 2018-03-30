@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 
+import { fetchUserDetails } from '../actions/'
+
 const style = {
   container: { display: 'flex', justifyContent: 'space-between' },
 }
@@ -21,18 +23,30 @@ class UserWrapper extends React.Component {
   }
 
   componentWillMount() {
-      // Fetch User Details if not fetched
-    // if (!this.props.member.email) {
-    //   this.props.fetchMemberDetails()
-    // } else {
-    //   this.setState({
-    //     member: this.props.member,
-    //     isFetching: false,
-    //   })
-    // }
+    // Fetch User Details if not fetched
+    if (!this.props.user.enr_no) {
+      this.props.fetchUserDetails()
+    } else {
+      this.setState({
+        user: this.props.user,
+        isFetching: false,
+      })
+    }
   }
-  render() {
-    if (true) {
+
+  componentDidMount() {
+
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      user: nextProps.user,
+      isFetching: false,
+    })
+  }
+  
+  render() {  
+    if (!this.state.isFetching && this.state.user.enr_no) {
       return (
         <div className="row">
           <div className="col s12">
@@ -51,13 +65,15 @@ class UserWrapper extends React.Component {
 }
 
 UserWrapper.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = state => ({
+  user: state.user,
 })
 
 const mapDispatchToProps = dispatch => ({
+  fetchUserDetails: bindActionCreators(fetchUserDetails, dispatch),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserWrapper)

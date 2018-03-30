@@ -6,6 +6,8 @@ import KnowYourAlum from '../Components/knowYourAlum.jsx';
 import ShareYourStory from '../Components/shareYourStory.jsx';
 import '../styles/publications.css';
 
+import { createKYA } from '../actions'
+
 export default class Publications extends React.Component {
   constructor(props){
     super(props);
@@ -15,6 +17,7 @@ export default class Publications extends React.Component {
       story: '',
       file: {},
     };
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   tabClick(clickTab) {
@@ -35,7 +38,24 @@ export default class Publications extends React.Component {
     });
   }
 
+  handleSubmit() {
+    const data = {}
+    const formData = new FormData();
+    const imagefile = document.querySelector('.inputfile');
+    const story = document.querySelector('#story');
+    console.log(story);
+    Materialize.toast('I am a toast', 2000)
+    formData.append("thumbnail", imagefile.files[0]);
+    formData.append("description", story.value);
+    formData.append("title", "RANDOM title");
+    createKYA(formData)
+  }
+
   readURL(input) {
+    console.log(input.files);
+    this.setState({
+      file: input.files[0],
+    })
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -50,10 +70,7 @@ export default class Publications extends React.Component {
 
   storyChange(e) {
     this.setState({
-      activeTab: this.state.activeTab,
-      writeMode: this.state.writeMode,
       story: e.target.value,
-      file: this.state.file,
     });
   }
 
@@ -76,12 +93,12 @@ export default class Publications extends React.Component {
             <input type='file' className="inputfile" onChange={(e) => this.readURL(e.target)} />
           </div>
           <div className="write-story">
-            <textarea name="write-story" className="browser-default" value={this.state.story} onChange={(e) => this.storyChange(e)}></textarea>
+            <textarea id="story" name="write-story" className="browser-default" value={this.state.story} onChange={(e) => this.storyChange(e)}></textarea>
           </div>
         </div>
         <div className="button-container">
           <div className="cancel-button">Cancel</div>
-          <div className="submit-button">Submit</div>
+          <div onClick={this.handleSubmit} className="submit-button">Submit</div>
         </div>
       </div>
     );
@@ -93,7 +110,7 @@ export default class Publications extends React.Component {
     return (
       <div>
       <Navbar/>
-      <div className="publications-container container">
+      <div className="publications-container container" style={{marginTop:'10%'}}>
         <div>
           <Tabs tabs={tabs} onClick={(clickTab) => this.tabClick(clickTab)} activeTab={this.state.activeTab} />
         </div>
