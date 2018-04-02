@@ -4,8 +4,7 @@ import axios from 'axios'
 import { fetchAPI, fetchAPIGET } from './fetchAPI'
 import { getPK, getToken } from '../../shared/Auth'
 import { recieveUser, logoutUser } from './user_actions'
-
-import { API_DOMAIN, IMG_OAUTH_REDIRECT } from '../../shared/config'
+import { IMG_OAUTH_REDIRECT, MEDIUM_RSS_URL, RSS_FEED_URL, API_DOMAIN  } from '../../shared/config'
 
 export const ImgOauthRedirect = () => {
   window.location.href = IMG_OAUTH_REDIRECT
@@ -147,4 +146,15 @@ export const registerDistinguishedAlumniCard = (data, cb) => {
     Materialize.toast(err.response.message, 2000)
   })
   console.log(data);
+}
+
+// Store the medium data in the store
+export const fetchTaggedFromMedium = (cb, tag) => {
+  fetch(
+    `${MEDIUM_RSS_URL}?rss_url=${RSS_FEED_URL}/tagged/${tag}`,
+  ).then((res) =>
+     res.json()
+  ).then((res) => {
+    cb(res.items)
+    })
 }

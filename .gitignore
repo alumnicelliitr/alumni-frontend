@@ -46,7 +46,6 @@ jspm_packages
 # Compiled files
 /lib
 /dist
-
 .env
-
 config.js
+
