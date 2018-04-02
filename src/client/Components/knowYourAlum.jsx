@@ -1,30 +1,30 @@
 import React from 'react';
 import PublicationCard from './publicationCard.jsx';
 import '../styles/knowYourAlum.css';
-import { baseUrl } from '../config.js';
-
-import Loader from './loader.jsx';
+import { createKYA, createSYS, fetchTaggedFromMedium } from '../actions'
 
 export default class KnowYourAlum extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      isLoaded:false,
-      data: {},
-    }
+constructor(props) {
+  super(props)
+  this.state = {
+    knowYourAlum: [],
   }
-  componentDidMount(){
-    let request = new Request(`${baseUrl}/api/website/knowYourAlum/`,{
-      method:'get',
-    });
-    fetch(request)
-    .then((res) => res.json())
-    .then((res) => {
+}
+  
+  componentWillMount() {
+    fetchTaggedFromMedium((knowYourAlum) => {
       this.setState({
-        isLoaded: true,
-        data: res,
-      });
-    });
+        knowYourAlum,
+      })
+    },  'productivity')
+  }
+
+  renderPosts = () =>{ 
+    let array = []
+    array = this.state.knowYourAlum.map((post) => (
+      <PublicationCard thumbnail={post.thumbnail || "/static/images/grey.jpg"} title={post.title}/>
+    ))
+    return array
   }
   render() {
     let cards;
@@ -43,7 +43,7 @@ export default class KnowYourAlum extends React.Component {
           IIT Roorkee has several affluent, influential and recognised alumni working in various sectors around the globe. The foundation of a strong and connected alumni network is the acquaintance with one's alumni. The ‘Know your Alum’ initiative of IARC works towards this cause and aims to bridge the gap between the students and the alumni by providing students an opportunity to know the eminent alumni of the institute and communicate with them.
         </p>
         <div className="publication-card-container">
-          {cards}
+          {this.renderPosts()}
         </div>
       </div>
     );
