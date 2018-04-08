@@ -127,7 +127,7 @@ export const checkAlumniCard = (cb) => {
 
 const header1 = {
   'Authorization': `Token ${getToken()}`,
-  // 'Content-Type': 'multipart/form-data'
+  // 'Content-Type': ``
 }
 
 export const registerDistinguishedAlumniCard = (data, cb) => {
@@ -142,8 +142,8 @@ export const registerDistinguishedAlumniCard = (data, cb) => {
     Materialize.toast('Successfully Nominated', 2000)
     cb(response.status === 201, response.data)
   }).catch((err) => {
-    console.log(err);
-    Materialize.toast(err.response.message, 2000)
+    console.error(err);
+    Materialize.toast("Something doesn't seem right", 2000)
   })
   console.log(data);
 }

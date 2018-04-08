@@ -2,12 +2,14 @@ import React from 'react';
 import PublicationCard from './publicationCard.jsx';
 import '../styles/knowYourAlum.css';
 import { createKYA, createSYS, fetchTaggedFromMedium } from '../actions'
+import Loader from './loader'
 
 export default class KnowYourAlum extends React.Component {
 constructor(props) {
   super(props)
   this.state = {
     knowYourAlum: [],
+    isLoaded: false,
   }
 }
   
@@ -15,8 +17,9 @@ constructor(props) {
     fetchTaggedFromMedium((knowYourAlum) => {
       this.setState({
         knowYourAlum,
+        isLoaded: true,
       })
-    },  'productivity')
+  },  'know-your-alum')
   }
 
   renderPosts = () =>{ 
@@ -27,14 +30,14 @@ constructor(props) {
     return array
   }
   render() {
-    let cards;
-    if (this.state.isLoaded){
-      cards = this.state.data.map((card,index) => {
-        return (
-          <PublicationCard {...card}/>
-        );
-      });
-    }
+    // let cards;
+    // if (this.state.isLoaded){
+    //   cards = this.state.data.map((card,index) => {
+    //     return (
+    //       <PublicationCard {...card}/>
+    //     );
+    //   });
+    // }
 
     return (
       <div>
@@ -43,7 +46,7 @@ constructor(props) {
           IIT Roorkee has several affluent, influential and recognised alumni working in various sectors around the globe. The foundation of a strong and connected alumni network is the acquaintance with one's alumni. The ‘Know your Alum’ initiative of IARC works towards this cause and aims to bridge the gap between the students and the alumni by providing students an opportunity to know the eminent alumni of the institute and communicate with them.
         </p>
         <div className="publication-card-container">
-          {this.renderPosts()}
+          {this.state.knowYourAlum.length > 0 ? this.renderPosts() : 'No content'}
         </div>
       </div>
     );
