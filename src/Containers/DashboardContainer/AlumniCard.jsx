@@ -19,7 +19,7 @@ const generateState = () => ({
   affirmation: false,
   canRegister: true,
 })
-/**/
+
 class AlumniCard extends Component {
   constructor(props) {
     super(props)
@@ -36,7 +36,7 @@ class AlumniCard extends Component {
   }
 
   componentDidMount() {
-    $('.collapsible').collapsible()
+    // $('.collapsible').collapsible()
   }
 
   handleAffirmation() {
@@ -89,10 +89,6 @@ class AlumniCard extends Component {
   render() {
     return (
       <div className="container">
-        <ul className="collapsible" data-collapsible="accordion">
-          <li>
-            <div className="collapsible-header"><i className="material-icons">filter_drama</i>Apply For Alumni Card</div>
-            <div className="collapsible-body">
               {this.state.canRegister ? (
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                 <input
@@ -179,9 +175,6 @@ class AlumniCard extends Component {
                 <div>Already registered for alumni card.</div>
               )}
             </div>
-          </li>
-        </ul>
-      </div>
     )
   }
 }

@@ -23,7 +23,7 @@ class AlumniCard extends Component {
   }
 
   componentDidMount() {
-    $('.collapsible').collapsible()
+    // $('.collapsible').collapsible()
   }
 
   render() {
