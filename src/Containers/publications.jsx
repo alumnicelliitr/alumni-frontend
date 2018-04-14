@@ -43,8 +43,6 @@ export default class Publications extends React.Component {
     const formData = new FormData();
     const imagefile = document.querySelector('.inputfile');
     const story = document.querySelector('#story');
-    console.log(story);
-    // Materialize.toast('I am a toast', 2000)
     formData.append("thumbnail", imagefile.files[0]);
     formData.append("description", story.value);
     formData.append("title", "RANDOM title");

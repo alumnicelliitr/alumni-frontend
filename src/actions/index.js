@@ -42,7 +42,6 @@ export const fetchUser = code => (dispatch) => {
 
 export const logoutUserfromAPI = () => (dispatch) => {
   fetchAPIGET(`${API_DOMAIN}api/core/logout`, (response, status) => {
-    console.log(response)
     localStorage.clear()
     dispatch(logoutUser())
     setTimeout(() => {
@@ -90,7 +89,6 @@ export const createKYA = data => {
   }).then((response) => {
   }).catch((err) => {
   })
-  console.log(data);
 }
 
 export const createSYS = data => {
@@ -102,7 +100,6 @@ export const createSYS = data => {
   }).then((response) => {
   }).catch((err) => {
   })
-  console.log(data);
 }
 
 export const createAlumniCard = (data, cb) => {
@@ -114,10 +111,8 @@ export const createAlumniCard = (data, cb) => {
   }).then((response) => {
     cb(response.status === 201, response.data)
   }).catch((err) => {
-    console.log(err);
-    // Materialize.toast(err.response.message, 2000)
+    window.Materialize.toast(err.response.message, 2000)
   })
-  console.log(data);
 }
 
 export const checkAlumniCard = (cb) => {
@@ -131,20 +126,16 @@ const header1 = {
   // 'Content-Type': 'multipart/form-data'
 }
 
-export const registerDistinguishedAlumniCard = (data, cb) => {
-  console.log(data);
-  
+export const registerDistinguishedAlumniCard = (data, cb) => {  
   axios({
     method: 'post',
     url: `${API_DOMAIN}api/core/nominate/`,
     headers: header1,
     data,
   }).then((response) => {
-    // Materialize.toast('Successfully Nominated', 2000)
+    window.Materialize.toast('Successfully Nominated', 2000)
     cb(response.status === 201, response.data)
   }).catch((err) => {
-    console.log(err);
-    // Materialize.toast(err.response.message, 2000)
+    window.Materialize.toast(err.response.message, 2000)
   })
-  console.log(data);
 }

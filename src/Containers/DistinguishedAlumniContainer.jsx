@@ -143,28 +143,20 @@ class DistinguishedAlumniContainer extends Component {
     nominee.nominee_photo = f1
     nominee.nominee_resume = f2
     nominee.nominee_optional1 = f3
-    console.log({
-      nominee: nominee,
-      nominator: this.state.nominator,
-    });
-    
 
     registerDistinguishedAlumniCard({
       nominee: nominee,
       nominator: this.state.nominator,
     }, (canRegister, data) => {
-      // Materialize.toast('Registered For Alumni Card', 2000)
-      // Materialize.toast('It will be delivered.', 2000)
+      window.Materialize.toast('Registered For Alumni Card', 2000)
+      window.Materialize.toast('It will be delivered.', 2000)
       this.setState({
         canRegister: !canRegister,
       })
-      console.log(this.state);
     })
   }
 
-  render() {
-    console.log(this.state);
-    
+  render() {    
     return (
       <div>
         <Navbar />
