@@ -33,6 +33,14 @@ class AlumniCard extends Component {
         canRegister,
       })
     })
+    $('.datepicker').pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15, // Creates a dropdown of 15 years to control year,
+      today: 'Today',
+      clear: 'Clear',
+      close: 'Ok',
+      closeOnSelect: false // Close upon selecting a date,
+    });
   }
 
   componentDidMount() {
@@ -97,12 +105,92 @@ class AlumniCard extends Component {
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                 <input
                   className="input-field"
+                  placeholder="First Name"
+                  className="browser-default"
+                  type="text"
+                  name="first_name"
+                  required
+                  value={this.state.alumCard.first_name}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Middle Name"
+                  className="browser-default"
+                  type="text"
+                  name="middle_name"
+                  required
+                  value={this.state.alumCard.middle_name}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Last Name"
+                  className="browser-default"
+                  type="text"
+                  name="last_name"
+                  required
+                  value={this.state.alumCard.last_name}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Date of Birth"
+                  className="browser-default"
+                  type="text"
+                  name="dob"
+                  required
+                  value={this.state.alumCard.dob}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="First Degree obtained from IIT Roorkee"
+                  className="browser-default"
+                  type="text"
+                  name="degree_name"
+                  required
+                  value={this.state.alumCard.degree_name}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Branch of the first degree"
+                  className="browser-default"
+                  type="text"
+                  name="degree_branch"
+                  required
+                  value={this.state.alumCard.degree_branch}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="datepicker"
+                  placeholder="Year of graduation for the first degree"
+                  className="browser-default"
+                  type="text"
+                  name="degree_year"
+                  required
+                  value={this.state.alumCard.degree_year}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
                   placeholder="Present Designation"
                   className="browser-default"
                   type="text"
                   name="present_desig"
                   required
                   value={this.state.alumCard.present_desig}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Present Company"
+                  className="browser-default"
+                  type="text"
+                  name="present_dept"
+                  required
+                  value={this.state.alumCard.present_dept}
                   onChange={this.handleChange}
                 />
                 <textarea
@@ -136,6 +224,36 @@ class AlumniCard extends Component {
                   name="delivery_add"
                   required
                   value={this.state.alumCard.delivery_add}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Telephone (with STD Code)"
+                  className="browser-default"
+                  type="text"
+                  name="telephone"
+                  required
+                  value={this.state.alumCard.telephone}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Mobile No."
+                  className="browser-default"
+                  type="text"
+                  name="mobile"
+                  required
+                  value={this.state.alumCard.mobile}
+                  onChange={this.handleChange}
+                />
+                <input
+                  className="input-field"
+                  placeholder="Email Address"
+                  className="browser-default"
+                  type="text"
+                  name="email"
+                  required
+                  value={this.state.alumCard.email}
                   onChange={this.handleChange}
                 />
                 <textarea
