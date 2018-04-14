@@ -42,19 +42,23 @@ export default class TrendingNews extends React.Component {
   }
 
   componentDidMount() {
-    var flkty = new Flickity( '.main-carousel', {
-      cellAlign: 'left',
-      wrapAround: true,
-      autoPlay: true,
-    });
-
-    // $('.main-carousel').flickity({
-      
-    // });
+    this.flkty = new Flickity( '.main-carousel', {
+        cellAlign: 'left',
+        wrapAround: true,
+        autoPlay: true,
+      });
   }
 
   render() {
     if (this.state.isLoaded) {
+      this.flkty.destroy();
+      this.flkty = new Flickity( '.main-carousel', {
+        cellAlign: 'left',
+        wrapAround: true,
+        autoPlay: true,
+      });
+      var $cells = $('.carousel-cell');
+      this.flkty.remove($cells);
       this.state.data.forEach((slide) => {
         const $cellElems = $(`<div class="carousel-cell">
             <a href="${slide.guid}">
@@ -62,21 +66,15 @@ export default class TrendingNews extends React.Component {
             <h4 class="carousel-heading">${slide.title}</h4>
             </a>
           </div>`);
-        // $('.main-carousel').flickity( 'append', $cellElems );
-        var flkty = new Flickity( '.main-carousel', {
-          cellAlign: 'left',
-          wrapAround: true,
-          autoPlay: true,
-        });
-        flkty.append($cellElems);
+        this.flkty.append($cellElems);
       });
     }
     return (
       <div className="trending-news">
         <div className="main-carousel">
-        <div class="carousel-cell">
-            <img class="carousel-image" src="/images/grey.jpg" />
-            <h4 class="carousel-heading">IARC</h4>
+        <div className="carousel-cell">
+            <img className="carousel-image" src="/images/grey.jpg" />
+            <h4 className="carousel-heading">IARC</h4>
           </div>
         </div>
       </div>
