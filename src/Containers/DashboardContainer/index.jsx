@@ -24,9 +24,11 @@ class UserDashboard extends React.Component {
   async componentWillMount() {
     const { default: AlumniCard } = await import('./AlumniCard')
     const { default: AlumniSettings } = await import('./AlumniSettings')
+    const { default: CurrentBatchAlumniCard } = await import('./CurrentBatchAlumniCard')
     this.setState({
       AlumniCard: <AlumniCard />,
       AlumniSettings: <AlumniSettings />,
+      CurrentBatchAlumniCard: <CurrentBatchAlumniCard />,
     })
   }
 
@@ -53,11 +55,13 @@ class UserDashboard extends React.Component {
     if(!this.state.user.isAlumni) {
       tabs = [
         {lightHeading: '',darkHeading: 'Alumni Card'},
+        {lightHeading: '',darkHeading: 'Alumni Card for current passing batch'},
         {lightHeading: '',darkHeading: ' Profile Settings'},
       ];
   
       tabContent = [
         ( <div id="alumniCard" className="about-containers">{this.state.AlumniCard}</div> ),
+        ( <div id=" settings" className="about-containers">{this.state.CurrentBatchAlumniCard}</div> ),
         ( <div id=" settings" className="about-containers">{this.state.AlumniSettings}</div> ),
       ];
     } else {

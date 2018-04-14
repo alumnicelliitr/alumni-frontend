@@ -2,22 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import $ from 'jquery'
-import { createAlumniCard, checkAlumniCard } from  '../../actions/'
+import { createCurrentAlumniCard, checkAlumniCard } from  '../../actions/'
 
 import './AlumniCard.css'
 
 const generateState = () => ({
   alumCard: {
-    first_name: '',
-    middle_name: '',
-    last_name: '',
-    mobile: '',
-    telephone: '',
-    dob: '',
-    email: '',
-    degree_name: '',
-    degree_branch: '',
-    degree_year: '',
     affirmation: false,
     office_add: '',
     residence_add: '',
@@ -29,7 +19,7 @@ const generateState = () => ({
   affirmation: false,
   canRegister: true,
 })
-
+/**/
 class AlumniCard extends Component {
   constructor(props) {
     super(props)
@@ -70,15 +60,17 @@ class AlumniCard extends Component {
         error.affirmation = 'Affirmation requires'
         return
     }
+    console.log(e);
 
     const formData = new FormData();
     for(let key in this.state.alumCard) {
       formData.append(key, this.state.alumCard[key])
     }
-    
+    console.log(this.state.alumCard);
     formData.append('user', this.props.user.enr_no)
-    createAlumniCard(formData, (canRegister, data) => {
-      window.Materialize.toast('It will be delivered.', 2000);
+    createCurrentAlumniCard(formData, (canRegister, data) => {
+      // Materialize.toast('Registered For Alumni Card', 2000)
+      // Materialize.toast('It will be delivered.', 2000)
       this.setState({
         canRegister: !canRegister,
       })
@@ -297,16 +289,8 @@ class AlumniCard extends Component {
                 <div>Already registered for alumni card.</div>
               )}
             </div>
-          </div>
-          <p onClick={this.handleAffirmation} >
-            <input  checked={this.state.affirmation} type="checkbox" required />
-            <label>Affirm that the information provided here is true to the best of my knowledge and request you to issue me a IITRAA Membership Card.</label>
-          </p>
-          <button disabled={!this.state.affirmation} type="submit" className="submit-button">Submit</button>
-        </form>
-        ):(
-          <div>Already registered for alumni card.</div>
-        )}
+          </li>
+        </ul>
       </div>
     )
   }

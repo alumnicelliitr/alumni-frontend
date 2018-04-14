@@ -22,6 +22,13 @@ class AlumniCard extends Component {
     this.state = generateState()
   }
 
+<<<<<<< 2d84293bcd52e5c5d090b1a55e47b4df56e478d8
+=======
+  componentDidMount() {
+    // $('.collapsible').collapsible()
+  }
+
+>>>>>>> Latest alumni card form
   render() {
     return (
       <div>
