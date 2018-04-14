@@ -1,0 +1,37 @@
+.row-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4F4F4F;
+  cursor: pointer;
+}
+.toggle-heading{
+  font-weight: lighter;
+  color: #828282;
+}
+.toggle-about{
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  padding: 20px;
+  margin-top: 10px;
+}
+.toggle-about p{
+  color: #828282;
+}
+.donate-button-container{
+  width: 15%;
+}
+.donate-button-container p{
+  text-align: center;
+}
+.donate-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  font-size: 1.2em;
+  background-color: #2D9CDB;
+  border-radius: 5px;
+  color: white;
+}

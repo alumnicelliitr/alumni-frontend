@@ -1,0 +1,15 @@
+html{
+  margin:0;
+  padding: 0;
+}
+body{
+  margin:0;
+  padding: 0;
+  font-family: 'Lato';
+}
+.light-heading{
+  font-weight: lighter;
+}
+.dark-subheading{
+  font-weight: normal;
+}

@@ -1,0 +1,25 @@
+.live-streaming-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+}
+.live-streaming-container .light-heading {
+  text-align: center;
+  color: #1F87C4;
+}
+.live-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 50px;
+  margin: auto;
+  font-size: 1.2em;
+  border: 1px solid #1F87C4;
+  margin-top: 20px;
+}
+.live-streaming-content{
+  color: #6D6D6D;
+}

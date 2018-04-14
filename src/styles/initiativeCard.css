@@ -1,0 +1,11 @@
+.initiative-card-container{
+  margin-bottom: 50px;
+}
+.initiative-card{
+  display: flex;
+  justify-content: space-between;
+}
+.initiative-card-content{
+  color: #6D6D6D;
+}
+
