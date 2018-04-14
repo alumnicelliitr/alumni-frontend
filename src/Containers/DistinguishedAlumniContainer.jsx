@@ -7,85 +7,11 @@ import '../styles/distinguished.css'
 
 import { registerDistinguishedAlumniCard } from '../actions/'
 
-const getNominator = () => ({
-  nominator_address
-:
-"yu",
-nominator_affiliation
-:
-"yu",
-nominator_contact
-:
-"hu",
-nominator_designation
-:
-"u",
-nominator_email
-:
-"h@h.hh",
-nominator_name
-:
-"skj",
-nominator_yearpass
-:
-"1977"
-})
-
-const getNominee = () => ({
-delivery_add
-:
-"tu",
-nominee_address
-:
-"ut",
-nominee_awards
-:
-"ut",
-nominee_category
-:
-"tu",
-nominee_contact
-:
-"uyt",
-nominee_degree
-:
-"uyt",
-nominee_designation
-:
-"utu",
-nominee_email
-:
-"wmail@g.vom",
-nominee_linkedin
-:
-"ut",
-nominee_name
-:
-"uy",
-nominee_optional1
-: '',
-nominee_photo
-: '',
-nominee_quals
-: 
-"ut",
-nominee_resume
-: '',
-nominee_webpage
-:
-"tut",
-nominee_yearpass
-:
-"1997",
-})
-
 class DistinguishedAlumniContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
         random: '',
-        nominee: getNominee(),
-        nominator: getNominator(),
     }
   }
 
@@ -126,13 +52,8 @@ class DistinguishedAlumniContainer extends Component {
         error.affirmation = 'Affirmation required'
         return
     }
-    console.log(e);
     
     const formData1 = new FormData();
-    console.log({
-      nominee: this.state.nominee,
-      nominator: this.state.nominator,
-    });
     const { nominee } = this.state
     const f1 = new FormData
     f1.append('nominee_photo', nominee.nominee_photo)

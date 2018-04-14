@@ -85,7 +85,6 @@ class AlumniCard extends Component {
   }
 
   render() {
-    // window.Materialize.toast('I am a toast!', 4000);
     return (
       <div className="container">
         {this.state.canRegister ? (
