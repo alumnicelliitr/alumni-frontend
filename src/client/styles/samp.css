@@ -1,0 +1,33 @@
+.samp-container{
+  padding: 20px 0;
+}
+.samp-container div{
+  display: flex;
+  justify-content: space-between;
+}/**/
+.samp-container h2{
+  text-align: center;
+  color: #282828;
+}
+.samp-content{
+  width: 50%;
+  font-size: 1.2em;
+  color: #6D6D6D;
+}
+.samp-image{
+  width: 300px;
+  height: 300px;
+}
+.register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  background-color: #F26C21;
+  border-radius: 50px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 30px;
+}

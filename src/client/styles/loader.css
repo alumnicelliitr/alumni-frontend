@@ -1,0 +1,21 @@
+.loader-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 50;
+}
+.loader{
+  position: absolute;
+  width: 10%;
+  background-color: #1F89C6;
+  height: 100%;
+  animation-name: loader-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes loader-animation {
+  0% { left: 0px; }
+  50% { left: 90%; }
+  100% { left: 0; }
+}

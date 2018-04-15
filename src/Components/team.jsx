@@ -27,6 +27,7 @@ export default class Team extends React.Component {
       });
     });
   }
+  
   render() {
     let foundingMembers;
     let currentMembers;

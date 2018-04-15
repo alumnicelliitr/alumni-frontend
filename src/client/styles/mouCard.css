@@ -1,0 +1,15 @@
+.mou-card{
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mou-card-content{
+  color: #6D6D6D;
+  font-size: 1.3em
+}
+.mou-card-image{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}

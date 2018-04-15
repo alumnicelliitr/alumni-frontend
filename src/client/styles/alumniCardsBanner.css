@@ -1,0 +1,20 @@
+.alumni-card-banner-container{
+  padding: 20px 0;
+  background-color: #F2F2F2;
+}
+.content-text {
+  font-size: 1.2em;
+  color: #6D6D6D;
+}
+.register-alumni-card-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  background-color: #1F87C4;
+  border-radius: 50px;
+  font-size: 1em;
+  margin-top: 20px;
+}

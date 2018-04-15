@@ -1,0 +1,30 @@
+.subscribe-newsletter{
+  background-color: #282828;
+  padding: 20px 0;
+  color: #fff;
+}
+.news-letter-form input{
+  background-color: #1C1C1C;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.3em;
+}
+.news-letter-form{
+  display: flex;
+  align-items: center;
+}
+.news-letter-form input:focus{
+  outline: none;
+}
+.subscribe-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  color: #fff;
+  background-color: #1F87C4;
+  font-size: 1em;
+  margin-left: 30px;
+  cursor: pointer;
+}
