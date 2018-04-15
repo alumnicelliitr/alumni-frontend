@@ -1,0 +1,52 @@
+input[type="text"], textarea[type="text"] {
+    width: 100%;
+    border: 1px solid #A0A0A0;;
+    color: #000;
+    background-color: #BDBDBD;
+    border-radius: 3%;
+    padding: 1% 1%;
+    margin: 1% 0%;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    background-color:#1F87C4;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.dropdown {
+    width: 100%;
+    border: 1px solid black;
+    padding: 2% 33%;
+    color: black;
+    margin: 0% 0%;
+}
+
+.settings-image {
+    width: 21vw;
+    height: 41vh;
+    background: #E8E8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 3%;
+}
+.settings-image > img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+.distinguishedContainer {
+    margin-top: 10%;
+}
+

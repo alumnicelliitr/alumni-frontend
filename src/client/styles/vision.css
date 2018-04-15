@@ -1,0 +1,20 @@
+.vision-container{
+  color: #6D6D6D;
+}
+.vision-content{
+  margin-top: 70px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.vision-quote {
+  margin-top: 100px;
+  display: flex;
+  color: #A0A0A0;
+  font-size: 1.05em;
+}
+.vision-quote img {
+  position: relative;
+  top: -20px;
+  margin-right: 5px;
+}

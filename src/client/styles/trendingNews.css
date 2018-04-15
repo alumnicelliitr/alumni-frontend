@@ -1,0 +1,79 @@
+.trending-news{
+  margin-top: 68px;
+}
+.carousel{
+  height: 400px !important;
+}
+.carousel-links {
+  position: relative;
+}
+.image-heading{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: #fff;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.middle-indicator{
+ position:absolute;
+ top:50%;
+ }
+.middle-indicator-text{
+ font-size: 4.2rem;
+}
+a.middle-indicator-text{
+  color:white !important;
+}
+.content-indicator{
+  width: 64px;
+  height: 64px;
+  background: none;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.carousel-cell{
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+.carousel-image{
+  height: 400px;
+  width: 100%;
+}
+.carousel-heading{
+  position: absolute;
+  top: 45%;
+  color: #fff;
+  width: 40%;
+  text-align: left;
+  left: 80px;
+}
+.flickity-page-dots {
+  bottom: 5px;
+}
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}

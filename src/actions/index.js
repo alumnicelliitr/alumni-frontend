@@ -101,7 +101,7 @@ export const createSYS = data => {
   }).catch((err) => {
   })
 }
-
+// createCurrentAlumniCard
 export const createAlumniCard = (data, cb) => {
   axios({
     method: 'post',
@@ -114,6 +114,21 @@ export const createAlumniCard = (data, cb) => {
     window.Materialize.toast(err.response.message, 2000)
   })
 }
+
+export const createCurrentAlumniCard = (data, cb) => {
+  axios({
+    method: 'post',
+    url: `${API_DOMAIN}api/website/alumni_card/current/register`,
+    headers,
+    data,
+  }).then((response) => {
+    cb(response.status === 201, response.data)
+  }).catch((err) => {
+    console.log(err);
+    // Materialize.toast(err.response.message, 2000)
+  })
+  console.log(data);
+} 
 
 export const checkAlumniCard = (cb) => {
   fetchAPIGET(`${API_DOMAIN}api/website/alumni_card`, (json, status) => {
@@ -129,8 +144,8 @@ const header1 = {
 export const registerDistinguishedAlumniCard = (data, cb) => {  
   axios({
     method: 'post',
-    url: `${API_DOMAIN}api/core/nominate/`,
-    headers: header1,
+    url: `http://localhost:1337/api/core/nominate/`,
+    headers,
     data,
   }).then((response) => {
     window.Materialize.toast('Successfully Nominated', 2000)

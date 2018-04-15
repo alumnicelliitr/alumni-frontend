@@ -3,7 +3,7 @@ import '../styles/tabs.css';
 
 export default class Tabs extends React.Component {
 
-  onClick(e) {
+  onClick = (e) => {
     this.props.onClick(e.currentTarget.getAttribute("data-key"));
   }
 
@@ -18,7 +18,7 @@ export default class Tabs extends React.Component {
         );
       }
       return (
-        <div className="custom-tab" key={index} data-key={index} onClick={(e) => this.onClick(e)} >
+        <div className="custom-tab" key={index} data-key={index} onClick={this.onClick} >
           <span className="light-heading">{tab.lightHeading}</span>
           {tab.darkHeading}
         </div>

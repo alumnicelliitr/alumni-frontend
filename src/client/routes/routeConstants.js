@@ -1,0 +1,25 @@
+export const WELCOME_ROUTE = '/'
+export const VISION_ROUTE = '/about/vision'
+export const DORA_ROUTE = '/about/dora'
+export const TEAM_ROUTE = '/about/team'
+export const SOCIAL_LINKS_ROUTE = '/about/social'
+export const UPCOMING_EVENTS_ROUTE = '/events/upcoming'
+export const RECENT_EVENTS_ROUTE = '/events/recent'
+export const INITIATIVES_ROUTE = '/initiatives'
+export const ALUM_ROUTE = '/publications/alum'
+export const STORY_ROUTE = '/publications/story'
+export const DONATE_ROUTE = '/donate'
+export const CONTACT_US_ROUTE = '/contact'
+export const WRITE_TO_US_ROUTE = '/write'
+export const AWARDS_ROUTE = '/awards'
+export const MOU_ROUTE = '/mou'
+export const ABOUT_EVENT_ROUTE = '/event/:id'
+export const PUBLICATIONS = '/publications'
+
+export const ALUM_DASHBOARD_ROUTE = '/dashboard/alumni'
+export const STUDENT_DASHBOARD_ROUTE = '/dashboard/student'
+
+export const TEMPORARY_LOGIN_ROUTE = '/login/user'
+
+export const DISTINGUISHED_ROUTE = '/distinguished'
+

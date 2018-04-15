@@ -1,0 +1,28 @@
+.input-field {
+    background: #FFFFFF !important;
+    width: 100%;
+    border: none;
+    color: black;
+    border-radius: 2%; /**/
+    padding: 1% 1%;
+    margin: 1% 0%;
+}
+
+.upload-images-container{
+  display: flex;
+  justify-content: space-between;
+}
+.image-uploader{
+  padding: 0 10px;
+}
+.image-uploader label{
+  font-size: 1em;
+}
+
+.collapsible-body {
+    background: #FAFAFA;
+}
+
+input:focus {
+    background: white;
+}
