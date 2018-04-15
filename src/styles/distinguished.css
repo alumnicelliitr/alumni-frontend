@@ -2,11 +2,14 @@ input[type="text"], textarea[type="text"] {
     width: 100%;
     border: 1px solid #A0A0A0;;
     color: #000;
-    background-color: #BDBDBD;
     border-radius: 3%;
     padding: 1% 1%;
     margin: 1% 0%;
 }
+
+::placeholder {
+    color: grey;
+};
 
 .submit-button {
     display: flex;
@@ -50,3 +53,10 @@ input[type="text"], textarea[type="text"] {
     margin-top: 10%;
 }
 
+.nominee-uploads{
+    display: flex;
+    justify-content: space-around;
+}
+.large-label{
+    font-size: 0.9em;
+}

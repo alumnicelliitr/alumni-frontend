@@ -7,11 +7,85 @@ import '../styles/distinguished.css'
 
 import { registerDistinguishedAlumniCard } from '../actions/'
 
+const getNominator = () => ({
+  nominator_address
+:
+"",
+nominator_association
+:
+"",
+nominator_contact
+:
+"",
+nominator_designation
+:
+"",
+nominator_email
+:
+"",
+nominator_name
+:
+"",
+nominator_yearpass
+:
+""
+})
+
+const getNominee = () => ({
+delivery_add
+:
+"",
+nominee_address
+:
+"",
+nominee_awards
+:
+"",
+nominee_category
+:
+"",
+nominee_contact
+:
+"",
+nominee_degree
+:
+"",
+nominee_designation
+:
+"",
+nominee_email
+:
+"",
+nominee_linkedin
+:
+"",
+nominee_name
+:
+"",
+nominee_description
+: '',
+nominee_photo
+: '',
+nominee_quals
+: 
+"",
+nominee_resume
+: '',
+nominee_webpage
+:
+"",
+nominee_yearpass
+:
+"",
+})
+
 class DistinguishedAlumniContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
         random: '',
+        nominee: getNominee(),
+        nominator: getNominator(),
     }
   }
 
@@ -53,21 +127,17 @@ class DistinguishedAlumniContainer extends Component {
         return
     }
     
-    const formData1 = new FormData();
-    const { nominee } = this.state
-    const f1 = new FormData
-    f1.append('nominee_photo', nominee.nominee_photo)
-    const f2 = new FormData
-    f2.append('nominee_resume', nominee.nominee_resume)
-    const f3 = new FormData
-    f3.append('nominee_optional1', nominee.nominee_optional1)
-    nominee.nominee_photo = f1
-    nominee.nominee_resume = f2
-    nominee.nominee_optional1 = f3
+    const formData = new FormData();
+    for(let key in this.state.nominee) {
+      formData.append(key, this.state.nominee[key])
+    }
+
+    for(let key in this.state.nominator) {
+      formData.append(key, this.state.nominator[key])
+    }
 
     registerDistinguishedAlumniCard({
-      nominee: nominee,
-      nominator: this.state.nominator,
+      formData
     }, (canRegister, data) => {
       window.Materialize.toast('Registered For Alumni Card', 2000)
       window.Materialize.toast('It will be delivered.', 2000)
