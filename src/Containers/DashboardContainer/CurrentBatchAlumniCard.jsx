@@ -8,6 +8,16 @@ import './AlumniCard.css'
 
 const generateState = () => ({
   alumCard: {
+    first_name: '',
+    middle_name: '',
+    last_name: '',
+    mobile: '',
+    telephone: '',
+    dob: '',
+    email: '',
+    degree_name: '',
+    degree_branch: '',
+    degree_year: '',
     affirmation: false,
     office_add: '',
     residence_add: '',
@@ -16,8 +26,9 @@ const generateState = () => ({
     photo_sign: '',
     photo_degree: '',
   },
+  money_affirmation: false,
   affirmation: false,
-  canRegister: true,
+  canRegister: false,
 })
 /**/
 class AlumniCard extends Component {
@@ -39,9 +50,10 @@ class AlumniCard extends Component {
     // $('.collapsible').collapsible()
   }
 
-  handleAffirmation() {
+  handleAffirmation(name) {
+    
     this.setState({
-      affirmation: !this.state.affirmation,
+      [name]: !this.state[name],
     })
   }
 
@@ -60,13 +72,11 @@ class AlumniCard extends Component {
         error.affirmation = 'Affirmation requires'
         return
     }
-    console.log(e);
 
     const formData = new FormData();
     for(let key in this.state.alumCard) {
       formData.append(key, this.state.alumCard[key])
     }
-    console.log(this.state.alumCard);
     formData.append('user', this.props.user.enr_no)
     createCurrentAlumniCard(formData, (canRegister, data) => {
       // Materialize.toast('Registered For Alumni Card', 2000)
@@ -74,7 +84,6 @@ class AlumniCard extends Component {
       this.setState({
         canRegister: !canRegister,
       })
-      console.log(this.state);
     })
   }
 
@@ -92,7 +101,7 @@ class AlumniCard extends Component {
         <ul className="collapsible" data-collapsible="accordion">
           <li>
             <div className="collapsible-header"><i className="material-icons">filter_drama</i>Apply For Alumni Card</div>
-            <div className="">
+            <div>
               {this.state.canRegister ? (
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                 <input
@@ -279,11 +288,15 @@ class AlumniCard extends Component {
                     </div>
                   </div>
                 </div>
-                <p onClick={this.handleAffirmation} >
-                  <input  checked={this.state.affirmation} type="checkbox" required />
+                <p onClick={() => this.handleAffirmation('affirmation')} >
+                  <input checked={this.state.affirmation} type="checkbox" required />
                   <label>Affirm that the information provided here is true to the best of my knowledge and request you to issue me a IITRAA Membership Card.</label>
                 </p>
-                <button disabled={!this.state.affirmation} type="submit" className="submit-button">Submit</button>
+                <p onClick={() => this.handleAffirmation('money_affirmation')} >
+                  <input checked={this.state.money_affirmation} type="checkbox" required />
+                  <label>2000 Rs from Library will be transferred to Alumni Association for Alumni Card.</label>
+                </p>
+                <button disabled={!this.state.affirmation && !this.state.money_affirmation} type="submit" className="submit-button">Submit</button>
               </form>
               ):(
                 <div>Already registered for alumni card.</div>

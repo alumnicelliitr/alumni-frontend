@@ -97,10 +97,8 @@ class AlumniCard extends Component {
   render() {
     return (
       <div className="container">
-        <ul className="collapsible" data-collapsible="accordion">
-          <li>
             <div className="collapsible-header"><i className="material-icons">filter_drama</i>Apply For Alumni Card</div>
-            <div className="">
+            <div>
               {this.state.canRegister ? (
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                 <input
@@ -293,20 +291,10 @@ class AlumniCard extends Component {
                 </p>
                 <button disabled={!this.state.affirmation} type="submit" className="submit-button">Submit</button>
               </form>
-              ):(
-                <div>Already registered for alumni card.</div>
-              )}
-            </div>
-          </div>
-          <p onClick={this.handleAffirmation} >
-            <input  checked={this.state.affirmation} type="checkbox" required />
-            <label>Affirm that the information provided here is true to the best of my knowledge and request you to issue me a IITRAA Membership Card.</label>
-          </p>
-          <button disabled={!this.state.affirmation} type="submit" className="submit-button">Submit</button>
-        </form>
         ):(
           <div>Already registered for alumni card.</div>
         )}
+        </div>
       </div>
     )
   }

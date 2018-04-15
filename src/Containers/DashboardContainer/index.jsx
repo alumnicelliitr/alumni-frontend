@@ -52,7 +52,7 @@ class UserDashboard extends React.Component {
   render() {
     let tabs = []
     let tabContent = []
-    if(!this.state.user.isAlumni) {
+    if(this.state.user.isAlumni) {
       tabs = [
         {lightHeading: '',darkHeading: 'Alumni Card'},
         {lightHeading: '',darkHeading: 'Alumni Card for current passing batch'},

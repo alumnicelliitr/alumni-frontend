@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 
+import CircularLoader from '../Components/CircularLoader'
+
 import { fetchUserDetails } from '../actions/'
 
 const style = {
@@ -60,7 +62,7 @@ class UserWrapper extends React.Component {
           <Link to="/">Let Us Guide you to the right place :)</Link>
         </div>)
     }
-    return <div>...fetching</div>
+    return <div><CircularLoader /></div>
   }
 }
 
