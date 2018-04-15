@@ -20,7 +20,6 @@ class WelcomeContainer extends React.Component {
       <div className="homepage">
         <Navbar/>
         <TrendingNews/>
-        <MOU/>
         <VideoLanding/>
         <SAMP/>
         <AlumniCardsBanner/>
